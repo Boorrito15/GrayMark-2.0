@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get '/components', to: "pages#components"
 
-  resources :schools, only: %i[index show new create] do
+  resources :schools, only: %i[index show] do
     resources :profiles
   end
 
   resources :profiles, only: %i[index show] do
-    resources :week_menus
+    resources :week_menus, only: %i[]
     resources :allergy_profiles
   end
 
