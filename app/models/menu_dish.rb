@@ -1,4 +1,4 @@
 class MenuDish < ApplicationRecord
-  belongs_to :DayMenu
+  belongs_to :day_menu
   belongs_to :dish
 end

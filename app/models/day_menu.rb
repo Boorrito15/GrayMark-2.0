@@ -1,5 +1,5 @@
 class DayMenu < ApplicationRecord
-  belongs_to :WeekMenu
+  belongs_to :week_menu
   has_many :menu_dishes
   has_many :dishes through: :menu_dishes
   validates :date, presence: true
