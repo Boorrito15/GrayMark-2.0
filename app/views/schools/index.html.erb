@@ -1,0 +1,19 @@
+  <div class="container text-left">
+    <h1>My Schools</h1>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <% @schools.each do |school| %>
+          <div class="col">
+            <div class="card">
+              <div class="card-body" background-color="linen">
+                <%= cl_image_tag school.photo.key, class:"avatar-large" %>
+                <br><br>
+                <h3 class="card-title"><%= school.name %></h3>
+                <br>
+                <a href="#" class="btn btn-primary">View school</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  </div>
