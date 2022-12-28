@@ -5,5 +5,16 @@
     <h1><%= @school.name %></h1>
   </div>
   <div>
+    <% @intervals.each do |week_menu| %>
+      <h5><%= week_menu.flatten[0] %> to <%= week_menu.flatten[0]+18.days %></h5>
+      <% @school.week_menus.each do |week_menu| %>
+        <br><br><br><br>
+        <% week_menu.profile.allergy_profiles.each do |allergy_profile| %>
+          <h5> <%= allergy_profile.ingredient.name  %> </h5>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 </div>
+
+<%# .menus.group_by { |menu| menu.menu_date.strftime("%A") } %>
