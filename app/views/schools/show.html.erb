@@ -4,15 +4,24 @@
     <br><br>
     <h1><%= @school.name %></h1>
   </div>
+
   <div>
-    <% @intervals.each do |week_menu| %>
-      <h5><%= week_menu.flatten[0] %> to <%= week_menu.flatten[0]+18.days %></h5>
-      <% @school.week_menus.each do |week_menu| %>
-        <br><br><br><br>
-        <% week_menu.profile.allergy_profiles.each do |allergy_profile| %>
-          <h5> <%= allergy_profile.ingredient.name  %> </h5>
+    <% @intervals.each do |week_menus| %>
+      <br>
+      <h4><%= week_menus.flatten[0] %> to <%= week_menus.flatten[0]+18.days %></h4>
+      <br>
+      <div class = "cards">
+        <% week_menus[1].each do |week_menu| %>
+          <div class = "card">
+            <div class ="card-body">
+              <% week_menu.profile.allergy_profiles.each do |allergy_profile| %>
+              <h5> <%= allergy_profile.ingredient.name.capitalize %>
+              <% end %> free </h5>
+              <%= link_to "View menu", week_menu_path %>
+            </div>
+          </div>
         <% end %>
-      <% end %>
+      </div>
     <% end %>
   </div>
 </div>
