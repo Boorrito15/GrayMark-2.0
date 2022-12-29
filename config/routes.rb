@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :profiles, only: %i[index show] do
-    resources :week_menus, only: %i[]
+    resources :week_menus
     resources :allergy_profiles
   end
 
