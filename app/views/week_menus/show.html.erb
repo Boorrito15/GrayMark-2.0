@@ -1,1 +1,20 @@
-
+<div class="container">
+  <div class="banner">
+    <h1><%= @ingredients.join(', ') %> free </h1>
+    <h2><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h2>
+  </div>
+    <% @day_menus_grouped_by_day.each do |day, day_menus| %>
+      <div class="mb-5" id="<%= day %>">
+        <h2><%= day.strftime("%A") %></h2>
+        <div class="cards">
+          <% day_menus.each do |day_menu| %>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><%= day_menu.dishes.pluck(:name).join(", ") %></h3>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+</div>

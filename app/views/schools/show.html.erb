@@ -9,7 +9,7 @@
   <div>
     <% @week_menus_by_date.each do |week_menus| %>
       <br>
-      <h4><%= week_menus[0].strftime("%d %B %Y") %> to <%= (week_menus[0]+18.days).strftime("%d %B %Y") %></h4>
+      <h3><%= week_menus[0].strftime("%d %B %Y") %> to <%= (week_menus[0]+18.days).strftime("%d %B %Y") %></h3>
       <br>
       <div class = "cards">
         <% week_menus[1].each do |week_menu| %>
