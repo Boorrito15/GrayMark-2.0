@@ -66,7 +66,7 @@ end
 @profile_tomatoes_walnuts = Profile.create(school: @cheam)
 @profile_pineapple_pinenuts = Profile.create(school: @cheam)
 
-# # ALLERGY PROFILES
+# ALLERGY PROFILES (join table)
 
 @allergy_profile_pineapple_pinenuts_pineapple = AllergyProfile.create(profile: @profile_pineapple_pinenuts, ingredient: Ingredient.find_by(id: 9266))
 @allergy_profile_pineapple_pinenuts_peanuts = AllergyProfile.create(profile: @profile_pineapple_pinenuts, ingredient: Ingredient.find_by(id: 16091))
@@ -76,8 +76,127 @@ end
 
 # WEEK_MENUS
 
-@week_menu_dec26_tomatoes_walnuts = WeekMenu.create(date: Date.new(2022,12,26), profile: Profile.first)
-@week_menu_dec26_pineapple_pinenuts = WeekMenu.create(date: Date.new(2022,12,26), profile: Profile.second)
+@week_menu_tomatoes_walnuts_dec26 = WeekMenu.create(date: Date.new(2022,12,26), profile: @profile_tomatoes_walnuts)
+@week_menu_pineapple_pinenuts_dec26 = WeekMenu.create(date: Date.new(2022,12,26), profile: @profile_pineapple_pinenuts)
 
-@week_menu_dec5_tomatoes_walnuts = WeekMenu.create(date: Date.new(2022,12,5), profile: Profile.first)
-@week_menu_dec5_pineapple_pinenuts = WeekMenu.create(date: Date.new(2022,12,5), profile: Profile.second)
+@week_menu_dec5_tomatoes_walnuts = WeekMenu.create(date: Date.new(2022,12,5), profile: @profile_tomatoes_walnuts)
+@week_menu_dec5_pineapple_pinenuts = WeekMenu.create(date: Date.new(2022,12,5), profile: @profile_pineapple_pinenuts)
+
+# DAY MENUS
+
+# Tomatoes_walnuts
+    # Week 1
+@day_menu_tomatoes_walnuts_dec_26_mon = DayMenu.create(date: Date.new(2022,12,26), week_menu: @week_menu_tomatoes_walnuts_dec26)
+@day_menu_tomatoes_walnuts_dec_26_tue = DayMenu.create(date: Date.new(2022,12,27), week_menu: @week_menu_tomatoes_walnuts_dec26)
+@day_menu_tomatoes_walnuts_dec_26_wed = DayMenu.create(date: Date.new(2022,12,28), week_menu: @week_menu_tomatoes_walnuts_dec26)
+@day_menu_tomatoes_walnuts_dec_26_thu = DayMenu.create(date: Date.new(2022,12,29), week_menu: @week_menu_tomatoes_walnuts_dec26)
+@day_menu_tomatoes_walnuts_dec_26_fri = DayMenu.create(date: Date.new(2022,12,30), week_menu: @week_menu_tomatoes_walnuts_dec26)
+    # Week 2
+# @day_menu_tomatoes_walnuts_dec_26_mon = DayMenu.create(date: Date.new(2023,01,02), week_menu: @week_menu_tomatoes_walnuts_dec26)
+# @day_menu_tomatoes_walnuts_dec_26_tue = DayMenu.create(date: Date.new(2023,01,03), week_menu: @week_menu_tomatoes_walnuts_dec26)
+# @day_menu_tomatoes_walnuts_dec_26_wed = DayMenu.create(date: Date.new(2023,01,04), week_menu: @week_menu_tomatoes_walnuts_dec26)
+# @day_menu_tomatoes_walnuts_dec_26_thu = DayMenu.create(date: Date.new(2023,01,05), week_menu: @week_menu_tomatoes_walnuts_dec26)
+# @day_menu_tomatoes_walnuts_dec_26_fri = DayMenu.create(date: Date.new(2023,01,06), week_menu: @week_menu_tomatoes_walnuts_dec26)
+#   # Week 3
+# @day_menu_tomatoes_walnuts_dec_26_mon = DayMenu.create(date: Date.new(2023,01,09), week_menu: @week_menu_tomatoes_walnuts_dec26)
+# @day_menu_tomatoes_walnuts_dec_26_tue = DayMenu.create(date: Date.new(2023,01,10), week_menu: @week_menu_tomatoes_walnuts_dec26)
+# @day_menu_tomatoes_walnuts_dec_26_wed = DayMenu.create(date: Date.new(2023,01,11), week_menu: @week_menu_tomatoes_walnuts_dec26)
+# @day_menu_tomatoes_walnuts_dec_26_thu = DayMenu.create(date: Date.new(2023,01,12), week_menu: @week_menu_tomatoes_walnuts_dec26)
+# @day_menu_tomatoes_walnuts_dec_26_fri = DayMenu.create(date: Date.new(2023,01,13), week_menu: @week_menu_tomatoes_walnuts_dec26)
+
+# Pineapple_pinenuts
+
+  # Week 1
+@day_menu_pineapple_pinenuts_dec_26_mon = DayMenu.create(date: Date.new(2022,12,26), week_menu: @week_menu_pineapple_pinenuts_dec26)
+@day_menu_pineapple_pinenuts_dec_26_tue = DayMenu.create(date: Date.new(2022,12,27), week_menu: @week_menu_pineapple_pinenuts_dec26)
+@day_menu_pineapple_pinenuts_dec_26_wed = DayMenu.create(date: Date.new(2022,12,28), week_menu: @week_menu_pineapple_pinenuts_dec26)
+@day_menu_pineapple_pinenuts_dec_26_thu = DayMenu.create(date: Date.new(2022,12,29), week_menu: @week_menu_pineapple_pinenuts_dec26)
+@day_menu_pineapple_pinenuts_dec_26_fri = DayMenu.create(date: Date.new(2022,12,30), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# Week 2
+# @day_menu_pineapple_pinenuts_dec_26_mon = DayMenu.create(date: Date.new(2023,01,02), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# @day_menu_pineapple_pinenuts_dec_26_tue = DayMenu.create(date: Date.new(2023,01,03), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# @day_menu_pineapple_pinenuts_dec_26_wed = DayMenu.create(date: Date.new(2023,01,04), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# @day_menu_pineapple_pinenuts_dec_26_thu = DayMenu.create(date: Date.new(2023,01,05), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# @day_menu_pineapple_pinenuts_dec_26_fri = DayMenu.create(date: Date.new(2023,01,06), week_menu: @week_menu_pineapple_pinenuts_dec26)
+#   # Week 3
+# @day_menu_pineapple_pinenuts_dec_26_mon = DayMenu.create(date: Date.new(2023,01,09), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# @day_menu_pineapple_pinenuts_dec_26_tue = DayMenu.create(date: Date.new(2023,01,10), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# @day_menu_pineapple_pinenuts_dec_26_wed = DayMenu.create(date: Date.new(2023,01,11), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# @day_menu_pineapple_pinenuts_dec_26_thu = DayMenu.create(date: Date.new(2023,01,12), week_menu: @week_menu_pineapple_pinenuts_dec26)
+# @day_menu_pineapple_pinenuts_dec_26_fri = DayMenu.create(date: Date.new(2023,01,13), week_menu: @week_menu_pineapple_pinenuts_dec26)
+
+# (Date.new(2022,12,26)..Date.new(2023,01,13)).each do |date|
+#   @day_menu_tomatoes_walnuts_dec_26_"#{date.strftime("%a %d")}" = DayMenu.create(date: date, week_menu: @week_menu_tomatoes_walnuts_dec26)
+# end
+
+# (Date.new(2022,12,26)..Date.new(2023,01,13)).each do |date|
+#   @day_menu_pineapple_pinenuts_dec_26_"#{date.strftime("%a %d")}" = DayMenu.create(date: date, week_menu: @week_menu_pineapple_pinenuts_dec26)
+# end
+
+# DISHES
+
+# main course
+
+Dish.create(name:"Jade Buddha Salmon Tartare", course:"main course")
+Dish.create(name:"Shredded Roast Beef Stuffed Sweet Potatoes", course:"main course")
+Dish.create(name:"Roasted Endive Salad With Prosciutto, Figs and Pistachios", course:"main course")
+Dish.create(name:"Split Pea and Mushroom Soup", course:"main course")
+Dish.create(name:"Alouette Chicken Paprika", course:"main course")
+Dish.create(name:"Bacon Wrapped Pork Tenderloin", course:"main course")
+Dish.create(name:"Salmon, Watercress, Fennel and Baby Beetroot Salad With Lemony Caviar Dressing", course:"main course")
+Dish.create(name:"Cilantro Lime Halibut", course:"main course")
+Dish.create(name:"Brown Butter Twice Baked Sweet Potatoes", course:"main course")
+Dish.create(name:"Chimichurri Skirt Steak with Grilled Asparagus", course:"main course")
+
+#sides
+
+Dish.create(name:"Garlicky Kale", course:"side dish")
+Dish.create(name:"Cauliflower, Brown Rice, and Vegetable Fried Rice", course:"side dish")
+Dish.create(name:"Powerhouse Almond Matcha Superfood Smoothie", course:"side dish")
+Dish.create(name:"Farro With Mushrooms and Asparagus", course:"side dish")
+Dish.create(name:"Corn Avocado Salsa", course:"side dish")
+Dish.create(name:"Moroccan Couscous and Chickpea Salad", course:"side dish")
+Dish.create(name:"Swiss Chard Wraps", course:"side dish")
+Dish.create(name:"Spicy Indian-Style Hummus", course:"side dish")
+Dish.create(name:"Balsamic Roasted Vegetables", course:"side dish")
+Dish.create(name:"Doughnuts", course:"side dish")
+
+#dessert
+
+Dish.create(name:"Vegan Dirty Chai Pudding", course:"dessert")
+Dish.create(name:"Mango Cranberry Sherbet", course:"dessert")
+Dish.create(name:"Strawberry Cheesecake Chocolate Crepes", course:"dessert")
+Dish.create(name:"Coffee Chia Pudding", course:"dessert")
+Dish.create(name:"Mint Chocolate Chia Pudding", course:"dessert")
+Dish.create(name:"Strawberry Lime Basil Sherbet", course:"dessert")
+Dish.create(name:"Easy Strawberry Shortcake", course:"dessert")
+Dish.create(name:"Avocado Chocolate Bits Frozen Yogurt", course:"dessert")
+Dish.create(name:"Cherries and Yogurt Parfait", course:"dessert")
+Dish.create(name:"Chocolate Pudding", course:"dessert")
+
+# # MENU DISHES (join table)
+
+# @menu_dishes_tomatoes_walnuts_dec_26_mon
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_mon, dish: Dish.where(course: "main course").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_mon, dish: Dish.where(course: "side dish").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_mon, dish: Dish.where(course: "dessert").sample)
+
+# @menu_dishes_tomatoes_walnuts_dec_26_tue
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_tue, dish: Dish.where(course: "main course").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_tue, dish: Dish.where(course: "side dish").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_tue, dish: Dish.where(course: "dessert").sample)
+
+# @menu_dishes_tomatoes_walnuts_dec_26_wed
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_wed, dish: Dish.where(course: "main course").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_wed, dish: Dish.where(course: "side dish").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_wed, dish: Dish.where(course: "dessert").sample)
+
+# @menu_dishes_tomatoes_walnuts_dec_26_thu
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_thu, dish: Dish.where(course: "side dish").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_thu, dish: Dish.where(course: "dessert").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_thu, dish: Dish.where(course: "main course").sample)
+
+# @menu_dishes_tomatoes_walnuts_dec_26_fri
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_fri, dish: Dish.where(course: "main course").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_fri, dish: Dish.where(course: "side dish").sample)
+MenuDish.create(day_menu: @day_menu_tomatoes_walnuts_dec_26_fri, dish: Dish.where(course: "dessert").sample)
