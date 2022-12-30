@@ -1,10 +1,12 @@
-<div class="container">
+<div data-controller="day-focus" class="container page" style="height: 200vh">
   <div class="banner">
+    <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
+    <br><br>
     <h1><%= @ingredients.join(', ') %> free </h1>
     <h2><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h2>
   </div>
 
-    <div class = "row mb-5">
+  <div class = "row mb-5">
     <div class="col col-lg-1">
       <button type="button" class="btn-circle" data-day="Monday" data-action="click->day-focus#scroll">M</button>
     </div>
@@ -22,12 +24,11 @@
     </div>
   </div>
 
-  <div>
-    <% @day_menus_grouped_by_day.each do |day, day_menus| %>
-      <div class="mb-5" id="<%= day %>">
-        <h2><%= day.strftime("%A") %></h2>
-        <div class="cards">
-          <% day_menus.each do |day_menu| %>
+  <% @day_menus_grouped_by_day.each do |day, day_menus| %>
+    <div class="mb-5" id="<%= day %>">
+      <h3><%= day %></h3>
+      <div class="cards">
+        <% day_menus.each do |day_menu| %>
             <% day_menu.dishes.each do |dish|  %>
               <div class="card">
                 <div class="card-body">
@@ -36,8 +37,7 @@
               </div>
             <% end %>
           <% end %>
-        </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
