@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import SlimSelectController from "./slim_select_controller"
+application.register("slim-select", SlimSelectController)
