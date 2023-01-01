@@ -3,6 +3,6 @@
 <%= simple_form_for [@week_menu] do |f| %>
   <%# <%= f.input :diets, label: "Select a diet", collection: Ingredient.diets, input_html: {data: {controller: "tom-select"}, name: "menu[diet]"} %>
   <%# <%= f.input :intolerances, label: "Select intolerances", collection: Ingredient.intolerances, input_html: {data: {controller: "tom-select"}, name: "menu[intolerances][]", multiple: true} %>
-  <%= f.input :profile, label: "Select any other ingredients", collection: Ingredient.all, input_html: {data: {controller: "tom-select"}, name: "menu[ingredient][1]", multiple: true} %>
+  <%= f.input :profile, label: "Select any other ingredients", as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select"}, name: "menu[ingredient][1]", multiple: true} %>
   <%= f.button :submit, class: "btn btn-primary", value: "Create Menu" %>
 <% end %>
