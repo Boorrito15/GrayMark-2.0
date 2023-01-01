@@ -47,8 +47,13 @@ class WeekMenusController < ApplicationController
       @allergies.each do |allergy|
         AllergyProfile.create[profile: @new_profile, ingredient: allergy]
       end
-      # create menu
-      WeekMenu.create[profile: @new_profile, date: @date]
+      # create menu with the new profile
+      @new_week_menu = WeekMenu.create[profile: @new_profile, date: @date]
+      #create 5 day menus
+      # (@date..@date+5.days).each do |date|
+      #   @new_day_menu = DayMenu.create(week_menu:@new_week_menu, date: date)
+      #       MenuDish.create(Dish.)
+
       # if allergies and ingredients matches but dates are different, then create a new menu but assign the same profile
       @week_menus = WeekMenu.where(profile: @profile)
       @dates []
