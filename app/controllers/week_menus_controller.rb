@@ -22,22 +22,16 @@ class WeekMenusController < ApplicationController
     @allergies = [Ingredient.find_by(name: "Tomatoes"), Ingredient.find_by(name: "Walnuts")]
 
     # take in dietician inputs DYNAMIC FOR PRODUCTION NEED CLAIRE'S HELP
-    @profile = @profiles.includes(:allergy_profiles)
-    @profiles = Profile.where(school: @school)
-    raise
-
-      @allergy_profiles = AllergyProfile.where(profile: @school.profile)
-      # this gives me an array of allergy_profiles, but what we want is to get the ingredients
-      @ingredients = @allergy_profiles.map(&:ingredient)
-      # if allergies and ingredients don't match then (regardless of order), create a new profile and menu
-      if @allergies != @ingredients
-        @new_profile = Profile.create(school: @school)
-        @new_allergy_profiles = @allergies.map { |allergy| AllergyProfile.create(profile: @new_profile, ingredient: allergy) }
+    @allergy_profiles = AllergyProfile.where(profile: @school.profile)
+    # this gives me an array of allergy_profiles, but what we want is to get the ingredients
+    @ingredients = @allergy_profiles.map(&:ingredient)
+    # if allergies and ingredients don't match then (regardless of order), create a new profile and menu
+    if @allergies.sort != @ingredients.sort
+      @new_profile = Profile.create(school: @school)
+      @new_allergy_profiles = @allergies.map { |allergy| AllergyProfile.create(profile: @new_profile, ingredient: allergy) }
       # create menu with the new profile
-
       @new_week_menu = WeekMenu.create(profile: @new_profile, date: @date)
         # create 5 day menus
-
         # if allergies and ingredients match but dates are different, then create a new menu but assign the same profile
         @week_menus = WeekMenu.where(profile: @profile)
         @dates = @week_menus.map(&:date)
