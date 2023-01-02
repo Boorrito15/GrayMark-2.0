@@ -28,17 +28,19 @@ class Spoonacular < ApplicationRecord
     end
     if !@dish_ids.empty?
       @dish_ids_formatted_api = @dish_ids.join(',')
-      url = "https://api.spoonacular.com/recipes/informationBulk?ids=#{@dish_ids_formatted_api}"
+      url = "https://api.spoonacular.com/recipes/informationBulk?apiKey=#{ENV['SPOONACULAR_API']}&ids=#{@dish_ids_formatted_api}"
       ingredients_serialized = URI.open(url).read
       ingredients_raw = JSON.parse(ingredients_serialized)
-
-      ingredients = ingredients_raw[0]["extendedIngredients"]
-
-      ingredients.each do |ingredient|
-        id = ingredient["id"]
-        name = ingredient["nameClean"]
-        ingredient = Ingredient.find_or_create_by(id: id, name: name)
-        DishIngredient.new(ingredient: ingredient, dish: @dish)
+      n = 0
+      @dish_ids.each do |dish, n|
+        ingredients = ingredients_raw[n]["extendedIngredients"]
+        n+=1
+        ingredients.each do |ingredient|
+          id = ingredient["id"]
+          name = ingredient["nameClean"]
+          ingredient = Ingredient.find_or_create_by(id: id, name: name)
+          DishIngredient.new(ingredient: ingredient, dish: @dish)
+        end
       end
     end
   end
