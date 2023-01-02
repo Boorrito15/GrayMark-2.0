@@ -15,59 +15,35 @@ class WeekMenusController < ApplicationController
   end
 
   def create
-    # take in dietician inputs
-    @school = School.find_by(name: "Cheam")
+    # take in dietician inputs PLACEHOLDER FOR TESTING
+    @cuisine = "British"
+    @profiles = Profile.where(school: "Cheam")
     @date = Date.new(2022, 12, 26)
     @allergies = [Ingredient.find_by(name: "Tomatoes"), Ingredient.find_by(name: "Walnuts")]
 
-    # check if the profile already exists
-    @profile = Profile.find_by(school: @school)
-
-    # if profile doesn't exist, create a new one. This is for creating a menu for the very first time
-    if @profile.empty?
-      @new_profile = Profile.create[school: @school]
-      @ingredients = []
-      @allergies.each do |allergy|
-        @new_allergy_profile = AllergyProfile.create[profile: @new_profile, ingredient: allergy]
-        @ingredients << @new_allergy_profile
-      end
-    # if profile exists, pull up the allergy profiles of that profile
-    else
-      @allergy_profiles = AllergyProfile.where(profile: @profile)
-      # this gives me an array of allergy_profiles, but what we want is to get the ingredients
-      @ingredients = []
-      # pull up the ingredients for each allergy profile
-      @allergy_profiles.each do |allergy_profile|
-        @ingredients << allergy_profile.ingredient
-      end
-    end
-    # if allergies and ingredients don't match then, create a new profile and menu
-    if @allergies != @ingredients
-      @new_profile = Profile.create[school: @school]
-      @allergies.each do |allergy|
-        AllergyProfile.create[profile: @new_profile, ingredient: allergy]
-      end
+    # take in dietician inputs DYNAMIC FOR PRODUCTION NEED CLAIRE'S HELP
+    @allergy_profiles = AllergyProfile.where(profile: @school.profile)
+    # this gives me an array of allergy_profiles, but what we want is to get the ingredients
+    @ingredients = @allergy_profiles.map(&:ingredient)
+    # if allergies and ingredients don't match then (regardless of order), create a new profile and menu
+    if @allergies.sort != @ingredients.sort
+      @new_profile = Profile.create(school: @school)
+      @new_allergy_profiles = @allergies.map { |allergy| AllergyProfile.create(profile: @new_profile, ingredient: allergy) }
       # create menu with the new profile
-      @new_week_menu = WeekMenu.create[profile: @new_profile, date: @date]
-      #create 5 day menus
-      # (@date..@date+5.days).each do |date|
-      #   @new_day_menu = DayMenu.create(week_menu:@new_week_menu, date: date)
-      #       MenuDish.create(Dish.)
-
-      # if allergies and ingredients matches but dates are different, then create a new menu but assign the same profile
-      @week_menus = WeekMenu.where(profile: @profile)
-      @dates []
-      @week_menus.each do |week_menu|
-        @dates << week_menu.date
+      @new_week_menu = WeekMenu.create(profile: @new_profile, date: @date)
+        # create 5 day menus
+        # if allergies and ingredients match but dates are different, then create a new menu but assign the same profile
+        @week_menus = WeekMenu.where(profile: @profile)
+        @dates = @week_menus.map(&:date)
+      elsif @dates.exlcude?(@date)
+        WeekMenu.create(profile: @new_profile, date: @date)
+        # if allergies and ingredients matches but dates are the same, then redirect to existing menu
+      else
+        redirect_to week_menu_path(WeekMenu.find_by(date: @date, profile: @profile))
       end
-    elsif @dates.exlcude?(@date)
-      WeekMenu.create[profile: @new_profile, date: @date]
-      # if allergies and ingredients matches but dates are the same, then redirect to existing menu
-    else
-      redirect_to week_menu_path(WeekMenu.find_by(date: @date, profile: @profile))
-    end
   end
 end
+
 
 # TO-DO: create 5 day_menus for Monday to Friday
   # TO-DO: create 3 dishes for each day_menu (1 dish for each course) (Spoonacular API)
