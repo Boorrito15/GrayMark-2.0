@@ -4,10 +4,10 @@ class Ingredient < ApplicationRecord
   validates :name, presence: true
 
   def self.diets
-    diets = ["Gluten Free", "Ketogenic", "Vegetarian", "Vegan", "Pescetarian"]
+    @diets = ["Gluten Free", "Ketogenic", "Vegetarian", "Vegan", "Pescetarian"]
   end
 
   def self.intolerances
-    intolerances = ["Dairy", "Egg", "Gluten", "Grain", "Peanut", "Seafood", "Sesame", "Shellfish", "Soy", "Sulfite", "Tree Nut", "Wheat"]
+    @intolerances = ["Dairy", "Egg", "Gluten", "Grain", "Peanut", "Seafood", "Sesame", "Shellfish", "Soy", "Sulfite", "Tree Nut", "Wheat"]
   end
 end

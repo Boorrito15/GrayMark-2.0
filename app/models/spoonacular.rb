@@ -7,7 +7,7 @@ class Spoonacular < ApplicationRecord
     @mealtype = mealtype
   end
 
-  def get_recipes
+  def search_recipes
     url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&excludeIngredients=#{@excludeIngredients}&type=#{@mealtype}"
     dish_serialized = URI.open(url).read
     dishes = JSON.parse(dish_serialized)
