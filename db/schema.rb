@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_01_205940) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_03_174711) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,6 +59,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_205940) do
     t.index ["week_menu_id"], name: "index_day_menus_on_week_menu_id"
   end
 
+  create_table "diets", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "dish_ingredients", force: :cascade do |t|
     t.bigint "dish_id", null: false
     t.bigint "ingredient_id", null: false
@@ -81,6 +87,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_205940) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "intolerance_profiles", force: :cascade do |t|
+    t.bigint "intolerance_id", null: false
+    t.bigint "profile_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["intolerance_id"], name: "index_intolerance_profiles_on_intolerance_id"
+    t.index ["profile_id"], name: "index_intolerance_profiles_on_profile_id"
+  end
+
+  create_table "intolerances", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "menu_dishes", force: :cascade do |t|
     t.bigint "day_menu_id", null: false
     t.bigint "dish_id", null: false
@@ -92,8 +113,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_205940) do
 
   create_table "profiles", force: :cascade do |t|
     t.bigint "school_id", null: false
+    t.bigint "diet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["diet_id"], name: "index_profiles_on_diet_id"
     t.index ["school_id"], name: "index_profiles_on_school_id"
   end
 
@@ -142,8 +165,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_205940) do
   add_foreign_key "day_menus", "week_menus"
   add_foreign_key "dish_ingredients", "dishes"
   add_foreign_key "dish_ingredients", "ingredients"
+  add_foreign_key "intolerance_profiles", "intolerances"
+  add_foreign_key "intolerance_profiles", "profiles"
   add_foreign_key "menu_dishes", "day_menus"
   add_foreign_key "menu_dishes", "dishes"
+  add_foreign_key "profiles", "diets"
   add_foreign_key "profiles", "schools"
   add_foreign_key "schools", "users"
   add_foreign_key "week_menus", "profiles"
