@@ -3,20 +3,20 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get '/components', to: "pages#components"
 
-  resources :schools, only: %i[index show] do
-    resources :profiles
+  resources :schools, only: %i[index show new create] do
+    resources :profiles, only: %i[index new create]
   end
 
-  resources :profiles, only: %i[index show] do
-    resources :week_menus
-    resources :allergy_profiles
+  resources :profiles, only: %i[index show new create] do
+    resources :week_menus, only: %i[index show new create]
+    resources :allergy_profiles, only: %i[index show new create]
   end
 
-  resources :week_menus do
-    resources :day_menu
+  resources :week_menus, only: %i[show] do
+    resources :day_menus, only: %i[index show new create]
   end
 
-  resources :day_menu do
+  resources :day_menu, only: %i[show] do
     resources :menu_dishes
   end
 
