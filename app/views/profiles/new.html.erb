@@ -2,8 +2,8 @@
   <h1>Submit a new profile for <%= @school.name %></h1>
 
   <%= simple_form_for [@school, @profile] do |f| %>
-    <%= f.input :allergy_profiles, label: "Select diet", collection: Ingredient.diets, input_html: {data: {controller: "slim-select"}, name: "profile[diet]"} %>
-    <%= f.input :allergy_profiles, label: "Select intolerances", collection: Ingredient.intolerances, input_html: {multiple: true, data: {controller: "slim-select"}, name: "profile[intolerances]"} %>
+    <%= f.input :diet, label: "Select diet", collection: Diet.pluck(:name), input_html: {data: {controller: "slim-select"}, name: "profile[diet]"} %>
+    <%= f.input :intolerance_profiles, label: "Select intolerances", collection: Intolerance.pluck(:name), input_html: {multiple: true, data: {controller: "slim-select"}, name: "profile[intolerances]"} %>
     <%= f.input :allergy_profiles, label: "Select ingredients to be excluded from the menu", collection: Ingredient.pluck(:name), input_html: {multiple: true, data: {controller: "slim-select"}, name: "profile[ingredients]"} %>
     <%= f.button :submit, class: "btn btn-primary", value: "Save profile" %>
   <% end %>
