@@ -16,12 +16,18 @@ class WeekMenusController < ApplicationController
 
   def create
     # take in dietician inputs PLACEHOLDER FOR TESTING
-    @cuisine = "British"
-    @profiles = Profile.where(school: "Cheam")
-    @date = Date.new(2022, 12, 26)
-    @allergies = [Ingredient.find_by(name: "Tomatoes"), Ingredient.find_by(name: "Walnuts")]
+    # @cuisine = "British"
+    # @profiles = Profile.where(school: "Cheam")
+    # @date = Date.new(2022, 12, 26)
+    # @allergies = [Ingredient.find_by(name: "Tomatoes"), Ingredient.find_by(name: "Walnuts")]
 
     # take in dietician inputs DYNAMIC FOR PRODUCTION NEED CLAIRE'S HELP
+    @cuisine = params
+    @diet = params[:menu][:diet]
+    @intolerances = params[:menu][:intolerances].reject { |i| i.blank? }
+    @date = 
+    @allergies = params[:menu][:ingredient].values.reject { |id| id.blank? }.map { |id| id.to_i }.reject { |id| id == 0 }
+
     @allergy_profiles = AllergyProfile.where(profile: @school.profile)
     # this gives me an array of allergy_profiles, but what we want is to get the ingredients
     @ingredients = @allergy_profiles.map(&:ingredient)

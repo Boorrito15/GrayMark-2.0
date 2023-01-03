@@ -1,10 +1,10 @@
 <div class="container">
   <h3>Create an Allergy Free Menu</h3>
   <%= simple_form_for [@week_menu] do |f| %>
-    <%= f.input :day_menus, label: "Select cuisine", collection: DayMenu.cuisine, input_html: {multiple: true, data: {controller: "slim-select"}} %>
-    <%= f.input :profile, label: "Select diet", collection: Ingredient.diets, input_html: {data: {controller: "slim-select"}} %>
-    <%= f.input :profile, label: "Select intolerances", collection: Ingredient.intolerances, input_html: {multiple: true, data: {controller: "slim-select"}} %>
-    <%= f.input :profile, label: "Select ingredients to be excluded from the menu", collection: Ingredient.pluck(:name), input_html: {multiple: true, data: {controller: "slim-select"}} %>
+    <%= f.input :day_menus, label: "Select cuisine", collection: DayMenu.cuisine, input_html: {multiple: true, data: {controller: "slim-select"}, name: "menu[cuisine]"} %>
+    <%= f.input :profile, label: "Select diet", collection: Ingredient.diets, input_html: {data: {controller: "slim-select"}, name: "menu[diet]"} %>
+    <%= f.input :profile, label: "Select intolerances", collection: Ingredient.intolerances, input_html: {multiple: true, data: {controller: "slim-select"}, name: "menu[intolerances]"} %>
+    <%= f.input :profile, label: "Select ingredients to be excluded from the menu", collection: Ingredient.pluck(:name), input_html: {multiple: true, data: {controller: "slim-select"}, name: "menu[ingredients]"} %>
     <%= f.button :submit, class: "btn btn-primary", value: "Create Menu" %>
   <% end %>
 </div>
