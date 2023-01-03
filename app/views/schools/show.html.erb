@@ -5,7 +5,6 @@
     <h1><%= @school.name %></h1>
     <h3><%= @school.postcode %></h3>
     <%= link_to "Create new allergy profile", new_school_profile_path(@school.id), class:"btn btn-primary" %>
-
     <%# <%= link_to "Create Menu", new_profile_week_menu, class:"btn btn-primary" %>
   </div>
 
@@ -18,11 +17,8 @@
         <% week_menus[1].each do |week_menu| %>
           <div class = "card">
             <div class ="card-body">
-              <% ingredients = [] %>
-              <% week_menu.profile.allergy_profiles.each do |allergy_profile| %>
-                <% ingredients << allergy_profile.ingredient.name.capitalize %>
-              <% end %>
-              <h5><%= ingredients.join(', ') %> free </h5>
+              <% @diet = week_menu.profile.diet %>
+              <h5><%= @diet.name %> - <%= @intolerances.join(', ') %> - <%= @allergies.join(', ') %> free </h5>
               <br><br>
               <%= link_to "View menu", week_menu_path(week_menu), class: "btn btn-primary" %>
             </div>

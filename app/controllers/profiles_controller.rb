@@ -9,18 +9,18 @@ class ProfilesController < ApplicationController
     @intolerances = params[:profile][:intolerances]
     @allergies = params[:profile][:ingredients]
 
-    @combination = @diet + @intolerances + @allergies
+    @profile = Profile.create(school: @school, diet: @diet)
 
-    @profile = Profile.create(school: @school)
-
-    AllergyProfile.create(profile: @profile, ingredient: @diet)
-
-    @intolerances.each do |intolerance|
-      AllergyProfile.create(profile: @profile, ingredient: intolerance)
+    unless @intolerances.empty?
+      @intolerances.each do |intolerance|
+      IntoleranceProfile.create(profile: @profile, ingredient: intolerance)
+      end
     end
 
-    @allergies.each do |allergy|
-      AllergyProfile.create(profile: @profile, ingredient: allergy)
+    unless @allergies.empty?
+      @allergies.each do |allergy|
+        AllergyProfile.create(profile: @profile, ingredient: allergy)
+      end
     end
   end
 end
