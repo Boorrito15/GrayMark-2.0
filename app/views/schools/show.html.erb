@@ -4,6 +4,8 @@
     <br><br>
     <h1><%= @school.name %></h1>
     <h3><%= @school.postcode %></h3>
+    <%= link_to "Create new allergy profile", new_school_profile_path(@school.id), class:"btn btn-primary" %>
+
     <%# <%= link_to "Create Menu", new_profile_week_menu, class:"btn btn-primary" %>
   </div>
 

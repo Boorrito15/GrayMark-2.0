@@ -5,9 +5,7 @@ class SchoolsController < ApplicationController
 
   def show
     @school = School.find(params[:id])
-
     @profiles = Profile.where(school: @school)
-
     @week_menus = []
     @profiles.each do |profile|
       @week_menus << WeekMenu.where(profile: profile)
