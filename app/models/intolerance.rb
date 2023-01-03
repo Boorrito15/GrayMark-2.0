@@ -1,0 +1,2 @@
+class Intolerance < ApplicationRecord
+end

@@ -5,6 +5,8 @@ require "open-uri"
 puts 'Cleaning database'
 DishIngredient.destroy_all
 AllergyProfile.destroy_all
+Diet.destroy_all
+Intolerance.destroy_all
 Ingredient.destroy_all
 MenuDish.destroy_all
 Dish.destroy_all
@@ -16,7 +18,7 @@ User.destroy_all
 
 # USER
   puts 'Creating user'
-
+  
   dietitian = User.create!(first_name: 'Grace', last_name: 'Allmark', email: 'ga@gmail.com', password: '123123')
 
 # SCHOOLS
@@ -51,6 +53,23 @@ User.destroy_all
   file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669726023/rfqojlnjwiyttmu5qv0a.png')
   @kings.photo.attach(io: file, filename: 'kings.jpg', content_type: 'image/jpg')
   @kings.save
+
+# DIETS
+  puts 'Creating diets'
+
+  ["Gluten Free", "Ketogenic", "Vegetarian", "Lacto-Vegetarian", "Ovo-Vegetarian", "Vegan", "Pescetarian", "Paleo", "Primal", "Low FODMAP", "Whole30"].each do |diet|
+    Diet.create(name: diet)
+  end
+
+
+
+# INTOLERANCES
+  puts 'Creating intolerances'
+
+  ["Dairy", "Egg", "Gluten", "Grain", "Peanut", "Seafood", "Sesame", "Shellfish", "Soy", "Sulfite", "Tree Nut", "Wheat"].each do |intolerance|
+    Intolerance.create(name: intolerance)
+  end
+
 
 # INGREDIENTS
   puts 'Creating ingredients'
@@ -102,8 +121,8 @@ User.destroy_all
   puts 'Creating profiles'
 
   School.all.each do |school|
-    @profile_1_school = Profile.create(school: school)
-    @profile_2_school = Profile.create(school: school)
+    @profile_1_school = Profile.create(school: school, diet: Diet.all.sample)
+    @profile_2_school = Profile.create(school: school, diet: Diet.all.sample)
   end
 
 
@@ -115,6 +134,8 @@ User.destroy_all
   Profile.all.each do |profile|
     @allergy_profile_1_profile = AllergyProfile.create(profile: profile, ingredient: Ingredient.all.sample)
     @allergy_profile_2_profile = AllergyProfile.create(profile: profile, ingredient: Ingredient.all.sample)
+    intolerance_profile_1_profile = IntoleranceProfile.create(profile: profile, intolerance: Intolerance.all.sample)
+    intolerance_profile_2_profile = IntoleranceProfile.create(profile: profile, intolerance: Intolerance.all.sample)
     @week_menu_dec26_allergy_profile = WeekMenu.create(date: Date.new(2022, 12, 26), profile: profile)
     @week_menu_dec5_allergy_profile = WeekMenu.create(date: Date.new(2022, 12, 5), profile: profile)
   end
