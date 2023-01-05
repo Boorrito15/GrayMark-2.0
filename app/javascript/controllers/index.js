@@ -15,3 +15,6 @@ application.register("navbar", NavbarController)
 
 import SlimSelectController from "./slim_select_controller"
 application.register("slim-select", SlimSelectController)
+
+import TomSelectController from "./tom_select_controller"
+application.register("tom-select", TomSelectController)
