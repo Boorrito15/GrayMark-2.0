@@ -45,6 +45,16 @@ class Spoonacular < ApplicationRecord
     end
   end
 end
-# In the original app, a week_menu would use over 15 calls for the menus and 15 more for the ingredients. 1 dish = 2 calls total 30 calls
+# In the original app, 1 allergy_profile/week_menu would use over 30 calls
+# 15 dishes = 15 calls
+# 15 ingredient sets = 15 calls
 
-# We want to get this number down to 1 week_menu = 3 calls and ingredients = 3 calls. 1 dish = 1/5 calls 1 ingredient 1/5 calls total 6 calls
+# This app, 1 allergy_profile/week_menu would use 6 calls
+# 15 dishes = 3 calls
+# 15 ingredient sets = 3 calls
+
+# This is then multiplied by the number of terms and intervals.
+# A school has 3 terms and 4 intervals in a term
+# 1 year of menus would equal to 180 calls OR 48 calls per allergy profile
+
+# But we can make it even more efficient
