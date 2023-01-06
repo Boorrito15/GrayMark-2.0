@@ -1,9 +1,9 @@
 <div class="container">
   <h1>Submit a new profile for <%= @school.name %></h1>
   <%= simple_form_for [@school, @profile] do |f| %>
-    <%= f.input :diet, label: "Select diet", collection: Diet.pluck(:name), input_html: {data: {controller: "tom-select"}, name: "profile[diet]", class: "input"} %>
-    <%= f.input :intolerance_profiles, label: "Select intolerances", collection: Intolerance.pluck(:name), input_html: {multiple: true, data: {controller: "tom-select"}, name: "profile[intolerances]", class: "input"} %>
-    <%= f.input :allergy_profiles, label: "Select ingredients to be excluded from the menu", collection: Ingredient.pluck(:name), input_html: {multiple: true, data: {controller: "tom-select"}, name: "profile[ingredients]", class: "input"} %>
+    <%= f.input :diet, label: "Select diet", collection: Diet.all, input_html: {data: {controller: "tom-select"}, name: "diet", class: "input", value: Diet.find_by(name:"Vegan")} %>
+    <%= f.input :intolerances, label: "Select intolerances", collection: Intolerance.all, input_html: {multiple: true, data: {controller: "tom-select"}, name: "intolerances[]", class: "input", value: [Intolerance.find_by(name:"Wheat"), Intolerance.find_by(name:"Peanut")]} %>
+    <%= f.input :ingredients, label: "Select ingredients to be excluded from the menu", collection: Ingredient.all.sort, input_html: {multiple: true, data: {controller: "tom-select"}, name: "ingredients[]", class: "input", value: [Ingredient.find_by(name:"Maple Syrup"), Ingredient.find_by(name:"Cherry pie filling")]} %>
     <%= f.button :submit, class: "btn btn-primary", value: "Save profile" %>
   <% end %>
 </div>
