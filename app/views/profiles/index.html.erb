@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Manage <%= @school.name %>'s profiles </h1>
+  <div class="row justify-content-between">
+    <div class="col-4">
+    </div>
+    <div class="col-4 text-end">
+      <%= link_to "Create new allergy profile", new_school_profile_path(@school.id), class:"btn btn-primary" %>
+    </div>
+  </div>
+  <br><br>
+  <div class = "cards">
+      <% @profiles.each do |profile| %>
+        <% @profile_intolerances = []
+        IntoleranceProfile.where(profile: profile).each do |intolerance_profile|
+          @profile_intolerances << intolerance_profile.intolerance.name
+        end
+        @profile_allergies = []
+        AllergyProfile.where(profile: profile).each do |allergy_profile|
+          @profile_allergies << allergy_profile.ingredient.name
+        end %>
+        <div class = "card">
+          <div class ="card-body">
+            <p> <%= @profile_intolerances.join(', ') %>, <%= @profile_allergies.join(', ') %> free | <%= profile.diet.name %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>

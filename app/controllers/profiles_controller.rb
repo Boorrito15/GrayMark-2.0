@@ -1,4 +1,9 @@
 class ProfilesController < ApplicationController
+  def index
+    @school = School.find(params[:school_id])
+    @profiles = Profile.where(school: @school)
+  end
+
   def new
     @school = School.find(params[:school_id])
     @profile = Profile.new(school: @School)

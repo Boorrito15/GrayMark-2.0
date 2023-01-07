@@ -4,7 +4,7 @@
     <br><br>
     <h1><%= @school.name %></h1>
     <h3><%= @school.postcode %></h3>
-    <%# <%= link_to "Manage profiles", new_profile_week_menu, class:"btn btn-primary" %>
+    <%= link_to "Manage profiles", school_profiles_path(@school), class:"btn btn-primary" %>
   </div>
 
   <div>
