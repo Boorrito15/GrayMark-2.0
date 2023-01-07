@@ -20,16 +20,16 @@ class ProfilesController < ApplicationController
     @profile = @profile_intolerance.joins(:allergy_profiles).where(allergy_profiles: {ingredient_id: @allergies}).uniq
 
     # IF PROFILE DOES NOT EXIST, MAKE IT
-    if @profile.nil?
+    if @profile.empty?
       @profile = Profile.create!(school: @school, diet: @diet)
-      unless @intolerances.nil?
+      unless @intolerances.empty?
         @intolerances.each do |intolerance|
-          IntoleranceProfile.create(profile: @profile, intolerance: Intolerance(intolerance))
+          IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))
         end
       end
-      unless @allergies.nil?
+      unless @allergies.empty?
         @allergies.each do |allergy|
-          AllergyProfile.create(profile: @profile, ingredient: allergy)
+          AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
         end
       end
       flash.alert = "This profile has been added to #{@school.name}."
@@ -37,6 +37,7 @@ class ProfilesController < ApplicationController
     # IF PROFILE EXISTs, GO TO IT
     else
       flash.alert = "This profile already exists for this #{@school.name}."
+      redirect_to school_path(@school)
     end
   end
 end
