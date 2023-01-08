@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+
   def index
     @school = School.find(params[:school_id])
     @profiles = Profile.where(school: @school)
@@ -17,11 +18,11 @@ class ProfilesController < ApplicationController
     @allergies = params[:ingredients].reject { |i| i.blank? }.sort
 
     # FIND IF PROFILE EXISTS
-      # 1) List all profiles that belong to "Cheam" and is "Vegetarian"
+    # 1) List all profiles that belong to "Cheam" and is "Vegetarian"
     @profiles = @school.profiles.where(diet: @diet)
-      # 2) Are there any profiles with the same intolerances?
+    # 2) Are there any profiles with the same intolerances?
     @profile_intolerance = @profiles.joins(:intolerance_profiles).where(intolerance_profiles: {intolerance_id: @intolerances}).distinct
-      # 3) If so, are there any profiles with the same ingredients
+    # 3) If so, are there any profiles with the same ingredients
     @profile = @profile_intolerance.joins(:allergy_profiles).where(allergy_profiles: {ingredient_id: @allergies}).uniq
 
     # IF PROFILE DOES NOT EXIST, MAKE IT
@@ -39,10 +40,27 @@ class ProfilesController < ApplicationController
       end
       flash.alert = "This profile has been added to #{@school.name}."
       redirect_to school_path(@school)
-    # IF PROFILE EXISTs, GO TO IT
+      # IF PROFILE EXISTs, GO TO IT
     else
       flash.alert = "This profile already exists for this #{@school.name}."
       redirect_to school_path(@school)
     end
+  end
+
+  def edit
+    @profile = Profile.find(params[:id])
+    @school = @profile.school
+    @diet = @profile.diet
+    @intolerances = @profile.intolerances.map(&:name)
+    @allergies = @profile.ingredients.map(&:name)
+    # raise
+  end
+
+  def update
+    @profile = Profile.find(params[:id])
+    # @school = School.find(params[:school_id])
+    # @diet = Diet.find_by(id: params[:diet].to_i)
+    # @intolerances = params[:intolerances].reject { |i| i.blank? }.sort
+    # @allergies = params[:ingredients].reject { |i| i.blank? }.sort
   end
 end

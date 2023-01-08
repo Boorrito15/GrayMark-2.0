@@ -4,6 +4,6 @@
     <%= f.input :diet, label: "Select diet", collection: Diet.all, input_html: {data: {controller: "tom-select"}, name: "diet", class: "input"} %>
     <%= f.input :intolerances, label: "Select intolerances", collection: Intolerance.all, input_html: {multiple: true, data: {controller: "tom-select"}, name: "intolerances[]", class: "input"} %>
     <%= f.input :ingredients, label: "Select ingredients to be excluded from the menu", collection: Ingredient.all.sort, input_html: {multiple: true, data: {controller: "tom-select"}, name: "ingredients[]", class: "input"} %>
-    <%= f.button :submit, class: "btn btn-primary", value: "Save profile" %>
+    <%= f.button :submit, class: "btn btn-primary", value: "Add profile" %>
   <% end %>
 </div>
