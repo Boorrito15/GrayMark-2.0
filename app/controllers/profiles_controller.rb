@@ -1,5 +1,4 @@
 class ProfilesController < ApplicationController
-
   def index
     @school = School.find(params[:school_id])
     @profiles = Profile.where(school: @school)
@@ -26,24 +25,23 @@ class ProfilesController < ApplicationController
     @profile = @profile_intolerance.joins(:allergy_profiles).where(allergy_profiles: {ingredient_id: @allergies}).uniq
 
     # IF PROFILE DOES NOT EXIST, MAKE IT
-    if @profile.empty?
+    if @profile.nil?
       @profile = Profile.create!(school: @school, diet: @diet)
-      unless @intolerances.empty?
+      unless @intolerances.nil?
         @intolerances.each do |intolerance|
           IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))
         end
       end
-      unless @allergies.empty?
+      unless @allergies.nil?
         @allergies.each do |allergy|
           AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
         end
       end
       flash.alert = "This profile has been added to #{@school.name}."
-      redirect_to school_path(@school)
+      redirect_to school_profiles_path(@school)
       # IF PROFILE EXISTs, GO TO IT
     else
       flash.alert = "This profile already exists for this #{@school.name}."
-      redirect_to school_path(@school)
     end
   end
 
@@ -58,9 +56,28 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = Profile.find(params[:id])
-    # @school = School.find(params[:school_id])
-    # @diet = Diet.find_by(id: params[:diet].to_i)
-    # @intolerances = params[:intolerances].reject { |i| i.blank? }.sort
-    # @allergies = params[:ingredients].reject { |i| i.blank? }.sort
+    @diet_input = params[:diet]
+    @diet = Diet.find_by(id: @diet_input)
+    @intolerances = params[:intolerances].reject { |i| i.blank? }.sort
+    @allergies = params[:ingredients].reject { |i| i.blank? }.sort
+
+    @profile.diet = @diet
+    @profile.save
+
+    @profile.intolerance_profiles.destroy_all
+    @intolerances.each do |intolerance|
+      IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))
+    end
+
+    @profile.allergy_profiles.destroy_all
+    @allergies.each do |allergy|
+      AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
+    end
+    # raise
+    flash.alert = "Profile has been updated successfully."
+    redirect_to school_profiles_path(@profile.school)
   end
+
+  private
+
 end

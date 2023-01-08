@@ -30,7 +30,7 @@ class WeekMenusController < ApplicationController
     @allergies = params[:week_menu][:ingredient]
 
     profile = @week_menu.profiles.joins(:allergy_profiles).where(allergy_profiles: { ingredient_id: @allergies }).group('profiles.id').having('count(profiles.id) >= ?', @allergies.size)
-    raise
+    
     @allergy_profiles = AllergyProfile.where(profile: profile)
     # this gives me an array of allergy_profiles, but what we want is to get the ingredients
     @ingredients = @allergy_profiles.map(&:ingredient)
