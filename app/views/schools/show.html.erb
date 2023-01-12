@@ -7,37 +7,39 @@
     <%= link_to "Manage profiles", school_profiles_path(@school), class:"btn btn-primary" %>
   </div>
 
-  <div>
-    <div class="row justify-content-between">
-      <div class="col-4">
-        <h3> Profiles </h3>
-      </div>
-      <div class="col-4 text-end">
-        <%= link_to "Create new allergy profile", new_school_profile_path(@school.id), class:"btn btn-primary" %>
-      </div>
-    </div>
-    <br>
-  </div>
-  <div class = "cards">
-    <% @profiles.each do |profile| %>
-      <% @profile_intolerances = []
-      IntoleranceProfile.where(profile: profile).each do |intolerance_profile|
-        @profile_intolerances << intolerance_profile.intolerance.name
-      end
-      @profile_allergies = []
-      AllergyProfile.where(profile: profile).each do |allergy_profile|
-        @profile_allergies << allergy_profile.ingredient.name
-      end %>
-      <div class = "card">
-        <div class ="card-body">
-          <p> <%= @profile_intolerances.join(', ') %>, <%= @profile_allergies.join(', ') %> free | <%= profile.diet.name %></p>
-          <%# <% raise %>
+  <% if false %>
+    <div>
+      <div class="row justify-content-between">
+        <div class="col-4">
+          <h3> Profiles </h3>
+        </div>
+        <div class="col-4 text-end">
+          <%= link_to "Create new allergy profile", new_school_profile_path(@school.id), class:"btn btn-primary" %>
         </div>
       </div>
-    <% end %>
-  </div>
-<br><br>
-  <% if false %>
+      <br>
+    </div>
+    <div class = "cards">
+      <% @profiles.each do |profile| %>
+        <% @profile_intolerances = []
+        IntoleranceProfile.where(profile: profile).each do |intolerance_profile|
+          @profile_intolerances << intolerance_profile.intolerance.name
+        end
+        @profile_allergies = []
+        AllergyProfile.where(profile: profile).each do |allergy_profile|
+          @profile_allergies << allergy_profile.ingredient.name
+        end %>
+        <div class = "card">
+          <div class ="card-body">
+            <p> <%= @profile_intolerances.join(', ') %>, <%= @profile_allergies.join(', ') %> free | <%= profile.diet.name %></p>
+            <%# <% raise %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <br><br>
+  <% end %>
+  <%# if false %>
     <div>
       <% @week_menus_by_date.each do |week_menus| %>
         <br>
@@ -48,7 +50,7 @@
             <div class = "card">
               <div class ="card-body">
                 <% @diet = week_menu.profile.diet %>
-                <h5><%= @diet.name %> - <%= @intolerances.join(', ') %> - <%= @allergies.join(', ') %> free </h5>
+                <p> <%= @intolerances.join(', ') %> - <%= @allergies.join(', ') %> free | <%= @diet.name %></p>
                 <br><br>
                 <%= link_to "View menu", week_menu_path(week_menu), class: "btn btn-primary" %>
               </div>
@@ -58,7 +60,7 @@
         <br><br>
       <% end %>
     </div>
-  <% end %>
+  <%# end %>
 </div>
 
 <%# .menus.group_by { |menu| menu.menu_date.strftime("%A") } %>
