@@ -2,6 +2,8 @@ class ProfilesController < ApplicationController
   def index
     @school = School.find(params[:school_id])
     @profiles = Profile.where(school: @school)
+    @active_profiles = @profiles.where(active: true)
+    @inactive_profiles = @profiles.where(active: false)
   end
 
   def new
@@ -77,7 +79,4 @@ class ProfilesController < ApplicationController
     flash.alert = "Profile has been updated successfully."
     redirect_to school_profiles_path(@profile.school)
   end
-
-  private
-
 end

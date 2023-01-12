@@ -113,9 +113,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_08_210607) do
 
   create_table "profiles", force: :cascade do |t|
     t.bigint "school_id", null: false
-    t.bigint "diet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "diet_id"
     t.boolean "active", default: true
     t.index ["diet_id"], name: "index_profiles_on_diet_id"
     t.index ["school_id"], name: "index_profiles_on_school_id"
