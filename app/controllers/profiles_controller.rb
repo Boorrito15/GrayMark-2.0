@@ -24,11 +24,11 @@ class ProfilesController < ApplicationController
     # 2) Are there any profiles with the same intolerances?
     @profile_intolerance = @profiles.joins(:intolerance_profiles).where(intolerance_profiles: {intolerance_id: @intolerances}).distinct
     # 3) If so, are there any profiles with the same ingredients
-    @profile = @profile_intolerance.joins(:allergy_profiles).where(allergy_profiles: {ingredient_id: @allergies}).uniq
+    @profile = @profile_intolerance.joins(:allergy_profiles).where(allergy_profiles: {ingredient_id: @allergies} ).distinct
 
     # IF PROFILE DOES NOT EXIST, MAKE IT
-    if @profile.nil?
-      @profile = Profile.create!(school: @school, diet: @diet)
+    if @profile.empty?
+      @profile = Profile.create!(school: @school, diet: @diet, active: true)
       unless @intolerances.nil?
         @intolerances.each do |intolerance|
           IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))

@@ -3,7 +3,7 @@
   <%= simple_form_for [@week_menu] do |f| %>
     <%= f.input :date, as: :date, label: "Start date", input_html: {data: {controller: "slim-select"}, name: "week_menu[date]"} %>
     <%= f.input :date, as: :date, label: "End date", input_html: {data: {controller: "slim-select"}, name: "week_menu[date]"} %>
-
+  
 
     <%= f.input :day_menus, label: "Select cuisine", collection: DayMenu.cuisine, input_html: {multiple: true, data: {controller: "slim-select"}, name: "week_menu[cuisine]"} %>
     <%= f.input :date, as: :date, label: "Select allergy profile", input_html: {data: {controller: "slim-select"}, name: "week_menu[profile]"} %>
