@@ -14,11 +14,11 @@ class SchoolsController < ApplicationController
 
     @profiles.each do |profile|
       @week_menus << WeekMenu.where(profile: profile)
-      IntoleranceProfile.where(profile: profile).each do |profile|
-        @intolerances << profile.intolerance.name
+      IntoleranceProfile.where(profile: profile).each do |intolerance_profile|
+        @intolerances << intolerance_profile.intolerance.name
       end
-      AllergyProfile.where(profile: profile).each do |profile|
-        @allergies << profile.ingredient.name
+      AllergyProfile.where(profile: profile).each do |allergy_profile|
+        @allergies << allergy_profile.ingredient.name
       end
     end
       # raise

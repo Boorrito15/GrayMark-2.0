@@ -1,9 +1,11 @@
 <div class="container">
   <h1>Edit <%= @intolerances.join(', ') %> <%= @allergies.join(', ') %> free <%= @diet.name %> for <%= @school.name %></h1>
   <%= simple_form_for [@school, @profile] do |f| %>
-    <%= f.input :diet, label: "Select diet", collection: Diet.all, input_html: {data: {controller: "tom-select"}, name: "diet", class: "input"} %>
-    <%= f.input :intolerances, label: "Select intolerances", collection: Intolerance.all, input_html: {multiple: true, data: {controller: "tom-select"}, name: "intolerances[]", value: @intolerances, class: "input"} %>
-    <%= f.input :ingredients, label: "Select ingredients to be excluded from the menu", collection: Ingredient.all.sort, input_html: {multiple: true, data: {controller: "tom-select"}, name: "ingredients[]", value: @allergies, class: "input"} %>
+    <%= f.association :diet, label: "Select diet", collection: Diet.all, selected: Diet.find(5), input_html: {data: {controller: "tom-select"}, name: "diet", class: "input"} %>
+    <%= f.input :intolerances, label: "Select intolerances", collection: Intolerance.all, selected: @intolerances, input_html: {multiple: true, data: {controller: "tom-select"}, name: "intolerances[]", class: "input"} %>
+    <%= f.input :ingredients, label: "Select ingredients to be excluded from the menu", collection: Ingredient.all.sort, selected: @allergies, input_html: {multiple: true, data: {controller: "tom-select"}, name: "ingredients[]", value: @allergies, class: "input"} %>
+    <%= f.input :active, as: :boolean, boolean_style: :inline, input_html: {name: "active", checked: @active, class: "form-check-label"} %>
+    <br>
     <%= f.button :submit, class: "btn btn-primary", value: "Save profile" %>
   <% end %>
 </div>

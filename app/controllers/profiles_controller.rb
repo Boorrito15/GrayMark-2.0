@@ -35,7 +35,6 @@ class ProfilesController < ApplicationController
           IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))
         end
       end
-      raise
       unless @allergies.nil?
         @allergies.each do |allergy|
           AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
@@ -55,7 +54,7 @@ class ProfilesController < ApplicationController
     @diet = @profile.diet
     @intolerances = @profile.intolerances.map(&:name)
     @allergies = @profile.ingredients.map(&:name)
-    # raise
+    @active = @profile.active
   end
 
   def update
@@ -64,6 +63,7 @@ class ProfilesController < ApplicationController
     @diet = Diet.find_by(id: @diet_input)
     @intolerances = params[:intolerances].reject { |i| i.blank? }.sort
     @allergies = params[:ingredients].reject { |i| i.blank? }.sort
+    @active = params[:active]
 
     @profile.diet = @diet
     @profile.save
