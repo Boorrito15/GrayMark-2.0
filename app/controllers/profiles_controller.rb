@@ -17,6 +17,7 @@ class ProfilesController < ApplicationController
     @diet = Diet.find_by(id: params[:diet].to_i)
     @intolerances = params[:intolerances].reject { |i| i.blank? }.sort
     @allergies = params[:ingredients].reject { |i| i.blank? }.sort
+    @active = params[:active]
 
     # FIND IF PROFILE EXISTS
     # 1) List all profiles that belong to "Cheam" and is "Vegetarian"
@@ -28,12 +29,13 @@ class ProfilesController < ApplicationController
 
     # IF PROFILE DOES NOT EXIST, MAKE IT
     if @profile.empty?
-      @profile = Profile.create!(school: @school, diet: @diet, active: true)
+      @profile = Profile.create!(school: @school, diet: @diet, active: @active)
       unless @intolerances.nil?
         @intolerances.each do |intolerance|
           IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))
         end
       end
+      raise
       unless @allergies.nil?
         @allergies.each do |allergy|
           AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
