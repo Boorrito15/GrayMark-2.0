@@ -5,7 +5,7 @@ class SchoolsController < ApplicationController
 
   def show
     @school = School.find(params[:id])
-    @profiles = Profile.where(school: @school)
+    @profiles = Profile.where(school: @school, active: true)
     @week_menus = []
     @intolerance_profiles = []
     @allergy_profiles = []
