@@ -35,7 +35,6 @@ class ProfilesController < ApplicationController
           IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))
         end
       end
-      raise
       unless @allergies.nil?
         @allergies.each do |allergy|
           AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
@@ -53,30 +52,43 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
     @school = @profile.school
     @diet = @profile.diet
-    @intolerances = @profile.intolerances.map(&:name)
-    @allergies = @profile.ingredients.map(&:name)
-    # raise
+    @intolerances_name = @profile.intolerances.map(&:name)
+    @allergies_name = @profile.ingredients.map(&:name)
+    @intolerances = @profile.intolerances.map
+    @allergies = @profile.ingredients.map
+    @active = @profile.active
   end
 
   def update
     @profile = Profile.find(params[:id])
-    @diet_input = params[:diet]
-    @diet = Diet.find_by(id: @diet_input)
+    @diet = Diet.find(params[:diet])
     @intolerances = params[:intolerances].reject { |i| i.blank? }.sort
     @allergies = params[:ingredients].reject { |i| i.blank? }.sort
+    @active = params[:active]
 
-    @profile.diet = @diet
-    @profile.save
+    # IF NOTHING CHANGES
+    if @profile.diet == @diet && @profile.intolerances.map(&:id) == @intolerances && @profile.ingredients.map(&:id) == @allergies
+    # IF ONLY ACTIVE IS CHANGES, DON'T DELETE ASSOCIATED WEEK_MENUS, INTOLERANCE, AND ALLERGY PROFILES
+    elsif @profile.diet != @diet
+      @profile.update(diet: @diet, active: @active)
+    
+    # IF DIET, INTOLERANCES, OR ALLERGIES CHANGE, DELETE ASSOCIATED WEEK_MENUS, INTOLERANCE, AND ALLERGY PROFILES AND CREATE NEW ONES
+    else
+      @profile.update(diet: @diet, active: @active)
+      @profile.intolerance_profiles.destroy_all
+      @intolerances.each do |intolerance|
+        IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))
+      end
 
-    @profile.intolerance_profiles.destroy_all
-    @intolerances.each do |intolerance|
-      IntoleranceProfile.create(profile: @profile, intolerance: Intolerance.find_by(id: intolerance))
+      @profile.allergy_profiles.destroy_all
+      @allergies.each do |allergy|
+        AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
+      end
+      raise
     end
 
-    @profile.allergy_profiles.destroy_all
-    @allergies.each do |allergy|
-      AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
-    end
+
+
     # raise
     flash.alert = "Profile has been updated successfully."
     redirect_to school_profiles_path(@profile.school)
