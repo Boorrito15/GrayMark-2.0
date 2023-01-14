@@ -5,6 +5,6 @@ class Profile < ApplicationRecord
   has_many :intolerances, through: :intolerance_profiles
   has_many :allergy_profiles, dependent: :destroy
   has_many :ingredients, through: :allergy_profiles
-  has_many :week_menus
+  has_many :week_menus, dependent: :destroy
   has_many :day_menus, through: :week_menus
 end
