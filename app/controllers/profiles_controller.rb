@@ -71,7 +71,7 @@ class ProfilesController < ApplicationController
     # IF ONLY ACTIVE IS CHANGES, DON'T DELETE ASSOCIATED WEEK_MENUS, INTOLERANCE, AND ALLERGY PROFILES
     elsif @profile.diet != @diet
       @profile.update(diet: @diet, active: @active)
-      raise
+    
     # IF DIET, INTOLERANCES, OR ALLERGIES CHANGE, DELETE ASSOCIATED WEEK_MENUS, INTOLERANCE, AND ALLERGY PROFILES AND CREATE NEW ONES
     else
       @profile.update(diet: @diet, active: @active)
