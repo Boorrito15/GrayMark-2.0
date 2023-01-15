@@ -1,20 +1,10 @@
 class WeekMenusController < ApplicationController
   def index
     @school = School.find(params[:school_id])
-    @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school })
-    @profiles = Profile.where(school: @school)
-    @menu_intolerances = []
-    @menu_allergies = []
-
-    @week_menus.each do |menu|
-      menu_profile = menu.profile
-      IntoleranceProfile.where(profile: menu_profile).each do |intolerance_profile|
-        @menu_intolerances << intolerance_profile.intolerance.name
-      end
-      AllergyProfile.where(profile: menu_profile).each do |allergy_profile|
-        @menu_allergies << allergy_profile.ingredient.name
-      end
-    end
+    @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
+    @profiles = Profile.where(school: @school, active: true)
+    @current_menus = @week_menus.select { |week_menu| week_menu.date > Date.today-28 }
+    @past_menus = @week_menus.select { |week_menu| week_menu.date < Date.today-28 }
   end
 
   def show
@@ -34,13 +24,7 @@ class WeekMenusController < ApplicationController
   end
 
   def create
-    # take in dietician inputs PLACEHOLDER FOR TESTING
-    # @cuisine = "British"
     @profiles = Profile.where(school: "Cheam")
-    # @date = Date.new(2022, 12, 26)
-    # @allergies = [Ingredient.find_by(name: "Tomatoes"), Ingredient.find_by(name: "Walnuts")]
-
-    # take in dietician inputs DYNAMIC FOR PRODUCTION NEED CLAIRE'S HELP
     @date = params[:week_menu][:date]
     @cuisine = params[:week_menu][:cuisine]
     @diet = params[:week_menu][:diet]

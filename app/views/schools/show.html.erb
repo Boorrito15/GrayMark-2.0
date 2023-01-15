@@ -59,13 +59,22 @@
     </div>
     <br><br>
   <% end %>
-  <%# if false %>
-    <div>
-      <% @current_menus.each do |week_menu| %>
-        <br>
-        <h3><%= week_menu.date.strftime("%d %B %Y") %> to <%= (week_menu.date+18.days).strftime("%d %B %Y") %></h3>
-        <br>
-        <div class = "cards">
+
+  <div>
+    <h3>Current menus (<%= @current_menus.first.date.strftime("%d %B %Y") %> to <%= (@current_menus.first.date+18.days).strftime("%d %B %Y") %>)</h3>
+    <br><br>
+      <div class = "cards">
+        <% @current_menus.each do |week_menu| %>
+          <% @menu_profile = week_menu.profile
+          @menu_diet = @menu_profile.diet
+          @menu_intolerances = []
+          IntoleranceProfile.where(profile: @menu_profile).each do |intolerance_profile|
+            @menu_intolerances << intolerance_profile.intolerance.name
+          end
+          @menu_allergies = []
+          AllergyProfile.where(profile: @menu_profile).each do |allergy_profile|
+            @menu_allergies << allergy_profile.ingredient.name
+          end %>
           <div class = "card">
             <div class ="card-body">
               <% @diet = week_menu.profile.diet %>
@@ -74,9 +83,7 @@
               <%= link_to "View menu", week_menu_path(week_menu), class: "btn btn-primary" %>
             </div>
           </div>
-        </div>
-        <br><br>
-      <% end %>
-    </div>
-  <%# end %>
+        <% end %>
+      </div>
+  </div>
 </div>
