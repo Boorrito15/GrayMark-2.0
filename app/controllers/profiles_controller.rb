@@ -71,7 +71,7 @@ class ProfilesController < ApplicationController
     # IF ONLY ACTIVE IS CHANGES, DON'T DELETE ASSOCIATED WEEK_MENUS, INTOLERANCE, AND ALLERGY PROFILES
     elsif @profile.diet != @diet
       @profile.update(diet: @diet, active: @active)
-    
+
     # IF DIET, INTOLERANCES, OR ALLERGIES CHANGE, DELETE ASSOCIATED WEEK_MENUS, INTOLERANCE, AND ALLERGY PROFILES AND CREATE NEW ONES
     else
       @profile.update(diet: @diet, active: @active)
@@ -84,10 +84,7 @@ class ProfilesController < ApplicationController
       @allergies.each do |allergy|
         AllergyProfile.create(profile: @profile, ingredient: Ingredient.find_by(id: allergy))
       end
-      raise
     end
-
-
 
     # raise
     flash.alert = "Profile has been updated successfully."
