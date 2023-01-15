@@ -1,4 +1,22 @@
 class WeekMenusController < ApplicationController
+  def index
+    @school = School.find(params[:school_id])
+    @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school })
+    @profiles = Profile.where(school: @school)
+    @menu_intolerances = []
+    @menu_allergies = []
+
+    @week_menus.each do |menu|
+      menu_profile = menu.profile
+      IntoleranceProfile.where(profile: menu_profile).each do |intolerance_profile|
+        @menu_intolerances << intolerance_profile.intolerance.name
+      end
+      AllergyProfile.where(profile: menu_profile).each do |allergy_profile|
+        @menu_allergies << allergy_profile.ingredient.name
+      end
+    end
+  end
+
   def show
     @week_menu = WeekMenu.find(params[:id])
     @school = @week_menu.profile.school
@@ -30,7 +48,7 @@ class WeekMenusController < ApplicationController
     @allergies = params[:week_menu][:ingredient]
 
     profile = @week_menu.profiles.joins(:allergy_profiles).where(allergy_profiles: { ingredient_id: @allergies }).group('profiles.id').having('count(profiles.id) >= ?', @allergies.size)
-    
+
     @allergy_profiles = AllergyProfile.where(profile: profile)
     # this gives me an array of allergy_profiles, but what we want is to get the ingredients
     @ingredients = @allergy_profiles.map(&:ingredient)

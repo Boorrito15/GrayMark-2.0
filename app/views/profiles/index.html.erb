@@ -46,7 +46,7 @@
         <div class ="card-body inactive">
           <p> <%= @profile_intolerances.join(', ') %>, <%= @profile_allergies.join(', ') %> free | <%= @profile_diet %></p>
           <br><br>
-          <%= link_to "edit", edit_school_profile_path(profile.school, profile), class:"btn btn-outline-secondary" %>
+          <%= link_to "edit", edit_school_profile_path(profile.school, profile), class:"btn btn-success" %>
         </div>
       </div>
     <% end %>

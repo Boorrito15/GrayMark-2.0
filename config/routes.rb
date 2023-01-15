@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :intolerance_profiles, only: %i[index show new create]
       resources :allergy_profiles, only: %i[index show new create]
     end
+    resources :week_menus, only: %i[index]
   end
 
   resources :week_menus, only: %i[show] do
