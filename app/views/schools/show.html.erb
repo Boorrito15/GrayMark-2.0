@@ -4,7 +4,27 @@
     <br><br>
     <h1><%= @school.name %></h1>
     <h3><%= @school.postcode %></h3>
-    <%= link_to "Manage profiles", school_profiles_path(@school), class:"btn btn-primary" %>
+    <br>
+    <div class = "cards">
+      <%= link_to school_profiles_path(@school) do %>
+        <div class="card text-bg-light mb-3">
+          <div class="card-body">
+            <h1 class="card-text"><%= @active_profiles.count %> </h1><h5>profiles</h5>
+            <br>
+            <h5 class="card-title">Manage</h5>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to school_week_menus_path(@school) do %>
+        <div class="card text-bg-light mb-3">
+          <div class="card-body">
+            <h1 class="card-text"><%= @week_menus.count %> </h1><h5>menus</h5>
+            <br>
+            <h5 class="card-title">Manage</h5>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <% if false %>
@@ -20,7 +40,7 @@
       <br>
     </div>
     <div class = "cards">
-      <% @profiles.each do |profile| %>
+      <% @active_profiles.each do |profile| %>
         <% @profile_intolerances = []
         IntoleranceProfile.where(profile: profile).each do |intolerance_profile|
           @profile_intolerances << intolerance_profile.intolerance.name
@@ -41,26 +61,22 @@
   <% end %>
   <%# if false %>
     <div>
-      <% @week_menus_by_date.each do |week_menus| %>
+      <% @current_menus.each do |week_menu| %>
         <br>
-        <h3><%= week_menus[0].strftime("%d %B %Y") %> to <%= (week_menus[0]+18.days).strftime("%d %B %Y") %></h3>
+        <h3><%= week_menu.date.strftime("%d %B %Y") %> to <%= (week_menu.date+18.days).strftime("%d %B %Y") %></h3>
         <br>
         <div class = "cards">
-          <% week_menus[1].each do |week_menu| %>
-            <div class = "card">
-              <div class ="card-body">
-                <% @diet = week_menu.profile.diet %>
-                <p> <%= @intolerances.join(', ') %> - <%= @allergies.join(', ') %> free | <%= @diet.name %></p>
-                <br><br>
-                <%= link_to "View menu", week_menu_path(week_menu), class: "btn btn-primary" %>
-              </div>
+          <div class = "card">
+            <div class ="card-body">
+              <% @diet = week_menu.profile.diet %>
+              <p> <%= @menu_intolerances.join(', ') %> - <%= @menu_allergies.join(', ') %> free | <%= @diet.name %></p>
+              <br><br>
+              <%= link_to "View menu", week_menu_path(week_menu), class: "btn btn-primary" %>
             </div>
-          <% end %>
+          </div>
         </div>
         <br><br>
       <% end %>
     </div>
   <%# end %>
 </div>
-
-<%# .menus.group_by { |menu| menu.menu_date.strftime("%A") } %>
