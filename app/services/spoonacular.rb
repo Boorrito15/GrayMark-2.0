@@ -46,7 +46,6 @@ class Spoonacular
         n += 1
         ingredients.each do |ingredient|
           id = ingredient["id"]
-          name = ingredient["nameClean"]
           ingredient = Ingredient.find_or_create_by(id: id)
           DishIngredient.new(ingredient: ingredient, dish: @dish)
         end
