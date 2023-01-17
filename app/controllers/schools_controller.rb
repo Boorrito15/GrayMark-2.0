@@ -19,7 +19,7 @@ class SchoolsController < ApplicationController
       end
     end
 
-    @current_menus = @week_menus.select { |week_menu| week_menu.date > Date.today-28 }
+    @current_menus = @week_menus.select { |week_menu| week_menu.date > Date.today - 21 }
 
     @week_menus_by_date = @week_menus.group_by { |week_menu| week_menu.date }
   end

@@ -1,13 +1,9 @@
 <div class="container">
-  <h3>Create an Allergy Free Menu for <%= @profile.school %></h3>
-  <%= simple_form_for [@week_menu] do |f| %>
-    <%= f.input :date, as: :date, label: "Start date", input_html: {data: {controller: "slim-select"}, name: "week_menu[date]"} %>
-    <%= f.input :date, as: :date, label: "End date", input_html: {data: {controller: "slim-select"}, name: "week_menu[date]"} %>
-  
-
-    <%= f.input :day_menus, label: "Select cuisine", collection: DayMenu.cuisine, input_html: {multiple: true, data: {controller: "slim-select"}, name: "week_menu[cuisine]"} %>
-    <%= f.input :date, as: :date, label: "Select allergy profile", input_html: {data: {controller: "slim-select"}, name: "week_menu[profile]"} %>
-
-    <%= f.button :submit, class: "btn btn-primary", value: "Create Menu" %>
+  <h3>Create allergy free menus for <%= @school.name %></h3>
+  <%= simple_form_for [@school, @week_menu] do |f| %>
+    <%= f.input :date, as: :date, html5: true, label: "Start date", input_html: {name: "date"} %>
+    <%= f.input :day_menus, label: "Select a cuisine", collection: DayMenu.cuisine, input_html: { data: {controller: "tom-select"}, name: "cuisine", class: "input"}%>
+    <h5>You will be creating <%= @profiles.count %> menus </h5>
+    <%= f.button :submit, class: "btn btn-primary", value: "Create Menus" %>
   <% end %>
 </div>

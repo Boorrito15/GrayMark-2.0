@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
 
   def new
     @school = School.find(params[:school_id])
-    @profile = Profile.new(school: @School)
+    @profile = Profile.new(school: @school)
   end
 
   def create
@@ -51,7 +51,11 @@ class ProfilesController < ApplicationController
   def edit
     @profile = Profile.find(params[:id])
     @school = @profile.school
-    @diet = @profile.diet
+    if @profile.diet.nil?
+      @diet = ""
+    else
+      @diet = @profile.diet
+    end
     @intolerances_name = @profile.intolerances.map(&:name)
     @allergies_name = @profile.ingredients.map(&:name)
     @intolerances = @profile.intolerances.map
