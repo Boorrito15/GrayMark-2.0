@@ -30,9 +30,9 @@
       <div class="cards">
         <% day_menus.each do |day_menu| %>
             <% day_menu.dishes.each do |dish|  %>
-              <div class="card">
+              <div class="card-trip">
                 <%= cl_image_tag dish.image.key, crop: :fill %>
-                <div class="card-body">
+                <div class="card-trip-infos">
                   <h4 class="card-title"><%= dish.name %></h4>
                 </div>
               </div>
