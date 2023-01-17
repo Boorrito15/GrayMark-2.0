@@ -1,2223 +1,993 @@
-ingredient;ingredientId
-raspberry extract;14011111
-monk fruit extract;13911111
-veal bones;13811111
-chai tea bags;13711111
-chocolate extract;13411111
-green tea bags;13311111
-coffee extract;13111111
-edible gold;12611111
-orange extract;12511111
-orange blossom water;12411111
-lemon extract;12311111
-cavatelli;12220420
-rum extract;12211111
-mostaccioli pasta;12120420
-maple extract;12111111
-tri color pasta;12020420
-ham bone;12011111
-cedar plank;11911111
-pork bones;11811111
-capellini;11720420
-chicken bones;11711111
-bucatini;11620420
-beef bones;11611111
-cooked ziti;11520421
-ziti;11520420
-fig spread;11519297
-cooked spaghetti;11420421
-spaghetti;11420420
-raspberry jelly;11419297
-lemon essence;11411111
-cooked spiral pasta;11320421
-rotini pasta;11320420
-peach preserves;11319297
-file powder;11311111
-cooked rigatoni;11220421
-rigatoni;11220420
-elderflower;11211111
-cooked penne pasta;11120421
-penne pasta;11120420
-blueberry jam;11119297
-maple flavoring;11111111
-cooked pasta shells;11020421
-pasta shells;11020420
-strawberry jelly;11019297
-mezcal;11014037
-cooked orzo;10920421
-orzo pasta;10920420
-plum preserves;10919297
-spiced rum;10914037
-lemon oil;10911111
-orecchiette;10820420
-strawberry jam;10819297
-tequila;10814037
-liquid stevia;10811111
-cooked linguine;10720421
-linguine;10720420
-raspberry jam;10719297
-cannellini beans;10716050
-ouzo;10714037
-food dye;10711111
-cooked lasagna noodles;10620421
-lasagna noodles;10620420
-cherry preserves;10619297
-kirsch;10614037
-white onion;10611282
-anise extract;10611111
-cooked jumbo pasta shells;10520421
-big shells;10520420
-grape jelly;10519297
-white beans;10516050
-chambord;10514534
-gin;10514037
-yellow onion;10511282
-beef soup bone;10511111
-gemelli;10420420
-chocolate chunks;10419903
-sugar cubes;10419335
-blackberry jam;10419297
-cherry gelatin;10419172
-boar leg;10417158
-orange liqueur;10414534
-cognac;10414037
-ale;10414003
-plum tomatoes;10411529
-red pearl onions;10411282
-rose water;10411111
-pancetta;10410123
-gluten-free elbow macaroni pasta;10398875
-cavatappi pasta;10320420
-spinach fettuccine;10320409
-semisweet chocolate minichips;10319903
-vanilla sugar;10319335
-red currant jelly;10319297
-sugar-free raspberry jello mix;10319175
-raspberry gelatin;10319172
-grand marnier;10314534
-coconut rum;10314037
-snack peppers;10311821
-aji amarillo;10311819
-petite tomatoes;10311693
-kabocha squash;10311643
-cherry tomatoes;10311529
-cipollini onions;10311282
-shiso leaves;10311111
-thick-cut bacon;10310123
-flavor shot;10242040
-cooked rice;10220445
-white rice;10220444
-manicotti;10220420
-tagliatelle;10220409
-whole wheat elbow macaroni;10220124
-cooked sushi rice;10220055
-sushi rice;10220054
-medium-grain rice;10220052
-chocolate shavings;10219903
-cinnamon sugar;10219335
-pineapple preserves;10219297
-strawberry gelatin;10219172
-pretzel twists;10219047
-graham cracker squares;10218617
-bread machine yeast;10218375
-flour tortillas;10218364
-light soy sauce;10216124
-yellow miso;10216112
-cooked green lentils;10216070
-canned beans;10216034
-sherry wine;10214106
-calvados;10214037
-ancho chiles;10211962
-bell pepper;10211821
-finger chili;10211819
-tomatoes in juice;10211693
-roma tomatoes;10211529
-yukon gold potatoes;10211362
-caramelized onions;10211282
-lebanese cucumber;10211205
-sumac;10211111
-slab bacon;10210123
-vegan cheddar cheese;10193701
-mango sorbet;10193691
-rajma masala;10193663
-yellow curry paste;10193605
-elbow macaroni;10120499
-cooked jasmine rice;10120445
-jasmine rice;10120444
-cooked bow tie pasta;10120421
-farfalle pasta;10120420
-pappardelle;10120409
-bread flour;10120129
-whole wheat lasagna noodles;10120124
-sticky rice;10120054
-short grain rice;10120052
-chocolate curls;10119903
-ez-sweets;10119868
-super fine sugar;10119335
-light muscovado sugar;10119334
-mango chutney;10119297
-orange flavor gelatin;10119172
-mini marshmallows;10119116
-pretzel sticks;10119047
-low fat graham crackers;10118617
-instant yeast;10118375
-alum powder;10118371
-rice paper;10118368
-burrito-size tortilla;10118364
-pasta dough;10118334
-cookies;10118192
-chocolate wafers;10118157
-sourdough bread;10118029
-tamari;10116124
-white miso;10116112
-creamy peanut butter;10116098
-butter beans;10116072
-canned white kidney beans;10116034
-fish;10115261
-rock shrimp;10115152
-tiger prawns;10115149
-lobster meat;10115147
-lump crabmeat;10115136
-canned tuna;10115121
-sole;10115028
-striped bass;10115004
-raspberry liqueur;10114534
-dry sherry;10114106
-port;10114057
-brandy;10114037
-lager;10114003
-flax egg;10112220
-wasabi powder;10111990
-dried chilies;10111962
-cuban pepper;10111821
-red jalapeno;10111819
-gem squash;10111641
-Asian medley;10111583
-marinara sauce;10111549
-grape tomatoes;10111529
-winter squash;10111485
-zucchini noodles;10111477
-white potatoes;10111362
-fingerling potatoes;10111352
-peppers;10111333
-pearl onions;10111282
-romaine lettuce;10111251
-pickled ginger;10111216
-garlic paste;10111215
-english cucumber;10111205
-cauliflower rice;10111135
-tea bags;10111111
-baby beet;10111080
-alfalfa sprouts;10111001
-meatballs;10110219
-speck;10110123
-gluten free bread;10099050
-piloncillo;10099002
-cooked wheat berries;10098872
-lamb stock;10098844
-candied nuts;10093785
-ginger garlic paste;10093754
-low sodium beef broth;10093741
-brioche buns;10093730
-cheese tortellini;10093727
-tia maria;10093716
-ground coffee;10093715
-roast beef deli slices;10093713
-fresh sardines;10093703
-citron;10093702
-lemon sorbet;10093691
-baharat;10093663
-dried shrimp;10093657
-orange bitters;10093653
-annatto seeds;10093648
-chocolate sprinkles;10093645
-grill cheese;10093624
-gluten free flour mix;10093620
-green curry paste;10093605
-champagne;10043155
-sugar-free jam;10043028
-pomegranate molasses;10042040
-polenta;10035137
-anaheim chiles;10031015
-italian bread;10028033
-beef tenderloin steaks;10023583
-ground beef;10023572
-ground sirloin;10023567
-ground round;10023562
-porterhouse steaks;10023003
-ditalini pasta;10020499
-cooked basmati rice;10020445
-basmati rice;10020444
-cooked angel hair pasta;10020421
-angel hair pasta;10020420
-cooked fettuccine;10020410
-fettuccine;10020409
-cake flour;10020129
-whole wheat spaghetti;10020124
-grain blend;10020088
-unbleached flour;10020081
-whole wheat pastry flour;10020080
-semolina flour;10020066
-sweet rice flour;10020061
-glutinous rice;10020054
-arborio rice;10020052
-instant brown rice;10020048
-short-grain brown rice;10020040
-black rice;10020036
-black quinoa;10020035
-israeli couscous;10020028
-pre-cooked farro;10020006
-farro;10020005
-demerara sugar;10019908
-dark chocolate candy bars;10019904
-semisweet chocolate chips;10019903
-splenda;10019868
-toffee;10019383
-chocolate sauce;10019348
-coarse sugar;10019335
-dark brown sugar;10019334
-apple jelly;10019297
-lavender honey;10019296
-icing;10019230
-butterscotch pudding mix;10019206
-lime jell-o;10019172
-pastry cream;10019170
-dutch process cocoa powder;10019165
-reese pieces;10019151
-chocolate chips;10019146
-raspberry sauce;10019137
-jumbo marshmallows;10019116
-white chocolate chips;10019087
-dark chocolate chips;10019071
-tortilla chip scoops;10019056
-pretzel rods;10019047
-cracker crumbs;10018621
-graham cracker crumbs;10018617
-flatbread;10018413
-calumet baking powder;10018371
-wonton wrappers;10018368
-wraps;10018364
-whole wheat hot dog buns;10018351
-hot dog buns;10018350
-shortcrust pastry;10018338
-puff pastry shells;10018337
-gluten free frozen piecrusts;10018334
-oyster crackers;10018228
-matzo;10018217
-golden oreos;10018210
-cookie crumbs;10018192
-marie biscuits;10018173
-oreo cookies;10018166
-chocolate wafer crumbs;10018157
-lemon cake mix;10018144
-sponge cake;10018133
-red velvet cake mix;10018099
-panko bread crumbs;10018079
-wheat flatbreads;10018042
-crostini;10018033
-crusty bread;10018029
-corn muffin mix;10018022
-elk sausages;10017338
-lamb;10017224
-elk tenderloin;10017166
-boar chop;10017158
-lean racks of lamb;10017032
-lamb loin;10017026
-lower sodium shoyu;10016424
-dairy free milk;10016223
-firm tofu;10016213
-sweet soy sauce;10016124
-red miso;10016112
-canned pigeon peas;10016102
-crunchy peanut butter;10016098
-canned butter beans;10016073
-canned lentils;10016070
-red lentils;10016069
-canned black-eyed peas;10016063
-canned cannellini beans;10016051
-dried cannellini beans;10016049
-canned red kidney beans;10016034
-borlotti beans;10016020
-white fish fillets;10015261
-squid tubes;10015175
-sea scallops;10015172
-littleneck clams;10015157
-green prawns;10015149
-lobster tails;10015147
-crabmeat;10015136
-tuna;10015121
-fresh tuna;10015117
-salmon steaks;10015076
-caviar alternative;10015072
-mackerel fillets;10015050
-lemon sole;10015028
-redfish;10015024
-sea bass;10015004
-anchovy paste;10015002
-dried hibiscus flowers;10014649
+Name;ID
+5 spice powder;1002002
+acorn squash;11482
+adobo sauce;6979
+agave nectar;19912
+ahi tuna;15117
+alfredo pasta sauce;93606
+almond extract;1002050
+almond flour;93740
+almond milk;93607
+almonds;12061
 amaretto;10014534
-ice;10014412
-green tea;10014355
-instant espresso powder;10014214
-chablis;10014160
-ginger beer;10014136
-madeira;10014106
-dessert wine;10014057
-scotch;10014052
-bourbon;10014037
-dark beer;10014003
-tri-tip steak;10013954
-filet mignon;10013926
-beef stew meat;10013411
-corned beef brisket;10013346
-short ribs;10013149
-bone-in beef short ribs;10013147
-flax seeds;10012220
-pecan pieces;10012142
-unsweetened shredded coconut;10012108
-blanched slivered almonds;10012062
-slivered almonds;10012061
-black sesame seeds;10012023
-raw pumpkin seeds;10012014
-chia egg;10012006
-wasabi paste;10011990
-king oyster mushroom;10011987
-fresno pepper;10011979
-napa cabbage leaves;10011970
-guajillo chiles;10011962
-dill pickles;10011937
-diced tomatoes with green chilies;10011885
-orange bell pepper;10011821
-habanero pepper;10011819
-yellow cherry tomatoes;10011696
-canned tomatoes;10011693
-banana shallot;10011677
-buttercup squash;10011643
-pickled jalapenos;10011632
-pepper and onion mix;10011583
-spaghetti sauce;10011549
-passata;10011547
-canned whole tomatoes;10011531
-beefsteak tomatoes;10011529
-sweet potato puree;10011508
-white sweet potatoes;10011507
-squash;10011485
-spinach;10011457
-watermelon radish;10011429
-cheese pumpkin;10011422
-edible flowers;10011416
-red potatoes;10011355
-purple potatoes;10011352
-poblano peppers;10011333
-sugar snap peas;10011300
-root vegetable;10011298
-red onion;10011282
-mizuna;10011270
-dried porcini mushrooms;10011268
-red leaf lettuce leaves;10011257
-curly leaf lettuce leaves;10011253
-iceberg lettuce leaves;10011252
-romaine hearts;10011251
-butter lettuce leaves;10011250
-baby leeks;10011246
-mixed mushrooms;10011238
-lacinato kale;10011233
-bottled ginger;10011216
-bottled garlic;10011215
-japanese eggplant;10011209
-persian cucumber;10011205
+ancho chiles;10211962
+anchovies;15001
+andouille sausage;7064
+angel food cake mix;18087
+angel hair pasta;10020420
+angostura bitters;93653
+apple;9003
+apple butter spread;19294
+apple cider;1009016
+apple juice;9016
+apple pie spice;1042035
+apricot preserves;19719
+apricots;9021
+arborio rice;10020052
+arrowroot powder;20003
+artichoke heart quarters;93828
+artichokes;11007
+arugula;11959
+asafoetida;1032035
+asafoetida powder;0
+asiago cheese;1001033
+asian pear;9252
+asparagus spears;11011
+avocado;9037
+avocado oil;4581
+baby bell peppers;10311821
+baby bok choy;93636
+baby carrots;11960
 baby corn;10011168
-fresh corn kernels;10011167
-cauliflower florets;10011135
-banana leaves;10011111
-coleslaw mix;10011109
-broccoli florets;10011090
-golden beet;10011080
-flat beans;10011052
-white asparagus;10011011
-roasted pork;10010225
-pork;10010219
+baby spinach leaves;11457
 baby-back ribs;10010204
-deli ham;10010151
-prosciutto;10010123
-pork cutlets;10010066
-pork chops;10010062
-orange food coloring;1461111
-red food color;1451111
-green food coloring;1441111
-yellow food coloring;1431111
-blue food coloring;1421111
-gala apples;1109003
-salt and pepper;1102047
-pink lady apple;1099003
-granny smith apples;1089003
-kosher salt;1082047
-red apple;1079003
-onion salt;1072047
-korean chile;1072009
-green apple;1069003
-garlic salt;1062047
-bbq seasoning;1062034
-ras el hanout;1062027
-aleppo pepper;1062009
+bacon;10123
+bacon fat;4609
+baguette;18033
+baking bar;19078
+baking powder;18371
+baking soda;18372
+balsamic glaze;98998
+balsamic vinegar;2069
+bamboo shoots;11028
+banana;9040
+basmati rice;10020444
+bay leaves;2004
+bbq sauce;6150
+beans;16069
+beef;23572
+beef brisket;13023
+beef broth;6008
+beef chuck roast;13786
+beef stock;6170
+beef tenderloin;13926
+beer;14003
+beets;11080
+bell pepper;10211821
+berries;1009054
+biscuit mix;18010
+biscuits;18009
+bittersweet chocolate;19903
+black bean sauce;99210
+black beans;16015
 black olives;1059195
-red delicious apples;1059003
-bulk pork sausage;1057063
-skinless boneless chicken breasts;1055062
+black pepper;1002030
+black sesame seeds;10012023
+blackberries;9042
+blanched almonds;12062
+blood orange;1009200
+blue cheese;1004
+blueberries;9050
+bok choy;11116
+boneless skinless chicken breast;1055062
+bourbon;10014037
+brandy;10114037
+bread;18064
+bread flour;10120129
+breakfast links;7919
+brie;1006
+broccoli;11090
+broccoli florets;10011090
+brown rice;20040
+brown rice flour;20090
+brown sugar;19334
+brownie mix;18632
+brussel sprouts;11098
+bulgur;20012
+butter;1001
+butterhead lettuce;11250
+buttermilk;1230
+butternut squash;11485
+butterscotch chips;19070
+cabbage;11109
+caesar dressing;43015
+cajun seasoning;1032028
+cake flour;10020129
+candy canes;93759
+candy coating;98857
+candy melts;93775
+canned black beans;16018
+canned diced tomatoes;11531
+canned garbanzo beans;16058
+canned green chiles;11980
+canned kidney beans;16034
+canned mushrooms;11264
+canned pinto beans;16044
+canned red kidney beans;10016034
+canned tomatoes;10011693
+canned tuna;10115121
+canned white beans;16051
+canned white cannellini beans;10016051
+cannellini beans;10716050
+cantaloupe;9181
+capers;2054
+caramel sauce;19364
+caramels;19074
+caraway seed;2005
+cardamom;2006
+cardamom pods;1002006
+carp;15008
+carrots;11124
+cat fish filets;15010
+cauliflower;11135
+cauliflower florets;10011135
+cauliflower rice;10111135
+celery;11143
+celery ribs;10111143
+celery root;11141
 celery salt;1052047
+celery seed;2007
+cereal;8029
+champagne;10043155
+chana dal;99236
+cheddar;1009
+cheese;1041009
+cheese curds;98921
+cheese dip;1188
+cheese soup;6038
+cheese tortellini;10093727
+cherry;9070
+cherry pie filling;19314
+cherry tomatoes;10311529
+chestnuts;12098
+chia seeds;12006
+chicken base;6080
+chicken bouillon;6480
+chicken bouillon granules;1006080
+chicken breasts;5062
+chicken broth;6194
+chicken drumsticks;5066
+chicken legs;5075
+chicken pieces;1005006
+chicken sausage;93668
+chicken stock;6172
+chicken tenders;1015062
+chicken thighs;5091
+chicken wings;5100
+chickpea;16057
+chile garlic sauce;93749
+chili paste;6973
+chili peppers;11962
+chili powder;2009
+chili sauce;6972
+chipotle chiles in adobo;11632
+chipotle chilies;98839
+chipotle peppers in adobo;99223
+chive & onion cream cheese spread;93748
+chocolate;19081
+chocolate chip cookies;28027
+chocolate chunks;10419903
+chocolate ice cream;19270
+chocolate milk;1102
+chocolate sandwich cookies;18166
+chocolate syrup;14181
+chocolate wafer cookies;10118157
+chorizo sausage;7019
+cider vinegar;2048
+cilantro;11165
+cinnamon roll;99020
+cinnamon stick;1002010
+cinnamon sugar;10219335
+cinnamon swirl bread;18047
+clam juice;14187
+clams;15157
+clarified butter;93632
+clove;1002011
+coarse salt;1002047
+coarsely ground pepper;2035
+cocoa nibs;98846
+cocoa powder;19165
+coconut;12104
+coconut aminos;98929
+coconut butter;93746
+coconut cream;12115
+coconut extract;1032050
+coconut flour;93747
+coconut milk;12118
+coconut oil;4047
+coconut water;12119
+cod;15015
+coffee;14209
+cognac;10414037
+cola;14400
+colby jack;1011
+collard greens;11161
+condensed cream of celery soup;6010
+condensed cream of mushroom soup;6147
+confectioner's swerve;99084
+cooked bacon;10862
+cooked brown rice;20041
+cooked chicken breast;5064
+cooked ham;10802
+cooked long grain rice;10220445
+cooked pasta;20421
+cooked polenta;1008166
+cooked quinoa;20137
+cooked wild rice;20088
+cookies;10118192
+coriander;2012
+corn;11168
+corn bread mix;18022
+corn chips;19003
+corn flakes cereal;8020
+corn flour;20019
+corn kernels;11172
+corn oil;42289
+corn tortillas;18363
+cornbread;18023
+corned beef;13346
+cornish hens;5307
+cornmeal;35137
+cornstarch;20027
+cotija cheese;1001019
+cottage cheese;1012
+country bread;10018029
+courgettes;11477
+couscous;20028
+cow pea;16063
+crabmeat;10015136
+cracked pepper;2030
+cranberries;9078
+cranberry juice;43382
+cream;1053
+cream cheese;1017
+cream cheese block;1186
+cream of chicken soup;6016
+cream of tartar;18373
+creamed corn;11174
+creamy peanut butter;10116098
+creme fraiche;1001056
+cremini mushrooms;11266
+creole seasoning;1002031
+crisp rice cereal;8066
+croutons;18242
+crystallized ginger;93751
+cucumber;11206
+cumin seeds;2014
+cup cake;18139
+currants;9085
+curry leaves;93604
+dairy free milk;10016223
+dark brown sugar;10019334
+dark chocolate;19904
+dark chocolate candy bars;10019904
+dark chocolate chips;10019071
+dark sesame oil;1004058
+dates;9087
+deep dish pie crust;18945
+deli ham;10010151
+deli turkey;7259
+dessert oats;8121
+dessert wine;10014057
+diced ham;99186
+diet pop;14146
+dijon mustard;1002046
+dill;2045
+dill pickles;10011937
+hot dog;21118
+double cream;1011053
+dried apricots;9032
+dried basil;2003
+dried cherries;93822
+dried chorizo;99233
+dried cranberries;9079
+dried dill;2017
+dried onion;11284
+dried porcini mushrooms;10011268
+dried rubbed sage;1002038
+dried thyme;2042
+dried tomatoes;11955
+dry bread crumbs;18079
+dry milk;1090
+dry mustard;1002024
+dry red wine;14097
+dry roasted peanuts;16090
+duck fat;4574
+dutch process cocoa powder;10019165
+edamame;11212
+egg substitute;1226
+egg vermicelli;20409
+egg whites;1124
+egg yolk;1125
+eggnog;1057
+eggplant;11209
+elbow macaroni;10120499
+enchilada sauce;6599
+english cucumber;10111205
+english muffin;18439
+erythritol;98887
+escarole;11213
+espresso;14210
+evaporated milk;1214
+extra firm tofu;16163
+extra virgin olive oil;1034053
+farfalle;10120420
+farro;10020005
+fat free mayo;42193
+fat-free less-sodium chicken broth;6984
+fennel;11957
+fennel seeds;2018
+fenugreek leaf;98963
+fenugreek seeds;2019
+feta cheese;1019
+fettuccine;10020409
+fire roasted tomatoes;98849
+fish;10115261
+fish sauce;6179
+fish stock;6963
+flank steak;23657
+flax seeds;10012220
+fleur de sel;1022047
+flour;20081
+flour tortillas;10218364
+fontina cheese;1020
+food dye;10711111
+frank's redhot sauce;98878
+free range eggs;1123
+french bread;18029
+fresh basil;2044
+fresh bean sprouts;11043
+fresh chives;11156
+fresh corn;11167
+fresh corn kernels;10011167
+fresh figs;9089
+fresh fruit;9431
+fresh herbs;10111297
+fresh mint;2064
+fresh mozzarella;1026
+fresh rosemary;2063
+fresh thyme leaves;2049
+fried onions;93709
+frosting;19230
+froyo bars;93629
+frozen corn;11913
+frozen spinach;11463
+fudge;19100
+fudge topping;10019348
+fun size almond joy bar;19065
+garam masala;93663
+garbanzo bean flour;16157
+garlic;11215
+garlic paste;10111215
+garlic powder;1022020
+garlic salt;1062047
+gelatin;19177
+gf chocolate cake mix;99040
+gin;10514037
+ginger;11216
+ginger ale;14136
+ginger paste;93754
+ginger-garlic paste;10093754
+gingersnap cookies;18172
+gnocchi;98853
+goat cheese;1159
+golden raisins;9297
+gorgonzola;1011004
+gouda cheese;1022
+graham cracker crumbs;10018617
+graham cracker pie crust;18942
+graham crackers;18617
+grain blend;10020088
+grand marnier;10314534
+granny smith apples;1089003
+granola;8212
+granulated garlic;1002020
+grape tomatoes;10111529
+grapefruit;9112
+grapeseed oil;4517
+gravy;6997
+great northern beans;16025
+greek yogurt;1256
+green beans;11052
+green bell pepper;11333
+green chili pepper;31015
+green food coloring;1441111
+green grapes;1019132
+green olives;1029195
+green onions;11291
+greens;21052
+grill cheese;10093624
+grill seasoning;1022034
+ground allspice;2001
+ground ancho chili;1022009
+ground beef;10023572
+ground chicken;5332
+ground chipotle chile pepper;1052009
+ground cinnamon;1012010
+ground cloves;2011
+ground coriander seeds;1002013
+ground cumin;1002014
+ground flaxseed;12220
+ground ginger;2021
+ground lamb;17224
+ground mace;2022
+ground nutmeg;2025
+ground pork;10219
+ground pork sausage;7063
+ground veal;17142
+gruyere;1023
+guacamole;1009037
+half n half;1049
+halibut fillet;15036
+ham;10151
+hamburger buns;18350
+hard cooked eggs;1129
+harissa;1006972
+hash brown potatoes;11390
+hazelnuts;12120
+healthy request cream of celery soup;6987
+hemp seeds;93602
+herbes de provence;1012042
+herbs;1002044
+hershey's kisses brand milk chocolates;93743
+hoisin sauce;6175
+honey mustard;99227
+horseradish;1002055
+hot sauce;6168
+hummus;16158
+ice;10014412
+ice cream;19095
+instant chocolate pudding mix;19184
+instant coffee powder;14214
+instant espresso powder;10014214
+instant lemon pudding mix;19332
+instant yeast;10118375
+irish cream;93764
+italian bread;10028033
+italian cheese blend;93651
+italian sausages;7036
+italian seasoning;1022027
+jaggery;99002
+jalapeno;11979
+jasmine rice;10120444
+jelly;19297
+jicama;11603
+jimmies;93645
+juice;1019016
+jumbo shell pasta;10520420
+kaffir lime leaves;93633
+kahlua;93716
+kalamata olives;1009195
+kale;11233
+ketchup;11935
+kitchen bouquet;93768
+kiwis;9148
+kosher salt;1082047
+ladyfingers;18423
+lamb;10017224
+lasagna noodles;10620420
+lb cake;18133
+lean ground beef;23557
+lean ground turkey;5662
+lean pork tenderloin;10060
+leeks;11246
+leg of lamb;17013
+lemon;9150
+lemon curd;93834
+lemon extract;12311111
+lemon juice;9152
+lemon peel;9156
+lemon pepper;1012030
+lemon wedges;1029150
+lemongrass;11972
+lettuce;11252
+lettuce leaves;93623
+light butter;4602
+light coconut milk;99009
+light corn syrup;19350
+light cream cheese;43274
+light mayonnaise;4641
+light olive oil;1054053
+light soy sauce;10216124
+lime;9159
+lime juice;9160
+lime wedges;1029159
+lime zest;1009159
+linguine;10720420
+liquid smoke;93627
+liquid stevia;10811111
+liquor;14037
+live lobster;15147
+long-grain rice;10220444
+low fat buttermilk;1088
+low fat milk;1082
+low fat plain yogurt;1117
+low fat ricotta cheese;1037
+low fat sour cream;1179
+low sodium chicken broth;6970
+low sodium soy sauce;16424
+low-sodium chicken stock;1006970
+lower sodium beef broth;10093741
+lump crab;10115136
+m&m candies;19157
+macadamia nuts;12131
+macaroni and cheese mix;32004
+madras curry powder;2015
+malt drink mix;14311
+mandarin orange sections;9383
+mandarin oranges;9218
+mango;9176
+maple syrup;19911
+maraschino cherries;9328
+margarine;4073
+marinara sauce;10111549
+marjoram;2023
+marsala wine;14057
+marshmallow fluff;93644
+marshmallows;19116
+masa harina;20317
+mascarpone;93820
+mat beans;99144
+matcha tea;98932
+mayonnaise;4025
+meat;1015006
+meatballs;10110219
+medjool dates;9421
+mexican cream;93772
+meyer lemon juice;1009152
+milk;1077
+milk chocolate chips;10019146
+mint chutney;98991
+minute rice;20048
+miracle whip;4014
+mirin;93830
+miso;16112
+molasses;19304
+monterey jack cheese;1001025
+mushroom;11260
+mussels;15164
+mustard;2046
+mustard seeds;2024
+napa cabbage;11119
+navel oranges;9202
+nectarine;9191
+new potatoes;11352
+non-fat greek yogurt;1011256
+nonfat cool whip;1200
+nonfat milk;1085
+nori;11446
+nut butter;12195
+nut meal;93620
+nutella;19125
+nutritional yeast;93690
+oat flour;20132
+oats;8120
+oil;4582
+oil packed sun dried tomatoes;11956
+okra;11278
 old bay seasoning;1052034
-pizza seasoning;1052027
-chipotle powder;1052009
+olive oil;4053
+olives;9195
+onion;11282
+onion powder;2026
+onion soup mix;6094
+orange;9200
+orange bell pepper;10011821
+orange juice;9206
+orange juice concentrate;9214
+orange liqueur;10414534
+orange marmalade;19303
+orange oil;12511111
+orange zest;9216
+oregano;2027
+oreo cookies;10018166
+orzo;10920420
+oyster sauce;6176
+oysters;15167
+palm sugar;93831
+pancetta;10410123
+paneer;98847
+panko;10018079
+papaya;9226
+paprika;2028
+parmigiano reggiano;1033
+parsley;11297
+parsley flakes;2029
+parsnip;11298
+part-skim mozzarella cheese;1028
+pasta;20420
+pasta salad mix;99036
+pasta sauce;10011549
+pastry flour;10020080
+peach;9236
+peanut butter;16098
+peanut butter chips;93762
+peanut butter cups;19150
+peanut oil;4042
+peanuts;16091
+pear liqueur;98988
+pearl barley;20005
+pearl onions;10111282
+peas;11304
+pecan;12142
+pecan pieces;10012142
+pecorino;1038
+penne;11120420
+peperoncino;11976
+pepper jack cheese;1025
+peppercorns;1022030
+peppermint baking chips;98858
+peppermint extract;1022050
+pepperoni;7057
+peppers;10111333
+pesto;93698
+pickle relish;11944
+pickles;11937
+pico de gallo;27027
+pie crust;18334
 pimento stuffed olives;1049195
-sausage patties;1047063
-skinless boneless chicken breast halves;1045062
-basil oil;1044053
-tarragon vinegar;1042053
+pimientos;11943
+pine nuts;12147
+pineapple;9266
+pineapple chunks;1029354
+pineapple in juice;9354
+pineapple juice;9273
+pink himalayan salt;1032047
+pinto beans;16043
+pistachios;12151
+pita;18413
+pizza crust;93770
+pizza mix;98924
+plain greek yogurt;1001256
+plain nonfat yogurt;1118
+plain yogurt;1001116
+plantain;9277
+plum;9279
+plum tomatoes;10411529
+poblano peppers;10011333
+polenta;10035137
+polish sausage;7059
+pomegranate juice;9442
+pomegranate molasses;10042040
+pomegranate seeds;9286
+popcorn;19034
+poppy seeds;2033
+pork;10010219
+Pork & Beans;16009
+pork belly;10005
+pork butt;10084
+pork chops;10010062
+pork links;1007063
+pork loin chops;10062
+pork loin roast;10225
+pork roast;10010225
+pork shoulder;10072
+pork tenderloin;10218
+port;10114057
+portabella mushrooms;11265
+pot roast;23612
+potato chips;19411
+potato starch;11413
+potatoes;11362
+poultry seasoning;2034
+powdered sugar;19336
+pretzel sandwiches;19047
+processed american cheese;1253
+prosciutto;10010123
+provolone cheese;1035
+prunes;9291
+puff pastry;18337
+pumpkin;11422
+pumpkin pie filling;11426
+pumpkin pie spice;1002035
+pumpkin puree;11424
+pumpkin seeds;12014
+queso fresco;1228
+quick cooking oats;8402
+quinoa;20035
+quinoa flour;93773
+radicchio;11952
+radishes;11429
+raisins;9299
+rajma masala;10193663
+ramen noodles;6583
+ranch dressing;4639
+ranch dressing mix;93733
+raspberries;9302
+raspberry jam;10719297
+raw cashews;12087
+raw shrimp;15152
+ready-to-serve Asian fried rice;93721
+real bacon recipe pieces;99229
+red apples;1079003
+red bell peppers;11821
+red cabbage;11112
+red chilli;11819
+red delicious apples;1059003
+red food coloring;1451111
+red grapefruit juice;98926
+red grapes;9132
+red kidney beans;16033
+red lentils;10016069
+red onion;10011282
+red pepper flakes;1032009
+red pepper powder;2031
+red potatoes;10011355
+red velvet cookie;18157
+red wine;14096
+red wine vinegar;1022068
+reduced fat shredded cheddar cheese;1001168
+refried beans;16202
+refrigerated crescent rolls;93618
+refrigerated pizza dough;93610
+refrigerated sugar cookie dough;18205
+rhubarb;9307
+rib tips;98937
+rice;20444
+rice flour;20061
+rice krispies cereal;8065
+rice milk;93761
+rice noodles;20133
+rice paper;10118368
+rice syrup;93784
+rice vinegar;1022053
+rice wine;43479
+ricotta salata;1036
+ritz crackers;18621
+roast beef;93713
+roasted chicken;5114
+roasted nuts;12135
+roasted peanuts;16092
+roasted red peppers;11916
+roma tomatoes;10211529
+romaine lettuce;10111251
+root vegetables;10011298
+rosemary;2036
+rotini pasta;11320420
+rotisserie chicken;5348
+round steak;23617
+rub;1012034
+rum extract;12211111
+runny honey;19296
+russet potatoes;11353
+rutabaga;11435
+rye bread;18060
+rye meal;98905
+saffron threads;2037
+sage;2038
+sage leaves;99226
+salad dressing;4114
+salami;7071
+salmon fillet;15076
+salsa;6164
+salsa verde;27028
+salt;2047
+salt and pepper;1102047
+salted butter;1001001
+saltine crackers;18228
+sandwich bun;18353
+sauerkraut;11439
+sausage;1017063
+sausage links;1037063
+scotch bonnet chili;10011819
+sea salt;1012047
+sea scallops;10015172
+seasoned bread crumbs;18376
+seasoned rice vinegar;1032053
 seasoned salt;1042047
 seasoning;1042027
-pimenton de la vera;1042009
-cheese;1041009
-pineapple tidbits;1039354
-oil cured black olives;1039195
-mcintosh apple;1039003
-sausage links;1037063
-extra virgin olive oil;1034053
-seasoned rice vinegar;1032053
-coconut extract;1032050
-pink himalayan salt;1032047
-asafoetida;1032035
-seafood seasoning;1032034
-cajun seasoning;1032028
-apple pie spice;1032027
-red pepper flakes;1032009
-sharp cheddar cheese;1031009
-pineapple chunks;1029354
-green olives;1029195
-fruit juice;1029016
-tart apples;1029003
-breakfast sausage;1027063
-bouillon cube;1026076
-chicken cutlets;1025062
-skin on boneless chicken breast halves;1025057
-chicken;1025006
-truffle oil;1024053
-red wine vinegar;1022068
-rice vinegar;1022053
-peppermint extract;1022050
-fleur de sel;1022047
-dried herbs;1022042
-mixed spice;1022035
-steak seasoning;1022034
-black peppercorns;1022030
-chili seasoning mix;1022028
-italian seasoning;1022027
-fresh marjoram;1022024
-garlic powder;1022020
-ancho chile powder;1022009
-green cardamoms;1022006
-extra sharp cheddar cheese;1021009
-stilton cheese;1021004
-crushed pineapple;1019354
-tamarind;1019322
-tangerines;1019218
-orange sections;1019200
-greek olives;1019195
-green mango;1019176
-juice;1019016
-fuji apple;1019003
-sausage;1017063
-gochujang;1016973
-reduced sodium broth;1016970
-turkey broth;1016194
-sriracha;1016168
-chicken bouillon powder;1016080
-beef base;1016076
-stock powder;1016075
-turkey breast cutlets;1015696
-chicken tenders;1015062
-meat;1015006
-chili oil;1014053
-white balsamic vinegar;1012069
-sherry vinegar;1012068
-black vinegar;1012053
-vanilla essence;1012050
-sea salt;1012047
-whole-grain mustard;1012046
-herbes de provence;1012042
-chai spice;1012035
-Spice Rub;1012034
-lemon pepper;1012030
-smoked paprika;1012028
-fresh herbs;1012024
-bouquet garni;1012023
-adobo seasoning;1012020
-jerk seasoning;1012009
-black cardamom pods;1012006
-star anise;1012002
-pickling spices;1012001
-double cream;1011053
-grana padano cheese;1011033
-shredded cheese;1011026
-sheeps milk cheese;1011019
-white cheddar cheese;1011009
-gorgonzola cheese;1011004
-fat of choice;1011001
-pineapple rings;1009354
-tamarind pulp;1009322
-strawberry puree;1009316
-pomegranate;1009286
-fuyu persimmon;1009265
-anjou pears;1009252
-green papaya;1009226
-blood orange zest;1009216
-blood orange juice;1009206
-blood orange;1009200
-kalamata olives;1009195
-cantaloupe balls;1009181
-mango puree;1009176
-lime zest;1009159
-grapefruit zest;1009156
-meyer lemon juice;1009152
-meyer lemon;1009150
-concord grapes;1009132
-red grapefruit;1009112
-berries;1009054
-wild blueberries;1009050
-guacamole;1009037
-apple cider;1009016
-braeburn apple;1009003
-store bought polenta;1008166
-regular chex;1008082
-nutri grain cereal;1008029
-cornflake crumbs;1008020
-soppressata;1007071
-pork links;1007063
-sweet italian sausage;1007036
-chorizo crumble;1007019
-aji amarillo paste;1006973
-harissa;1006972
-low sodium chicken stock;1006970
-dashi;1006963
-stock;1006615
-turkey stock;1006172
-green hot sauce;1006168
-picante sauce;1006164
-chicken bouillon granules;1006080
-beef bouillon granules;1006076
-bouillon powder;1006075
-bouillon;1006008
-skinless boneless turkey breast;1005696
-bone in skin on turkey breast;1005191
-foie gras;1005150
-chicken drumettes;1005100
-skinless bone-in chicken thighs;1005096
-bone-in chicken thighs;1005091
-bone in skin on chicken breasts;1005057
-chicken pieces;1005006
-olive oil cooking spray;1004679
-salad oil;1004582
-stick margarine;1004073
-dark sesame oil;1004058
-garlic oil;1004053
-aged balsamic vinegar;1002069
-white wine vinegar;1002068
-horseradish;1002055
-caper berries;1002054
-malt vinegar;1002053
-almond extract;1002050
-raspberry vinegar;1002048
-unrefined sea salt;1002047
-dijon mustard;1002046
-herbs;1002044
-za'atar;1002042
-dried sage;1002038
-pumpkin pie spice;1002035
-crab boil;1002034
-white peppercorns;1002032
-creole seasoning;1002031
-black pepper;1002030
-sweet paprika;1002028
-fresh oregano;1002027
-granulated onion;1002026
-dry mustard;1002024
-granulated garlic;1002020
-ground fenugreek;1002019
-ground cumin;1002014
-cloves;1002011
-cinnamon stick;1002010
-japanese 7 spice;1002009
-cardamom pods;1002006
-fresh bay leaves;1002004
-5 spice powder;1002002
-whole allspice;1002001
-nonfat greek yogurt;1001256
-whey protein powder;1001223
-low fat shredded cheddar cheese;1001168
-low fat vanilla yogurt;1001119
-raita;1001116
-creme fraiche;1001056
-whipping cream;1001053
-asiago cheese;1001033
-low fat shredded mozzarella cheese;1001028
-shredded mozzarella cheese;1001026
-monterey jack cheese;1001025
-comte cheese;1001023
-cotija cheese;1001019
-soft cheese;1001017
-shredded cheddar cheese;1001009
-blue cheese crumbles;1001004
-salted butter;1001001
-instant cheesecake pudding mix;99192
-sukrin;99190
-challah roll;99189
-boursin herb cheese;99188
-diced ham;99186
-limeade;99185
-lemonade;99184
-strawberry pie filling;99183
-whole wheat penne pasta;99182
-chex wheat cereal;99180
-wax gourd;99179
-tree tomato;99173
-star apple;99171
-bread bowl;99169
-sago;99164
-ridge gourd;99162
-ribbon fish;99161
-licorice twists;99160
-radish leaves;99157
-pretzel rolls;99156
-pretzel nuggets;99155
-bajra;99151
-oat milk;99149
-mat bean;99144
-long pepper;99141
-wood apple;99140
-mitsuba;99135
-hemp oil;99134
-hazel nut milk;99132
-ragi;99128
-elderflower liqueur;99126
-goldfish crackers;99121
-garden cress seed;99119
-conversation hearts;99117
-coix seed;99115
-Chocolate Easter Eggs;99112
-captain crunch cereal;99106
-bottle gourd;99105
-bagel chips;99098
-alo drink;99095
-acai powder;99094
-preserved lemon;99093
-chartreuse;99091
-khoya;99090
-powdered peanut butter;99089
-cashew milk;99088
-low-carb tortilla;99086
-swerve sweetener;99084
-red bean paste;99082
-kelp noodles;99081
-maca powder;99079
-vanilla protein powder;99076
-chocolate protein powder;99075
-squid ink pasta;99074
-gluten-free bagel;99073
-gluten-free chocolate cookies;99070
-paleo wrap;99066
-strawberry cake mix;99065
-bread dough;99063
-quinoa pasta;99062
-onion rolls;99061
-pimento cheese spread;99060
-gluten free crackers;99057
-gluten-free short bread cookie;99056
-crème De Menthe Baking Chips;99054
-peanut butter cookie mix;99047
-gf sugar cookie mix;99046
-gf chocolate cake mix;99040
-brown rice noodles;99038
-burger skillet;99037
-pasta salad mix;99036
-turkey smokies;99035
-Asian dumplings;99034
-skim vanilla greek yogurt;99033
-maraschino cherry syrup;99032
-sweet potato starch noodles;99031
-curacao;99029
-peanut sauce;99028
-lo mein noodles;99027
-turkey burgers;99026
-whole wheat bread crumbs;99025
-whole wheat couscous;99024
-fat-free sugar-free vanilla pudding mix;99022
-limoncello;99021
-cinnamon roll;99020
-sun-dried tomato wrap;99019
-spinach wraps;99018
-carom seeds;99017
-chestnut flour;99016
-shell topping;99015
-hot giardiniera;99014
-Biscoff spread;99011
-light coconut milk;99009
-turkey breast tenderloins;99008
-lean bacon;99006
-xylitol;99005
-blackening seasoning;99003
-jaggery;99002
-coconut milk beverage;99001
-korean marinade;99000
-sazon;98999
-balsamic glaze;98998
-berbere;98995
-low fat evaporated milk;98993
-mint chutney;98991
-oaxaca cheese;98989
-pear liqueur;98988
-banana flower;98987
-sunflower sprouts;98986
-taco salad shell;98985
-cannoli shells;98983
-veggie lunch meat;98982
-veggie nuggets;98981
-seasoned flour;98980
-coconut milk powder;98979
-heath bar;98978
-tortilla strips;98977
-coconut coffee creamer;98976
-vegan mayonnaise;98975
-dr pepper;98974
-queso quesadilla;98973
-veggie sausage;98971
-cheese sticks;98970
-vegetarian sausages;98968
-udon noodles;98966
-soy lecithin granules;98965
-mango powder;98964
-methi;98963
-sweet chili sauce;98962
-summer savory;98961
-artichoke bottoms;98959
-plum vinegar;98954
-ground fennel;98953
-raspberry vinaigrette;98952
-cheesecake mix;98951
-fresh horseradish;98949
-Hawaiian bread;98947
-freeze-dried strawberries;98946
-pea shoots;98945
-sub rolls;98940
-rainier cherries;98939
-romanesco;98938
-rib tips;98937
-musk melon;98936
-flax seed oil;98934
-farmers cheese;98933
-matcha powder;98932
-coconut vinegar;98930
-coconut aminos;98929
-sunflower seed butter;98928
-cassava flour;98927
-grapefruit juice;98926
-candied fruit;98925
-pizza mix;98924
-shirataki noodles;98923
-corn husks;98922
-cheese curds;98921
-breadstick dough;98918
-andes mints;98917
-texas toast;98915
-grissini breadsticks;98914
-turkey thighs;98913
-duck breast;98912
-wax chili;98910
-epazote;98908
-pike;98906
-rye meal;98905
-bone broth;98904
-pepper rings;98903
-lime curd;98902
-nacho cheese sauce;98901
-oat flakes;98899
-bonito flakes;98898
-dried strawberries;98897
-acai juice;98896
-sprouted grain bread;98895
-psyllium husk powder;98893
-psyllium husk;98892
-tofu skin;98891
-pea protein;98890
-erythritol;98887
-graham flour;98886
-high gluten flour;98883
-icecream sandwiches;98882
-decorating gel;98881
-condensed skim milk;98880
-buffalo wing sauce;98878
-gluten free pasta;98875
-hemp milk;98874
-pork rinds;98873
-wheat berries;98872
-hawaiian rolls;98871
-buffalo mozzarella;98870
-freekeh;98869
-funfetti cake mix;98866
-meatloaf mix;98865
-malted milk balls;98864
-goji berries;98863
-olive tapenade;98862
-dulce de leche;98861
-kimchi;98860
-peppermint candies;98859
-peppermint baking chips;98858
-candy coating;98857
-cookie mix;98856
-soy chunks;98854
-gnocchi;98853
-tart shells;98852
-black licorice;98851
-peeps;98850
-fire roasted canned tomatoes;98849
-allergy friendly chocolate chips;98848
-paneer;98847
-cacao nibs;98846
-vegetable stock cube;98845
-biscotti;98843
-splenda brown sugar blend;98842
-piquillo peppers;98841
-broccolini;98840
-dried chipotle chili pepper;98839
-havarti cheese;93838
-focaccia;93837
-green peppercorns;93836
-lemon curd;93834
-liquid egg whites;93833
-cheese ravioli;93832
-coconut sugar;93831
-mirin;93830
-golden syrup;93829
-artichoke hearts;93828
-white whole wheat flour;93824
-spelt flour;93823
-dried cherries;93822
-manchego cheese;93821
-mascarpone cheese;93820
-sourdough starter;93819
+seasoning blend;1032027
 seeds;93818
-phyllo cups;93817
-quinoa flakes;93816
-margarita mix;93815
-lightly sweetened whipped cream;93814
-vanilla bean paste;93813
-vanilla powder;93812
-lavender;93811
-ground hazelnuts;93810
-grappa;93809
-fennel pollen;93808
-dry cider;93807
-yacon syrup;93806
-chilean sea bass;93804
-chow mein noodles;93803
-hollandaise sauce mix;93802
-hollandaise sauce;93801
-pistachio oil;93800
-guanciale;93799
-brine;93798
-sun-dried tomato paste;93797
-salt packed anchovy;93796
-ramps;93793
-taleggio cheese;93792
-jarlsberg cheese;93791
-mozzarella balls;93790
-citric acid;93789
-campari;93788
-cachaca;93787
-lillet blanc;93786
-candied walnuts;93785
-rice syrup;93784
-candied pecans;93783
-southern comfort;93782
-midori melon liqueur;93781
-galliano;93780
-banana liqueur;93779
-oxtails;93778
-tzatziki;93777
-minute tapioca;93776
-candy melts;93775
-black treacle;93774
-quinoa flour;93773
-mexican cream;93772
-whole wheat pizza dough;93771
-pizza crust;93770
-kitchen bouquet;93768
-braggs liquid aminos;93767
-amaretti cookies;93766
-guar gum;93765
-irish cream;93764
-amaranth flour;93763
-peanut butter chips;93762
-rice drink;93761
-teff flour;93760
-candy canes;93759
-aioli;93758
-verjus;93757
-black forest ham;93756
-hazelnut liqueur;93755
-ginger paste;93754
-lemon pie filling;93753
-ginger juice;93752
-crystallized ginger;93751
-garlic scapes;93750
-chile garlic sauce;93749
-chive & onion cream cheese spread;93748
-coconut flour;93747
-coconut butter;93746
-cream of coconut;93745
-german chocolate;93744
-hershey kisses;93743
-candied cherries;93742
-fat free low sodium beef broth;93741
-almond flour;93740
-wondra flour;93739
-red cinnamon candies;93737
-peach schnapps;93736
-imitation crabmeat;93735
-empanada dough;93734
-ranch dressing mix;93733
-crepes;93732
-cinnamon schnapps;93731
-brioche;93730
-ponzu sauce;93729
-wheat thin crackers;93728
-tortellini;93727
-spinach tortellini;93725
-naan;93723
-lavash;93722
-ready-to-serve Asian fried rice;93721
-framboise lambic;93720
-wasabi peas;93719
-urad dal;93718
-kahlua;93716
-coffee beans;93715
-goose;93714
-roast beef;93713
-crème de cacao;93712
-wax beans;93711
-brazil nuts;93710
-fried onions;93709
-rice protein powder;93707
-mincemeat;93706
-marzipan;93704
-yuzu;93702
-vegan cheese;93701
-soy pudding;93700
-ciabatta rolls;93699
-pesto;93698
-sun-dried tomato pesto;93697
-tapioca flour;93696
-steel cut oats;93695
-gluten free breadcrumbs;93694
-sorbet;93691
-nutritional yeast;93690
-mango pulp;93688
-dried blueberries;93686
-jalapeno jelly;93685
-cracked wheat;93684
-mint jelly;93683
-yuzu juice;93682
-serrano ham;93680
-capicola;93679
-guava juice;93678
-cherry juice;93677
-quark;93676
-whole wheat tortillas;93675
-cinnamon sugar butter;93674
-italian salad dressing mix;93670
-ham hock;93669
-chicken sausage;93668
-clotted cream;93665
-garam masala;93663
-dragon fruit;93662
-quick cooking tapioca;93660
-Ener-G egg replacer;93658
-shrimp paste;93657
-galangal;93656
-ciabatta bread;93655
-wheat gluten;93654
-bitters;93653
-lowfat greek yoghurt;93652
-italian cheese blend;93651
-nonfat buttermilk;93650
-catalina dressing;93649
-achiote powder;93648
-acini di pepe pasta;93647
-slider buns;93646
-sprinkles;93645
-marshmallow creme;93644
-gummy worms;93642
-chocolate covered sunflower seeds;93641
-sweet pickle juice from the jar;93640
-dried pineapple;93639
-dried mango;93638
-candy corn;93637
-baby bok choy;93636
-vegan cream cheese;93634
-kaffir lime leaves;93633
-ghee;93632
-baby artichokes;93631
-skim milk ricotta cheese;93630
-froyo bars;93629
-stevia;93628
-liquid smoke;93627
-xanthan gum;93626
-natural cane sugar;93625
-halloumi cheese;93624
-lettuce leaves;93623
-vanilla bean;93622
-sorrel;93621
-gluten-free flour;93620
-stout beer;93619
-refrigerated crescent rolls;93618
-burrata cheese;93617
-dulse;93615
-sea bream;93614
-juniper berries;93613
-demi glace;93612
-kefir;93611
-pizza dough;93610
-vegan sour cream;93608
-almond milk;93607
-alfredo sauce;93606
-curry paste;93605
-curry leaves;93604
-bee pollen;93603
-hemp seeds;93602
-hemp protein powder;93601
-snails;90560
-simple syrup;90480
-frog legs;80200
-vital wheat gluten;48052
-blueberry pie filling;44158
-low fat swiss cheese;43589
-rice wine;43479
-pear juice;43408
-marmite;43406
-hearts of palm;43392
-cranberry juice;43382
-low fat cream cheese;43274
-nonfat vanilla yogurt;43261
-sparkling wine;43155
-chili beans;43112
-blue cheese dressing;43020
-slaw dressing;43016
-caesar salad dressing;43015
-skim milk mozzarella cheese;42304
-corn oil;42289
-fat-free mayonnaise;42193
-muesli;42184
-whipped topping;42135
-turkey bacon;42130
-liquid pectin;42063
-grenadine syrup;42040
-rose hips;35203
-elk round roast;35177
-cornmeal;35137
-white cornmeal;35136
-huckleberries;35043
-cockles;35028
-macaroni dinner;32004
-green chillies;31015
-vegetable juice;31008
-chocolate cookie pie crust;28111
-chocolate chip cookies;28027
-frozen waffles;28015
-tartar sauce;27049
-steak sauce;27048
-salsa verde;27028
-pico de gallo;27027
-pita chips;25037
-microwave popcorn;25026
-popcorn kernels;25002
-flank steak;23657
-beef sirloin tip roast;23653
-top round steak;23636
-sirloin steak;23625
-round steak;23617
-pot roast;23612
-Top Sirloin;23584
-beef;23572
-85% lean ground beef;23567
-90% lean ground beef;23562
-lean ground beef;23557
-beef patties;23507
-ribs;23236
-steak;23232
-skirt steak;23167
-chuck steak;23145
-boneless chuck steak;23078
-flat iron steak;23059
-sirloin tip steak;23032
-t-bone steaks;23003
-potato salad;22971
-chili without beans;22911
-beef ravioli;22900
-soy crumbles;22120
-hot dogs;21118
-salad mix;21052
-sorghum flour;20648
-millet flour;20647
-unbleached all purpose flour;20581
-macaroni;20499
-rice;20444
-cooked pasta;20421
-pasta;20420
-cooked egg noodles;20410
-egg noodles;20409
-cooked elbow macaroni;20400
-masa harina;20317
-spelt;20140
-kamut;20138
-cooked quinoa;20137
-cooked rice noodles;20134
-rice noodles;20133
-oat flour;20132
-barley flour;20130
 self-rising flour;20129
-cooked whole wheat pasta;20125
-whole wheat pasta;20124
-cooked soba noodles;20115
-soba noodles;20114
-fresh pasta;20093
-brown rice flour;20090
-cooked wild rice;20089
-wild rice;20088
-flour;20081
-whole wheat flour;20080
-wheat germ;20078
-wheat bran;20077
-tapioca;20068
-sorghum;20067
-semolina;20066
-rye flour;20064
-rice flour;20061
-minute rice;20048
-cooked brown rice;20041
-brown rice;20040
-long grain brown rice;20036
-quinoa;20035
-oat bran;20033
-millet;20031
-hominy;20030
-cooked couscous;20029
-couscous;20028
-cornstarch;20027
-cornmeal mix;20024
-corn flour;20019
-cooked bulgur;20013
-bulgur;20012
-buckwheat flour;20011
-buckwheat;20008
-pearl barley;20005
-barley;20004
-arrowroot powder;20003
-amaranth;20001
-agave nectar;19912
-maple syrup;19911
-turbinado sugar;19908
-dark chocolate;19904
-bittersweet chocolate;19903
-no calorie sweetener;19868
-rice cakes;19816
-apricot preserves;19719
-baked tortilla chips;19433
-potato chips;19411
-banana chips;19400
-toffee bits;19383
-chocolate glaze;19375
-caramel sauce;19364
-corn syrup;19350
-dark corn syrup;19349
-fudge ice cream topping;19348
-maple sugar;19340
-powdered sugar;19336
-sugar;19335
-brown sugar;19334
-instant lemon pudding mix;19332
-cherry pie filling;19314
-apple pie filling;19312
-fruit pectin;19310
-molasses;19304
-orange marmalade;19303
-jam;19297
-honey;19296
-apple butter;19294
-frozen vanilla yogurt;19293
-strawberry ice cream;19271
-chocolate ice cream;19270
-chocolate covered espresso beans;19268
-frosting;19230
-cream cheese frosting;19228
-coconut pecan frosting;19227
-chocolate frosting;19226
-instant vanilla pudding mix;19206
-instant pistachio pudding mix;19202
-butterscotch pudding;19201
-instant chocolate pudding mix;19184
-gelatin;19177
-lemon jell-o;19172
-custard;19170
-custard powder;19169
-cocoa powder;19165
-twix bar;19160
-m&m candy;19157
-snickers;19155
-chocolate covered caramel candy;19152
-peanut butter candies;19151
-peanut butter cups;19150
-mounds candy bar;19142
-strawberry sauce;19137
-milky way;19135
-sugar free maple syrup;19128
-chocolate covered raisins;19127
-nutella;19125
-marshmallows;19116
-breakfast syrup;19113
-kit-kat;19109
-jelly beans;19108
-gumdrops;19106
-fudge;19100
-sherbet;19097
-vanilla ice cream;19095
-peppermint patties;19091
-low fat vanilla ice cream;19088
-white chocolate;19087
-butterscotch;19085
-chocolate;19081
-unsweetened chocolate;19078
-caramel;19074
-carob chips;19071
-butterscotch chips;19070
-butterfinger candy bar;19069
-fun size almond joy bar;19065
-cheese tortilla chips;19057
-tortilla chips;19056
-pretzels;19047
-caramel popcorn;19039
-popcorn;19034
-chex party mix;19033
-corn chips;19003
-beef jerky;19002
-potato bread;18971
-tostada shells;18952
-deep dish pie crust;18945
-graham cracker crust;18942
-brownie mix;18632
-crackers;18621
-graham crackers;18617
-vanilla wafers;18609
-chocolate graham cracker crumbs;18608
-english muffins;18439
-ladyfingers;18423
-pita breads;18413
-bagels;18408
-seasoned bread crumbs;18376
-active yeast;18375
-fresh yeast;18374
-cream of tartar;18373
-baking soda;18372
-baking powder;18371
-egg roll wrappers;18368
-tortillas;18364
-corn tortillas;18363
-taco shells;18360
-sandwich bun;18353
-whole wheat hamburger buns;18351
-hamburger buns;18350
-french roll;18349
-dinner yeast rolls;18347
-filo pastry;18338
-puff pastry;18337
-pie crust;18334
-pancake mix;18292
-waffle cone;18272
-ice cream cones;18271
-whole-grain english muffins;18266
-croutons;18242
-croissants;18239
-100 percent whole wheat crackers;18235
-saltine crackers;18228
-matzo meal;18217
-vanilla cream filled sandwich style cookies;18210
-sugar cookie dough;18205
-gingerbread people;18192
-digestive biscuits;18173
-gingersnap cookies;18172
-chocolate sandwich cookies;18166
-chocolate cookies;18157
-yellow cake mix;18144
-cup cake;18139
-white cake mix;18137
-lb cake;18133
-spice cake mix;18114
-chocolate cake mix;18099
-angel food cake;18088
-angel food cake mix;18087
+semi sweet chocolate chips;10019903
+serrano chile;11977
+sesame oil;4058
+sesame seed hamburger buns;10018350
+sesame seeds;12023
+shallot;11677
+sharp cheddar cheese;1031009
+sheeps milk cheese;1011019
+shells;11020420
+sherry;10114106
+sherry vinegar;1012068
+shiitake mushroom caps;11238
+short grain rice;10120052
+short pasta;20499
+short ribs;10013149
+shortbread cookies;18192
+shortcrust pastry;10018338
+shortening;4615
+shredded cheddar cheese;1001009
+shredded cheese;1011026
+shredded chicken;1005114
+shredded coconut;12108
+shredded mexican cheese blend;1001251
+shredded mozzarella;1001026
+silken tofu;16161
+sirloin steak;23625
+skim milk ricotta;93630
+skim vanilla greek yogurt;99033
+skin-on bone-in chicken leg quarters;1005091
+skinless boneless chicken breast halves;1045062
+skinless boneless chicken thighs;5096
+skinned black gram;93718
+slaw dressing;43016
+slaw mix;10011109
+slivered almonds;10012061
+smoked paprika;1012028
+smoked salmon;15077
+smoked sausage;7916
+smooth peanut butter;16150
+snapper fillets;15101
+snow peas;11300
+soda water;14121
+sour cream;1056
+sourdough bowl;99169
+sourdough bread;10118029
+soy milk;16223
+soy protein powder;16122
+soy sauce;16124
+spaghetti;11420420
+spaghetti squash;11492
+sparkling wine;43155
+spelt flour;93823
+spicy brown mustard;1022046
+spinach;10011457
+sprite;14144
+sprouts;11001
+squash;10011485
+sriracha sauce;1016168
+steaks;23232
+steel cut oats;93695
+stevia;93628
+stew meat;10023618
+stew vegetables;11583
+stock;1006615
+store-bought phyllo;18338
+stout;93619
+strawberries;9316
+strawberry jam;10819297
+strawberry jello;10219172
 stuffing;18082
 stuffing mix;18081
-bread crumbs;18079
-whole wheat bread;18075
-toast;18070
-white bread;18069
-bread;18064
-rye bread;18060
-cinnamon bread;18047
-pumpernickel bread;18044
-whole wheat pitas;18042
-baguette;18033
-french bread;18029
-cornbread;18023
-corn bread mix;18022
-banana bread;18019
-baking mix;18010
-biscuits;18009
-lean ground lamb;17353
-venison loin;17345
-ground venison;17343
-buffalo;17330
-lamb chops;17305
-veal shanks;17276
-lamb cutlets;17239
-ground lamb;17224
-calf liver;17202
-rabbit;17180
-venison;17164
-reindeer;17162
-boar;17158
-veal;17142
-veal chops;17104
-veal cutlets;17094
-lamb stew meat;17059
-lamb shoulder;17047
-lamb rib chops;17032
-lamb rack;17029
-lean lamb loin chops;17026
-lamb loin chops;17023
-leg of lamb;17013
-lamb shanks;17009
-vegetarian bacon;16542
-low sodium soy sauce;16424
-soy beans;16409
-unsalted peanuts;16390
-soy yogurt;16252
-soy milk;16235
-soymilk;16223
-unsweetened soy milk;16222
-tofu;16213
-refried beans;16202
-extra firm tofu;16163
-bean curd;16162
-silken tofu;16161
-hummus;16158
-besan;16157
-smooth peanut butter;16150
-veggie patty;16147
-soy pulp;16130
-soy sauce;16124
-shoyu;16123
-soy protein;16122
-fat free soy flour;16117
-soya flour;16115
-tempeh;16114
-Miso Soybean Paste;16112
-soy nuts;16111
-pigeon peas;16102
-peanut flour;16100
-peanut butter;16098
-roasted peanuts;16092
-peanuts;16091
-dry roasted peanuts;16090
-split peas;16085
-glass noodles;16082
-green grams;16080
-canned lima beans;16073
-lima beans;16072
-dried lima beans;16071
-cooked lentils;16070
-dal;16069
-black eyed peas;16063
-canned chickpeas;16058
-chickpeas;16057
-dried chickpeas;16056
-carob powder;16055
-canned fava beans;16054
-fava beans;16053
-canned white beans;16051
-canned pinto beans;16044
-pinto beans;16043
-dried pinto beans;16042
-canned navy beans;16039
-navy beans;16038
-dried navy beans;16037
-canned kidney beans;16034
-red beans;16033
-dried beans;16032
-white kidney beans;16028
-canned great northern beans;16026
-great northern beans;16025
-dried great northern beans;16024
-cranberry beans;16020
-canned black beans;16018
-black beans;16015
-dried black beans;16014
-baked beans;16009
-vegetarian baked beans;16006
-adzuki beans;16002
-tilapia fillets;15261
-canned salmon;15260
-crawfish tails;15243
-farm raised catfish filet;15234
-smoked trout;15214
-light tuna;15184
-squid;15175
-bay scallops;15172
-oysters;15167
-octopus;15166
-mussels;15164
-clams;15157
-shrimp;15152
-live lobster;15147
-dungeness crabs;15143
-canned crabmeat;15141
-crab;15136
-yellowfin tuna;15127
-solid white tuna packed in water;15126
-solid white albacore tuna in olive oil;15124
-water-packed tuna;15121
-oil packed tuna;15119
-ahi tuna steaks;15117
-rainbow trout;15115
-trout filet;15114
-swordfish steaks;15110
-red snapper fillets;15101
-shark;15095
-royal porgy;15090
-sardines;15088
-smoked salmon;15077
-salmon;15076
-orange roughy;15073
-salmon roe;15072
-rockfish;15070
-red mullet;15055
-monkfish;15054
-mackerel;15050
-herring;15039
-halibut fillets;15036
-smoked haddock;15035
-haddock;15033
-grouper fillets;15031
-flounder fillets;15028
-mahi mahi;15023
-black cod;15019
-salt cod;15018
-cod;15015
-caviar;15012
-catfish fillets;15010
-carp;15008
-european seabass;15004
-canned anchovies;15002
-anchovy;15001
-hibiscus;14649
-blueberry juice;14623
-merlot;14602
-pernod;14551
-triple sec;14534
-iced tea;14475
-frozen cranberry juice concentrate;14430
-water;14412
-cola;14400
-tea;14355
-chocolate malt powder;14317
-malted milk powder;14311
-limeade concentrate;14303
-lemonade concentrate;14292
-lemonade mix;14287
-cranberry juice cocktail;14242
-instant coffee granules;14214
-espresso;14210
-coffee;14209
-hot chocolate mix;14197
-clam juice;14187
-chocolate syrup;14181
-chardonnay;14160
-root beer;14157
-diet pop;14146
-lemon lime soda;14144
-moscato;14140
-ginger ale;14136
-sauvignon blanc;14134
-vermouth;14132
-creme soda;14130
-club soda;14121
-pinot grigio;14113
-chianti;14108
-dry white wine;14106
-zinfandel;14102
-pinot noir;14099
-dry red wine;14097
-red wine;14096
-wine;14084
-marsala wine;14057
-whiskey;14052
-vodka;14051
-rum;14037
-crème de menthe;14034
-light beer;14006
-beer;14003
-tri-tip roast;13958
-beef shoulder roast;13943
-beef tenderloin;13926
-beef strip loin;13923
-strip steak;13913
-cube steaks;13874
-prime rib;13833
-beef chuck roast;13786
-top blade steak;13523
-beef round roast;13411
-corned beef;13346
-suet;13335
-liver;13325
-kidney;13323
-beef heart;13321
-beef shank;13227
-boneless beef short ribs;13149
-beef short ribs;13147
-beef brisket;13023
-tahini;12698
-salted cashews;12585
-roasted pumpkin seeds;12516
-ground flaxseed;12220
-almond butter;12195
-sweetened shredded coconut;12179
-creamed coconut;12177
-walnuts;12155
-black walnuts;12154
-unsalted pistachios;12152
-pistachios;12151
-pine nuts;12147
-pecans;12142
-nuts;12135
-macadamia nuts;12131
-hazelnuts;12120
-coconut water;12119
-coconut milk;12118
-canned coconut milk;12117
-coconut cream;12115
-sweetened coconut;12109
-coconut flakes;12108
-coconut;12104
-chestnuts;12098
-cashew butter;12088
-cashews;12087
-roasted cashews;12085
-almond paste;12071
-blanched almonds;12062
-almonds;12061
-sunflower seeds;12036
-sesame seeds;12023
-unsalted pumpkin seeds;12016
-pumpkin seeds;12014
-lotus nuts;12013
-chia seeds;12006
-fiddleheads;11995
-wasabi;11990
-straw mushrooms;11989
-oyster mushrooms;11987
-pasilla chile;11982
-canned green chiles;11980
-jalapeno;11979
-serrano chile;11977
-pepperoncini;11976
-grape leaves;11974
-lemongrass;11972
-cactus pads;11963
-chili peppers;11962
-baby carrots;11960
-arugula;11959
-fennel bulb;11957
-oil packed sun dried tomatoes;11956
-sun-dried tomatoes;11955
-tomatillos;11954
-baby zucchini;11953
-radicchio;11952
-yellow bell pepper;11951
-enoki mushrooms;11950
-sweet pickle relish;11945
-pickle relish;11944
-pimientos;11943
-cornichons;11941
-sweet pickles;11940
-dill pickle;11937
-ketchup;11935
-roasted red peppers;11916
-frozen corn;11913
-white shoepeg corn;11901
-tomato paste;11887
-tomato juice;11886
-no salt added diced tomatoes;11885
-red bell pepper;11821
-chili;11819
-broccoli slaw;11741
-yellow tomatoes;11696
-orange tomato;11695
-shallots;11677
-radish sprouts;11676
-thai chili;11670
-wakame;11669
-spirulina;11667
-agar;11663
-carrot juice;11655
-delicata squash;11643
-yellow squash;11641
-chipotle peppers in adobo;11632
-dried chives;11615
-canned beets;11609
-jicama;11603
-yams;11601
-watercress;11591
-canned water chestnuts;11590
-vegetable;11583
-turnip greens;11568
-turnips;11564
-canned tomato sauce;11549
-tomato puree;11547
-stewed tomatoes;11533
-canned diced tomatoes;11531
-tomatoes;11529
-green tomatoes;11527
-taro;11518
-red-skinned sweet potatoes;11508
-sweet potatoes;11507
-kang kong;11503
-spaghetti squash;11492
-hubbard squash;11489
-butternut squash;11485
-acorn squash;11482
-zucchini;11477
-patty pan squash;11475
-frozen spinach;11463
-baby spinach;11457
-nori;11446
-seaweed;11445
-irish moss;11444
-sauerkraut;11439
-rutabaga;11435
-daikon radish;11430
-radishes;11429
-pumpkin pie mix;11426
-pumpkin puree;11424
-pumpkin;11422
-squash flowers;11416
-potato starch;11413
-fries;11408
-tater tots;11398
-hash brown potatoes;11390
-potato flakes;11378
-potatoes;11362
-waxy potatoes;11355
-russet potatoes;11353
-new potatoes;11352
-green bell pepper;11333
-peas and carrots;11322
-canned peas;11306
-peas;11304
-snow peas;11300
-parsnips;11298
-fresh parsley;11297
-sweet onion;11294
-green onions;11291
-dried onion;11284
-onion;11282
-okra;11278
-mustard greens;11270
-dried shiitake mushrooms;11268
-cremini mushrooms;11266
-portobello mushrooms;11265
-canned mushrooms;11264
-mushrooms;11260
-red leaf lettuce;11257
-lotus root;11254
-green leaf lettuce;11253
-lettuce;11252
-torn romaine lettuce;11251
-butter lettuce;11250
-leeks;11246
-kohlrabi;11241
-morel mushrooms;11240
-chanterelle mushrooms;11239
-shiitake mushrooms;11238
-kale;11233
-jerusalem artichokes;11226
-ginger;11216
-garlic;11215
-escarole;11213
-edamame;11212
-eggplant;11209
-dandelion greens;11207
-cucumber;11206
-yard long beans;11199
-mâche;11190
-canned corn;11177
-mexicorn;11176
-cream-style corn;11174
-corn kernels;11172
-corn;11168
-ears corn;11167
-fresh cilantro;11165
-collard greens;11161
-chives;11156
-frisee;11152
-belgian endive;11151
-chayote;11149
-swiss chard;11147
-celery;11143
-celery root;11141
-cauliflower;11135
-yuca;11134
-carrots;11124
-napa cabbage;11119
-bok choy;11116
-savoy cabbage;11114
-red cabbage;11112
-cabbage;11109
-burdock root;11104
-brussels sprouts;11098
-broccoli rabe;11096
-broccoli;11090
-beet greens;11086
-pickled beets;11084
-beets;11080
-green beans;11052
-bean sprouts;11043
-frozen baby lima beans;11039
-baby lima beans;11032
-bamboo shoots;11028
-bitter gourd;11024
-asparagus;11011
-artichokes;11007
-sprouts;11001
-pulled pork;10983
-pork sirloin tip roast;10963
-boneless pork shoulder;10958
-real bacon recipe pieces;10862
-pork loin;10225
-ground pork;10219
-pork tenderloin;10218
-pork ribs;10204
-salt pork;10165
-ham;10151
-ham steak;10149
-canadian bacon;10130
-bacon;10123
-pork liver;10110
-spare ribs;10088
-pork butt;10084
-cooked pork;10073
-pork shoulder;10072
-pork loin chops;10062
-lean pork tenderloin;10060
-pork rib roast;10044
-bone-in pork chops;10036
-pork belly;10005
-golden delicious apple;9501
-pomegranate juice;9442
-tamarind juice;9437
-mango nectar;9436
-guava nectar;9435
-clementines;9433
-fruit;9431
-dried fruit;9426
-medjool dates;9421
-bartlett pears;9412
-canned pineapple;9354
-maraschino cherries;9328
-watermelon;9326
-tamarind paste;9322
-strawberries;9316
-rhubarb;9307
-raspberries;9302
-raisins;9299
-golden raisins;9297
-quince;9296
-prunes;9291
-pomegranate seeds;9286
-plums;9279
-plantains;9277
-pineapple juice;9273
-pineapple;9266
-persimmons;9265
-pear nectar;9262
-dried pears;9259
-pears;9252
-peach nectar;9251
-dried peaches;9246
-peaches;9236
-passion fruit juice;9232
-passion-fruit;9231
-papaya;9226
-tangerine juice;9221
-canned mandarin oranges;9218
-orange zest;9216
-orange juice concentrate;9214
-orange juice;9206
-navel oranges;9202
-orange;9200
-olives;9195
-nectarines;9191
-mulberries;9190
-honeydew melon;9184
-cantaloupe;9181
-mango;9176
-lychee;9164
-lime juice;9160
-lime;9159
-lemon zest;9156
-lemon juice;9152
-lemon;9150
-kumquats;9149
-kiwi;9148
-jackfruit;9144
-guava;9139
-cape gooseberries;9138
-grape juice;9135
-red grapes;9132
-black grapes;9129
-grapefruit;9112
-gooseberries;9107
-fruit cocktail;9099
-dried figs;9094
-figs;9089
-elderberries;9088
-dates;9087
-dried currants;9085
-red currants;9084
-black currants;9083
-whole cranberry sauce;9081
-dried cranberries;9079
-cranberries;9078
-cherries;9070
-black cherries;9063
-star fruit;9060
-mixed berries;9054
-blueberries;9050
-blackberries;9042
-bananas;9040
-avocado;9037
-apricot nectar;9036
-dried apricots;9032
-apricots;9021
-unsweetened applesauce;9019
-apple juice;9016
-dried apples;9011
-apple;9003
-instant oatmeal;8640
-quick cooking oats;8402
-cocoa puffs cereal;8271
-granola;8212
-cooked grits;8164
-grits;8160
-puffed rice;8156
-oatmeal;8121
-rolled oats;8120
-cream of wheat;8104
-quick cooking grits;8092
-chex cereal;8082
-crisp rice cereal;8066
-rice krispies cereal;8065
-rice chex;8064
-raisin bran cereal;8061
-lucky charms cereal;8050
-grape-nuts cereal;8038
-fruity pebbles;8034
-cereal;8029
-cornflakes;8020
-corn chex;8019
-COCOA KRISPIES;8014
-cheerios;8013
-all-bran cereal;8001
-turkey sausage;7955
-italian turkey sausage;7927
-pastrami;7925
-breakfast links;7919
-smoked sausage;7916
-spam;7908
-turkey pepperoni;7278
-deli turkey;7259
-beef hot dogs;7241
-cocktail sausages;7235
-smoked ham;7216
-cooked ham;7214
-salami;7071
-andouille sausage;7064
-ground sausage;7063
-kielbasa;7059
-pepperoni;7057
-mortadella;7050
-italian sausage;7036
-chorizo;7019
-bratwurst;7013
-bologna;7008
-chicken gravy;6999
-brown gravy;6998
-gravy;6997
-au jus gravy;6996
-healthy request cream of celery soup;6987
-fat-free less-sodium chicken broth;6984
-adobo sauce;6979
-chili paste;6973
-chili sauce;6972
-worcestershire sauce;6971
-low sodium chicken broth;6970
-seafood stock;6963
-vegetable broth;6615
-enchilada sauce;6599
-ramen noodles;6583
-chicken bouillon;6480
-condensed french onion soup;6354
-turkey gravy;6326
-tomato & basil sauce;6233
-healthy request cream of chicken soup;6195
-chicken broth;6194
-reduced sodium cream of mushroom soup;6182
-fish sauce;6179
-oyster sauce;6176
-hoisin sauce;6175
-chicken stock;6172
-beef stock;6170
-hot sauce;6168
-salsa;6164
-tomato soup;6159
-plum sauce;6151
-bbq sauce;6150
-condensed cream of mushroom soup;6147
-teriyaki sauce;6112
-onion soup mix;6094
-chicken base;6080
-beef bouillon cubes;6076
-beef bouillon powder;6075
-cream of potato soup;6053
-cheese soup;6038
-cream of chicken soup;6016
-condensed cream of celery soup;6010
-beef broth;6008
-turkey breast;5696
-93% lean ground turkey meat;5665
-ground turkey;5662
-shredded chicken;5348
-chicken feet;5335
-ground chicken;5332
-duck legs;5317
-canned chicken;5311
-cornish game hens;5307
-turkey wings;5195
-turkey legs;5193
-turkey neck;5179
-turkey giblets;5171
-turkey meat;5166
-turkey;5165
-quail;5157
-pheasant;5153
-guinea fowl;5151
-duck;5139
-cooked chicken;5112
-roasting chicken;5109
-chicken wings;5100
-skinless boneless chicken thighs;5096
-chicken thighs;5091
-skinless chicken legs;5080
-chicken legs;5075
-skinless chicken drumsticks;5071
-chicken drumsticks;5066
-cooked chicken breast;5064
-chicken breasts;5062
-chicken livers;5027
-skinless chicken pieces;5011
-whole chicken;5006
-honey mustard;4703
-pam;4679
-dairy free margarine;4673
-light mayonnaise;4641
-ranch dressing;4639
-dairy free butter;4628
-shortening;4615
-bacon fat;4609
-light butter;4602
+sub rolls;98940
+sugar;19335
+sugar snap peas;10011300
+sugar syrup;90480
+sukrin sweetener;99190
+summer savory;98961
+summer squash;11641
 sunflower oil;4584
-mustard oil;4583
-canola oil;4582
-avocado oil;4581
-goose fat;4576
-turkey fat;4575
-duck fat;4574
-chicken fat;4542
-hazelnut oil;4532
-almond oil;4529
-walnut oil;4528
-grapeseed oil;4517
-vegetable oil;4513
-safflower oil;4511
-balsamic vinaigrette;4135
-french dressing;4120
-salad dressing;4114
-margarine;4073
-sesame oil;4058
-palm oil;4055
-olive oil;4053
-coconut oil;4047
-peanut oil;4042
-rice bran oil;4037
-mayonnaise;4025
-thousand island dressing;4017
-asian toasted sesame dressing;4016
-miracle whip;4014
-light salad dressing;4011
-pork fat;4002
-taco seasoning;2073
-balsamic vinegar;2069
-wine vinegar;2068
-dried mint;2066
-fresh mint;2064
-fresh rosemary;2063
-horseradish sauce;2055
-capers;2054
-white vinegar;2053
-vanilla extract;2050
-fresh thyme;2049
-apple cider vinegar;2048
-salt;2047
-mustard;2046
-fresh dill;2045
-fresh basil;2044
-turmeric;2043
-dried thyme;2042
-fresh tarragon;2041
-fresh sage;2038
-saffron;2037
-rosemary;2036
-spices;2035
-poultry seasoning;2034
-poppy seeds;2033
-white pepper;2032
-cayenne pepper;2031
-fresh ground black pepper;2030
-dried parsley;2029
-paprika;2028
-oregano;2027
-onion powder;2026
-nutmeg;2025
-mustard seeds;2024
-dried marjoram;2023
-ground mace;2022
-ground ginger;2021
-dried garlic;2020
-fenugreek seeds;2019
-fennel seeds;2018
-dried dill;2017
-dill seed;2016
-curry powder;2015
-cumin seeds;2014
-coriander seeds;2013
-ground coriander;2012
-ground cloves;2011
-ground cinnamon;2010
-chili powder;2009
-chervil;2008
-celery seed;2007
-ground cardamom;2006
-caraway seeds;2005
-bay leaf;2004
-dried basil;2003
-anise seeds;2002
-ground allspice;2001
-greek yogurt;1256
-american cheese;1253
-shredded mexican cheese blend;1251
-buttermilk;1230
-queso fresco;1228
-egg substitute;1226
-protein powder;1223
-evaporated milk;1214
-low fat shredded mexican cheese blend;1209
-low fat parmesan cheese;1204
-nonfat cool whip;1200
-fat-free half-and-half;1199
-strawberry yogurt;1197
-velveeta cheese;1192
-kraft singles;1190
-queso dip;1188
-cream cheese block;1186
-nonfat sour cream;1180
-low fat sour cream;1179
-low fat milk;1174
-egg white powder;1173
-reduced fat cheese;1168
-goat cheese;1159
-nonfat milk powder;1154
-unsalted butter;1145
-egg replacer;1144
-quail eggs;1140
-duck eggs;1138
-poached eggs;1131
-hard-boiled eggs;1129
-egg yolks;1125
-egg whites;1124
-eggs;1123
-vanilla yogurt;1119
-plain nonfat yogurt;1118
-low fat plain yogurt;1117
-yogurt;1116
-goat milk;1106
-chocolate milk;1103
-evaporated skim milk;1097
+sunflower seeds;12036
+sweet chilli sauce;98962
+sweet onion;11294
+sweet paprika;1002028
+sweet pickle juice;93640
+sweet pickle relish;11945
+sweet potato;11507
+sweet tea;14355
+sweetened coconut;12109
 sweetened condensed milk;1095
-buttermilk powder;1094
-milk powder;1090
-low fat buttermilk;1088
-fat-free milk;1085
-low-fat milk;1082
-milk;1077
-non-dairy creamer;1067
-eggnog;1057
-sour cream;1056
-whipped cream;1054
-heavy cream;1053
-light cream;1052
-half & half;1049
+sweetened shredded coconut;12179
+swiss chard;11147
 swiss cheese;1040
-roquefort cheese;1039
-romano cheese;1038
-part-skim ricotta cheese;1037
-ricotta cheese;1036
-provolone cheese;1035
-parmesan cheese;1033
-grated parmesan cheese;1032
-neufchatel cheese;1031
-muenster cheese;1030
-Low Moisture Part-Skim Mozzarella Cheese;1029
-part-skim mozzarella cheese;1028
-mozzarella cheese;1026
-pepper jack cheese;1025
-gruyere cheese;1023
-gouda cheese;1022
-fontina cheese;1020
-feta cheese;1019
-edam cheese;1018
-cream cheese;1017
-low fat cottage cheese;1016
-fat-free cottage cheese;1014
-cottage cheese;1012
-colby jack cheese;1011
-cheddar cheese;1009
-camembert cheese;1007
-brie;1006
-blue cheese;1004
-butter;1001
+taco seasoning mix;2073
+taco shells;18360
+tahini;12698
+tamari;10116124
+tapioca flour;93696
+tarragon;2041
+tart apple;1029003
+tea bags;10111111
+tequila;10814037
+teriyaki sauce;6112
+thai basil;1012044
+thai chiles;11670
+thai red curry paste;93605
+thick-cut bacon;10310123
+tilapia fillets;15261
+toast;18070
+toffee bits;19383
+tofu;16213
+tomatillos;11954
+tomato juice;11886
+tomato paste;11887
+tomato puree;11547
+tomato sauce;11549
+tomato soup;6159
+tomatoes;11529
+top blade steak;13523
+top round steak;23636
+Top Sirloin;23584
+tortilla;18364
+tortilla chips;19056
+triple sec;14534
+truffle oil;1024053
+tuna;10015121
+turbinado sugar;19908
+turkey;5165
+turkey breast;5696
+turkey kielbasa;7955
+turmeric;2043
+turnips;11564
+unbleached flour;10020081
+unsalted butter;1145
+unsmoked back bacon;10130
+unsweetened applesauce;9019
+unsweetened coconut milk;12117
+unsweetened shredded coconut;10012108
+vanilla bean;93622
+vanilla bean paste;93813
+vanilla essence;1012050
+vanilla extract;2050
+vanilla frosting;10019230
+vanilla instant pudding mix;19206
+vanilla protein powder;99076
+vanilla wafers;18609
+vanilla yogurt;1119
+vegan cheese;93701
+vegan chocolate chips;98848
+vegan margarine;4673
+vegetable broth;6615
+vegetable oil;4513
+vegetarian bacon;16542
+vermouth;14132
+vinaigrette;4135
+vinegar;2053
+vodka;14051
+walnuts;12155
+water;14412
+water chestnuts;11590
+water-packed tuna;15121
+watercress;11591
+watermelon chunks;9326
+wheat bran;20077
+wheat germ;20078
+whipped cream;1054
+whipped topping;42135
+whipping cream;1001053
+whiskey;14052
+white balsamic vinegar;1012069
+white bread;18069
+white cake mix;18137
+white cheddar;1011009
+white chocolate;19087
+white chocolate chips;10019087
+white onion;10611282
+white pepper;2032
+white whole wheat flour;93824
+white wine;14106
+white wine vinegar;1002068
+whole allspice berries;1002001
+whole chicken;5006
+whole coriander seeds;2013
+whole cranberry sauce;9081
+whole kernel corn;11177
+whole star anise;1012002
+whole wheat bread;18075
+whole wheat flour;20080
+whole wheat tortillas;93675
+whole-grain mustard;1012046
+wine;14084
+wine vinegar;2068
+winter squash;10111485
+won ton wraps;10018368
+worcestershire sauce;6971
+wraps;10018364
+xanthan gum;93626
+yeast;18375
+yellow bell pepper;11951
+yellow cake mix;18144
+yellow onion;10511282
+yogurt;1116
+yukon gold potato;10211362

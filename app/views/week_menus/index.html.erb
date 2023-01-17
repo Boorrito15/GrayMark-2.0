@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Manage <%= @school.name%>'s menus </h1>
+  <br><br>
   <div class="row justify-content-between">
     <div class="col-4">
       <nav>
@@ -13,10 +14,10 @@
       </nav>
     </div>
     <div class="col-4 text-end">
+      <%= link_to "Create menus", new_school_week_menu_path(@school.id), class:"btn btn-primary" %>
     </div>
   </div>
   <br>
-
 <!--TABS -->
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -25,7 +26,11 @@
           <div class = "card">
             <div class ="card-body">
               <% @profile = menu.profile
-              @menu_diet = @profile.diet.name
+              if @profile.diet.nil?
+                @menu_diet = ""
+              else
+                @menu_diet = @profile.diet.name
+              end
               @menu_intolerances = []
               IntoleranceProfile.where(profile: @profile).each do |intolerance_profile|
                 @menu_intolerances << intolerance_profile.intolerance.name
@@ -52,7 +57,11 @@
             <div class = "card">
               <div class ="card-body">
                 <% @profile = menu.profile
-                @menu_diet = @profile.diet.name
+                if @profile.diet.nil?
+                  @menu_diet = ""
+                else
+                  @menu_diet = @profile.diet.name
+                end
                 @menu_intolerances = []
                 IntoleranceProfile.where(profile: @profile).each do |intolerance_profile|
                   @menu_intolerances << intolerance_profile.intolerance.name

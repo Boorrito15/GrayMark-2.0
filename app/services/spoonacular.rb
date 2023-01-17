@@ -1,47 +1,57 @@
-class Spoonacular < ApplicationRecord
-  def initialize(cuisine, diet, intolerances, excludeIngredients, mealtype)
+class Spoonacular
+  def initialize(cuisine, diet, intolerances, exclude_ingredients, meal_type)
     @cuisine = cuisine
     @diet = diet
     @intolerances = intolerances
-    @excludeIngredients = excludeIngredients.map { |id| Ingredient.find(id).name }.join(", ")
-    @mealtype = mealtype
+    @exclude_ingredients = exclude_ingredients
+    @meal_type = meal_type
   end
 
+  def call
+    search_recipes
+    create_dishes
+  end
+
+  private
+
   def search_recipes
-    url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&excludeIngredients=#{@excludeIngredients}&type=#{@mealtype}"
+    url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&exclude_ingredients=#{@exclude_ingredients}&type=#{@meal_type}&number=5&sort=random"
     dish_serialized = URI.open(url).read
     dishes = JSON.parse(dish_serialized)
-    @dishes = dishes["results"].sample[5]
+    @dishes = dishes["results"]
   end
 
   def create_dishes
+    @dish_ids = []
+    @dishes_processed = []
     @dishes.each do |dish|
-      @dish = Dish.find_or_create_by(id: dish["id"], name: dish["title"], course: @mealtype)
+      @dish = Dish.find_or_create_by(id: dish["id"], name: dish["title"], course: @meal_type)
       #If dish is new, create it connect image
       if @dish.previously_new_record?
         file = URI.open(dish["image"])
         @dish.image.attach(io: file, filename: "dish.png", content_type: "image/png")
         @dish.save
-        @dish_ids = []
-        @dish_ids << dish.id
+        @dish_ids << dish["id"]
       end
+      @dishes_processed << @dish
     end
-    if !@dish_ids.empty?
+    # Get recipe information
+    unless @dish_ids.empty?
       @dish_ids_formatted_api = @dish_ids.join(',')
-      url = "https://api.spoonacular.com/recipes/informationBulk?apiKey=#{ENV['SPOONACULAR_API']}&ids=#{@dish_ids_formatted_api}"
+      url = "https://api.spoonacular.com/recipes/informationBulk?apiKey=#{ENV['SPOONACULAR_API_2']}&ids=#{@dish_ids_formatted_api}"
       ingredients_serialized = URI.open(url).read
       ingredients_raw = JSON.parse(ingredients_serialized)
-      n = 0
-      @dish_ids.each do |dish, n|
+      @dish_ids.count.times do |n|
         ingredients = ingredients_raw[n]["extendedIngredients"]
-        n+=1
+        n += 1
         ingredients.each do |ingredient|
           id = ingredient["id"]
           name = ingredient["nameClean"]
-          ingredient = Ingredient.find_or_create_by(id: id, name: name)
+          ingredient = Ingredient.find_or_create_by(id: id)
           DishIngredient.new(ingredient: ingredient, dish: @dish)
         end
       end
+      return @dishes_processed
     end
   end
 end

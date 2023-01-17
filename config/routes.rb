@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/components', to: "pages#components"
 
   resources :schools, only: %i[index show new create] do
+    resources :week_menus, only: %i[index show new create]
     resources :profiles, only: %i[index show new create edit update] do
       resources :week_menus, only: %i[index show new create]
       resources :intolerance_profiles, only: %i[index show new create]
