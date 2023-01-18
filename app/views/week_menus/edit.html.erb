@@ -72,7 +72,7 @@
                 end %>
                 <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
                 <br><br>
-                <%= link_to "View menu", week_menu_path(menu), class: "btn btn-primary" %>
+                <%= link_to "Review", week_menu_path(menu), class: "btn btn-primary" %>
               </div>
             </div>
           <% end %>
@@ -81,4 +81,3 @@
     </div>
   </div>
 </div>
-
