@@ -67,6 +67,9 @@ class WeekMenusController < ApplicationController
           MenuDish.create(day_menu: @day_menu, dish: @dessert_dishes[n])
         end
       end
+      redirect_to school_week_menus_path(@school)
+    else
+      redirect_to profile school_profiles_path(@school)
     end
   end
 
