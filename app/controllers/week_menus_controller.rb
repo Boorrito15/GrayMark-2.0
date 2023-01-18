@@ -76,6 +76,7 @@ class WeekMenusController < ApplicationController
   end
 
   def review
+    @school = School.find(params[:school_id])
     @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
     @week_menus_pending = @week_menus.where(status: false) || @week_menus.where(status: empty?)
     @week_menus_approved = @week_menus.where(status: true)

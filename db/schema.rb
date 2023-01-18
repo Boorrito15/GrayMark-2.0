@@ -156,7 +156,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_102121) do
     t.bigint "profile_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "status"
+    t.boolean "status", default: false
     t.index ["profile_id"], name: "index_week_menus_on_profile_id"
   end
 

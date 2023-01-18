@@ -1,3 +1,79 @@
 <div class="container">
-  <h1>Review <%= @week_menu.count %> menus for <%= @school.name%> </h1>
+  <h1>Review <%= @week_menus.count %> menus for <%= @school.name%> </h1>
+  <br><br>
+  <div class="row justify-content-between">
+    <div class="col-4">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+          role="tab" aria-controls="nav-home" aria-selected="true">To review</button>
+
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+          role="tab" aria-controls="nav-profile" aria-selected="false">Approved</button>
+        </div>
+      </nav>
+    </div>
+    <div class="col-4 text-end">
+      <%= link_to "Approve all menus", new_school_week_menu_path(@school.id), class:"btn btn-primary" %>
+    </div>
+  </div>
+  <br>
+<!--TAB 1: Pending menus -->
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class = "cards">
+        <% @week_menus_pending.each do |menu| %>
+          <div class = "card">
+            <div class ="card-body">
+              <% @profile = menu.profile
+              if @profile.diet.nil?
+                @menu_diet = ""
+              else
+                @menu_diet = @profile.diet.name
+              end
+              @menu_intolerances = []
+              IntoleranceProfile.where(profile: @profile).each do |intolerance_profile|
+                @menu_intolerances << intolerance_profile.intolerance.name
+              end
+              @menu_allergies = []
+              AllergyProfile.where(profile: @profile).each do |allergy_profile|
+                @menu_allergies << allergy_profile.ingredient.name
+              end %>
+              <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
+              <br><br>
+              <%= link_to "View menu", week_menu_path(menu), class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="tab-pane fade p-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class = "cards">
+        <% @week_menus_approved.each do |menu| %>
+          <div class = "card">
+            <div class ="card-body">
+              <% @profile = menu.profile
+              if @profile.diet.nil?
+                @menu_diet = ""
+              else
+                @menu_diet = @profile.diet.name
+              end
+              @menu_intolerances = []
+              IntoleranceProfile.where(profile: @profile).each do |intolerance_profile|
+                @menu_intolerances << intolerance_profile.intolerance.name
+              end
+              @menu_allergies = []
+              AllergyProfile.where(profile: @profile).each do |allergy_profile|
+                @menu_allergies << allergy_profile.ingredient.name
+              end %>
+              <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
+              <br><br>
+              <%= link_to "View menu", week_menu_path(menu), class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
