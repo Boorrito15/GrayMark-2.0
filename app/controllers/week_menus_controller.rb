@@ -12,14 +12,14 @@ class WeekMenusController < ApplicationController
 
   def show
     @week_menu = WeekMenu.find(params[:id])
+    @profile = @week_menu.profile
     @school = @week_menu.profile.school
+    @diet = @profile.diet.name
+    @intolerances = @profile.intolerances.map(&:name)
+    @allergies = @profile.ingredients.map(&:name)
     @day_menus = DayMenu.where(week_menu: @week_menu)
     @day_menus_ordered = @day_menus.in_order_of(:meal_type, [ "main course", "side dish", "dessert" ])
     @day_menus_grouped_by_day = @day_menus.group_by { |day_menu| day_menu.date.strftime("%A") }
-    @ingredients = []
-    @week_menu.profile.allergy_profiles.each do |allergy_profile|
-      @ingredients << allergy_profile.ingredient.name.capitalize
-    end
   end
 
   def new
@@ -46,9 +46,6 @@ class WeekMenusController < ApplicationController
 
         @intolerances = profile.intolerances.map(&:name).join(',')
         @allergies = profile.ingredients.map(&:name).join(',')
-
-        # For each profile create 15 Dishes
-        # TO-DO: Refactor into one call for all mealtypes
 
         @main = Spoonacular.new(@cuisine, @diet, @intolerances, @allergies, "main course")
         @main_dishes = @main.call
@@ -78,16 +75,27 @@ class WeekMenusController < ApplicationController
   def review
     @school = School.find(params[:school_id])
     @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
-    @week_menus_pending = @week_menus.where(status: false) || @week_menus.where(status: empty?)
+    @week_menus_pending = @week_menus.where(status: nil) && @week_menus.where(status: false)
     @week_menus_approved = @week_menus.where(status: true)
+  end
+
+  def update_status
+    @week_menu = WeekMenu.find(params[:id])
+    @school = @week_menu.profile.school
+    @week_menu.update(status: !@week_menu.status)
+    redirect_to edit_school_week_menu_path(@school, @week_menu), notice: "Menu has been updated"
   end
 
   def edit
-    @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
-    @week_menus_pending = @week_menus.where(status: false) || @week_menus.where(status: empty?)
-    @week_menus_approved = @week_menus.where(status: true)
     @week_menu = WeekMenu.find(params[:id])
+    @profile = @week_menu.profile
+    @school = @week_menu.profile.school
+    @diet = @profile.diet.name
+    @intolerances = @profile.intolerances.map(&:name)
+    @allergies = @profile.ingredients.map(&:name)
+    @day_menus = DayMenu.where(week_menu: @week_menu)
+    @day_menus_ordered = @day_menus.in_order_of(:meal_type, [ "main course", "side dish", "dessert" ])
+    @day_menus_grouped_by_day = @day_menus.group_by { |day_menu| day_menu.date.strftime("%A") }
   end
 end
-
   # TO-DO: create 3 dishes for each day_menu (1 dish for each course) (Spoonacular API)

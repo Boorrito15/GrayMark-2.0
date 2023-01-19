@@ -9,6 +9,9 @@ Rails.application.routes.draw do
       collection do
         get :review
       end
+      member do
+        patch :update_status
+      end
     end
     resources :profiles, only: %i[index show new create edit update] do
       # resources :week_menus, only: %i[index show new review create edit update]
