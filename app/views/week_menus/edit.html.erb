@@ -6,9 +6,9 @@
     <h2><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h2>
     <% case @week_menu.status %>
     <% when true %>
-      <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-primary" %>
+       <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-primary" %>
     <% else %>
-      <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-success" %>
+       <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-info" %>
     <% end %>
   </div>
 
@@ -49,4 +49,16 @@
     </div>
   <% end %>
 
+  <div class="row justify-content-between">
+    <div class="col-4">
+      <% unless @week_menu.prev.nil? %>
+        <%= link_to "<< Prev Menu", edit_school_week_menu_path(@school, @week_menu.prev.id), class:"btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="col-4 justify-content-end">
+      <% unless @week_menu.next.nil? %>
+        <%= link_to "Next Menu >>", edit_school_week_menu_path(@school, @week_menu.next.id), class:"float-end btn btn-primary"  %>
+      <% end %>
+    </div>
+  </div>
 </div>

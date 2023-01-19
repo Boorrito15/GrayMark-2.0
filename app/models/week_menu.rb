@@ -8,4 +8,12 @@ class WeekMenu < ApplicationRecord
   def return_status
     self.status == true ? "Approved" : "Pending"
   end
+
+  def next
+    WeekMenu.where("id > ?", id).order(id: :asc).limit(1).first
+  end
+
+  def prev
+    WeekMenu.where("id < ?", id).order(id: :desc).limit(1).first
+  end
 end
