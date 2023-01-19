@@ -8,7 +8,7 @@
     <% when true %>
       <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-primary" %>
     <% else %>
-      <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-secondary" %>
+      <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-success" %>
     <% end %>
 
   </div>
