@@ -1,5 +1,5 @@
 class AddStatusToWeekMenus < ActiveRecord::Migration[7.0]
   def change
-    add_column :week_menus, :status, :boolean
+    add_column :week_menus, :status, :boolean, default: true
   end
 end

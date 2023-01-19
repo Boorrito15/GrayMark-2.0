@@ -4,4 +4,8 @@ class WeekMenu < ApplicationRecord
   has_many :menu_dishes, through: :day_menus, dependent: :destroy
   has_many :dishes, through: :menu_dishes
   validates :date, presence: true, uniqueness: { scope: %i[profile] }
+
+  def return_status
+    self.status == true ? "Approved" : "Pending"
+  end
 end

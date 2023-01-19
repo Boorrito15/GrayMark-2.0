@@ -2,8 +2,15 @@
   <div class="banner">
     <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
     <br><br>
-    <h1><%= @ingredients.join(', ') %> free </h1>
+    <h1><%= @intolerances.join(', ') %>, <%= @allergies.join(', ') %> free | <%= @diet %> </h1>
     <h2><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h2>
+    <% case @week_menu.status %>
+    <% when true %>
+      <button type="button" class="btn btn-primary"><%= @week_menu.return_status %></button>
+    <% else %>
+      <button type="button" class="btn btn-outline primary" disabled><%= @week_menu.return_status %></button>
+    <% end %>
+
   </div>
 
   <div class = "row mb-5">
@@ -28,7 +35,7 @@
     <div class="mb-5" id="<%= day %>">
       <h3><%= day %></h3>
       <div class="cards">
-      
+
         <% day_menus.each do |day_menu| %>
             <% day_menu.dishes.each do |dish|  %>
               <div class="card-trip">

@@ -5,7 +5,7 @@
     <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
-        role="tab" aria-controls="nav-home" aria-selected="true">To review</button>
+        role="tab" aria-controls="nav-home" aria-selected="true">Pending</button>
 
         <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
         role="tab" aria-controls="nav-profile" aria-selected="false">Approved</button>
@@ -36,7 +36,7 @@
               end %>
               <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
               <br><br>
-              <%= link_to "Review menu", week_menu_path(menu), class: "btn btn-primary" %>
+              <%= link_to "Review menu", edit_school_week_menu_path(@school, menu), class: "btn btn-primary" %>
             </div>
           </div>
         <% end %>
@@ -64,7 +64,7 @@
               end %>
               <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
               <br><br>
-              <%= link_to "Approved", week_menu_path(menu), class: "btn btn-primary" %>
+              <%= link_to "Approved", edit_school_week_menu_path(@school, menu), class: "btn btn-primary" %>
             </div>
           </div>
         <% end %>
