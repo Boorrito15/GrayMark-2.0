@@ -1,8 +1,8 @@
 <div class="container">
   <h1>Manage <%= @school.name%>'s menus </h1>
   <br><br>
-  <div class="row justify-content-between">
-    <div class="col-4">
+  <div class="d-flex flex-wrap justify-content-between">
+    <div>
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
@@ -13,7 +13,7 @@
         </div>
       </nav>
     </div>
-    <div class="col-4 text-end">
+    <div>
       <%= link_to "Create menus", new_school_week_menu_path(@school.id), class:"btn btn-primary" %>
     </div>
   </div>
