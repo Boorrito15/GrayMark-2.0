@@ -4,7 +4,12 @@ class SchoolsController < ApplicationController
   end
 
   def search
-    @schools = School.all.order('name ASC')
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR postcode ILIKE :query"
+      @schools = School.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @schools = School.all.order('name ASC')
+    end
   end
 
   def show
