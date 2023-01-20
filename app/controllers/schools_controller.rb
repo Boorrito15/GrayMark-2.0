@@ -30,8 +30,14 @@ class SchoolsController < ApplicationController
 
   def assign_school
     @school = School.find(params[:id])
-    @school.update(user: current_user)
+    @dietician = @school.user
+    if @dietician == current_user
+      @school.update(user: nil)
+      flash.alert = "#{@school.name} has been removed from your schools"
+    else
+      @school.update(user: current_user)
+      flash.alert = "#{@school.name} has been added to your schools"
+    end
     redirect_to schools_path
-    flash.alert = "#{@school.name} has been added to your schools"
   end
 end
