@@ -10,9 +10,6 @@ class SchoolsController < ApplicationController
   def show
     @school = School.find(params[:id])
     @school.user.nil? ? @dietician = nil : @dietician = @school.user.first_name << " " << @school.user.last_name
-    # unless @school.user.nil?
-    #   @dietician = @school.user.first_name << " " << @school.user.last_name
-    # end
     @active_profiles = Profile.where(school: @school, active: true)
     @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
     @intolerances = []
