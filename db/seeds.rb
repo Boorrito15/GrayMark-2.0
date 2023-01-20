@@ -3,74 +3,80 @@ require 'json'
 require "open-uri"
 
 puts 'Cleaning database'
-Profile.destroy_all
-IntoleranceProfile.destroy_all
-AllergyProfile.destroy_all
+# Profile.destroy_all
+# IntoleranceProfile.destroy_all
+# AllergyProfile.destroy_all
 # Diet.destroy_all
 # Intolerance.destroy_all
-Ingredient.destroy_all
-DishIngredient.destroy_all
-MenuDish.destroy_all
-Dish.destroy_all
-DayMenu.destroy_all
-WeekMenu.destroy_all
+# Ingredient.destroy_all
+# DishIngredient.destroy_all
+# MenuDish.destroy_all
+# Dish.destroy_all
+# DayMenu.destroy_all
+# WeekMenu.destroy_all
 # School.destroy_all
 # User.destroy_all
 
-# # USER
-# puts 'Creating user'
+# USER
+puts 'Creating user'
 
-# dietitian = User.create!(first_name: 'Grace', last_name: 'Allmark', email: 'ga@gmail.com', password: '123123')
+dietitian = User.create!(first_name: 'Grace', last_name: 'Allmark', email: 'ga@gmail.com', password: '123123')
 
-# # SCHOOLS
-# puts 'Creating schools'
+# SCHOOLS
+puts 'Creating schools'
 
-# @cheam = School.create!(name: 'Cheam', town: 'Newbury', postcode: 'RG19 8LD', menu_count: 10, user: dietitian)
-# file = URI.open('http://res.cloudinary.com/df5d4fbx4/image/upload/v1/development/v1t9h5nmvhg542shwu3j3966i3q5')
-# @cheam.photo.attach(io: file, filename: 'cheam.jpg', content_type: 'image/jpg')
-# @cheam.save
+@cheam = School.create!(name: 'Cheam', town: 'Newbury', postcode: 'RG19 8LD', menu_count: 10, user: dietitian)
+file = URI.open('http://res.cloudinary.com/df5d4fbx4/image/upload/v1/development/v1t9h5nmvhg542shwu3j3966i3q5')
+@cheam.photo.attach(io: file, filename: 'cheam.jpg', content_type: 'image/jpg')
+@cheam.save
 
-# @eton = School.create!(name: 'Eton', town: 'Windsor', postcode: 'SL4 6DW', menu_count: 10, user: dietitian)
-# file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669285266/ug7wnbkxu1borfrnv4w8.jpg')
-# @eton.photo.attach(io: file, filename: 'eton.jpg', content_type: 'image/jpg')
-# @eton.save
+@eton = School.create!(name: 'Eton', town: 'Windsor', postcode: 'SL4 6DW', menu_count: 10, user: dietitian)
+file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669285266/ug7wnbkxu1borfrnv4w8.jpg')
+@eton.photo.attach(io: file, filename: 'eton.jpg', content_type: 'image/jpg')
+@eton.save
 
-# @hogwarts = School.create!(name: 'Hogwarts', town: 'Hogsmeade', postcode: 'CH16 1DE', menu_count: 10, user: dietitian)
-# file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669283546/mbehaazckdwyrz7txvtj.jpg')
-# @hogwarts.photo.attach(io: file, filename: 'hogwarts.jpg', content_type: 'image/jpg')
-# @hogwarts.save
+@hogwarts = School.create!(name: 'Hogwarts', town: 'Hogsmeade', postcode: 'CH16 1DE', menu_count: 10, user: dietitian)
+file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669283546/mbehaazckdwyrz7txvtj.jpg')
+@hogwarts.photo.attach(io: file, filename: 'hogwarts.jpg', content_type: 'image/jpg')
+@hogwarts.save
 
-# @bsb = School.create!(name: 'BSB', town: 'Bournemouth', postcode: 'BH8 9PY', menu_count: 10, user: dietitian)
-# file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669285048/uw5wxfx7jgimvkm8i1lz.jpg')
-# @bsb.photo.attach(io: file, filename: 'bsb.jpg', content_type: 'image/jpg')
-# @bsb.save
+@bsb = School.create!(name: 'BSB', town: 'Bournemouth', postcode: 'BH8 9PY', menu_count: 10, user: dietitian)
+file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669285048/uw5wxfx7jgimvkm8i1lz.jpg')
+@bsb.photo.attach(io: file, filename: 'bsb.jpg', content_type: 'image/jpg')
+@bsb.save
 
-# @st_trinians = School.create!(name: 'St Trinians', town: 'Remenham', postcode: 'RG9 3DD', menu_count: 14, user: dietitian)
-# file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669285062/lej4phekj0rlueypqpsv.jpg')
-# @st_trinians.photo.attach(io: file, filename: 'st_trinians.jpg', content_type: 'image/jpg')
-# @st_trinians.save
+@st_trinians = School.create!(name: 'St Trinians', town: 'Remenham', postcode: 'RG9 3DD', menu_count: 14, user: dietitian)
+file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669285062/lej4phekj0rlueypqpsv.jpg')
+@st_trinians.photo.attach(io: file, filename: 'st_trinians.jpg', content_type: 'image/jpg')
+@st_trinians.save
 
-# @kings = School.create!(name: 'Kings', town: 'Winchester', postcode: 'SO22 5PN', menu_count: 4, user: dietitian)
-# file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669726023/rfqojlnjwiyttmu5qv0a.png')
-# @kings.photo.attach(io: file, filename: 'kings.jpg', content_type: 'image/jpg')
-# @kings.save
+@kings = School.create!(name: 'Kings', town: 'Winchester', postcode: 'SO22 5PN', menu_count: 4, user: dietitian)
+file = URI.open('https://res.cloudinary.com/df5d4fbx4/image/upload/v1669726023/rfqojlnjwiyttmu5qv0a.png')
+@kings.photo.attach(io: file, filename: 'kings.jpg', content_type: 'image/jpg')
+@kings.save
 
-# # DIETS
-# puts 'Creating diets'
+puts "Creating schools in Hampshire"
 
-# ["Gluten Free", "Ketogenic", "Vegetarian", "Lacto-Vegetarian", "Ovo-Vegetarian", "Vegan", "Pescetarian", "Paleo", "Primal", "Low FODMAP", "Whole30"].each do |diet|
-#   Diet.create(name: diet)
-# end
+filepath = "db/data/schools_hampshire.csv"
+CSV.foreach(filepath, headers: :first_row, col_sep: ';') do |row|
+  School.create!(id: row[0], name: row[1], address: "#{row[2]} #{row[3]} #{row[4]}", town: row[5], county: row[6], postcode: row[7], phone_number: row[8])
+end
 
-# # INTOLERANCES
-# puts 'Creating intolerances'
+# DIETS
+puts 'Creating diets'
 
-# ["Dairy", "Egg", "Gluten", "Grain", "Peanut", "Seafood", "Sesame", "Shellfish", "Soy", "Sulfite", "Tree Nut", "Wheat"].each do |intolerance|
-#   Intolerance.create(name: intolerance)
-# end
+["Gluten Free", "Ketogenic", "Vegetarian", "Lacto-Vegetarian", "Ovo-Vegetarian", "Vegan", "Pescetarian", "Paleo", "Primal", "Low FODMAP", "Whole30"].each do |diet|
+  Diet.create(name: diet)
+end
 
+# INTOLERANCES
+puts 'Creating intolerances'
 
-# # INGREDIENTS
+["Dairy", "Egg", "Gluten", "Grain", "Peanut", "Seafood", "Sesame", "Shellfish", "Soy", "Sulfite", "Tree Nut", "Wheat"].each do |intolerance|
+  Intolerance.create(name: intolerance)
+end
+
+# INGREDIENTS
 puts 'Creating ingredients'
 
 filepath = "db/data/ingredients.csv"
@@ -78,7 +84,7 @@ CSV.foreach(filepath, headers: :first_row, col_sep: ';') do |row|
   Ingredient.create!(name: row[0], id: row[1])
 end
 
-# # DISHES
+# DISHES
 # puts 'Creating dishes'
 # # main course
 # Dish.create(name:"Jade Buddha Salmon Tartare", course:"main course")
@@ -123,9 +129,9 @@ end
 #   @profile_1_school = Profile.create(school: school, diet: Diet.all.sample, active: true)
 #   @profile_2_school = Profile.create(school: school, diet: Diet.all.sample, active: false)
 # end
-# # DISH INGREDIENTS (join_table)
+# DISH INGREDIENTS (join_table)
 
-# # WEEK_MENUS + ALLERGY PROFILES (join table)
+# WEEK_MENUS + ALLERGY PROFILES (join table)
 
 # puts 'Creating allergy profiles'
 # puts 'Creating week menus'

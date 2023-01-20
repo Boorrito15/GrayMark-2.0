@@ -1,9 +1,14 @@
 <div class="container text-left">
   <div class="banner">
-    <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
+    <%# <% unless @school.photo.nil?%>
+      <%# <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
+    <%# <% end %>
     <br><br>
     <h1><%= @school.name %></h1>
     <h3><%= @school.postcode %></h3>
+    <h4><%= @dietician %></h4>
+    <%= button_to "Add to profile", assign_school_school_path(@school), method: :patch, class: "btn btn-primary"  %>
+
     <br>
     <div class = "cards">
       <%= link_to school_profiles_path(@school) do %>

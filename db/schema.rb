@@ -126,7 +126,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_19_132420) do
     t.string "town"
     t.string "postcode"
     t.integer "menu_count"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
@@ -159,7 +159,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_19_132420) do
     t.bigint "profile_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "status"
+    t.boolean "status", default: true
     t.index ["profile_id"], name: "index_week_menus_on_profile_id"
   end
 
