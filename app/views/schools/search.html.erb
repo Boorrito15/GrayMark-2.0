@@ -1,0 +1,19 @@
+  <div class="container text-left">
+    <h1>Find your schools</h1>
+      <br><br>
+      <div class="cards">
+        <% @schools.each do |school| %>
+          <div class="card">
+            <div class="card-body" background-color="linen">
+              <h3 class="card-title"><%= school.name %></h3>
+              <h5><%= school.postcode %></h5>
+              <% unless school.user.nil? %>
+                <p>Dietician: <%= school.user.first_name %> <%= school.user.last_name %></p>
+              <% end %>
+              <br>
+              <%= link_to "View school", school_path(school), class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  </div>

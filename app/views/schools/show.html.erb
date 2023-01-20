@@ -1,10 +1,28 @@
 <div class="container text-left">
   <div class="banner">
-    <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
+    <%# <% unless @school.photo.nil?%>
+      <%# <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
+    <%# <% end %>
     <br><br>
-    <h1><%= @school.name %></h1>
-    <h3><%= @school.postcode %></h3>
-    <br>
+
+    <div class="d-flex flex-wrap justify-content-between">
+      <div>
+        <h2><%= @school.name %></h2>
+        <h3><%= @school.postcode %></h3>
+        <br>
+        <h4><%= @dietician %></h4>
+      </div>
+      <div>
+      <% if @school.user == current_user %>
+        <%= button_to "Remove from my profile", assign_school_school_path(@school), method: :patch, class: "btn btn-primary"  %>
+      <% elsif @school.user.nil? %>
+        <%= button_to "Add to profile", assign_school_school_path(@school), method: :patch, class: "btn btn-primary" %>
+      <% else %>
+      <% end %>
+      </div>
+    </div>
+
+    <br><br>
     <div class = "cards">
       <%= link_to school_profiles_path(@school) do %>
         <div class="card text-bg-light mb-3">

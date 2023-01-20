@@ -5,7 +5,7 @@ class CreateSchools < ActiveRecord::Migration[7.0]
       t.string :town
       t.string :postcode
       t.integer :menu_count
-      t.references :user, null: false, foreign_key: true
+      t.references :user, null: true, foreign_key: true
 
       t.timestamps
     end

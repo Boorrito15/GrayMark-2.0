@@ -3,8 +3,6 @@
     <div class="col">
       <div class="card">
         <div class="card-body" background-color="linen">
-          <%= cl_image_tag school.photo.key, class:"avatar-large" %>
-          <br><br>
           <h3 class="card-title"><%= school.name %></h3>
           <br>
           <%= link_to "View school", school_path(school), class: "btn btn-primary" %>
