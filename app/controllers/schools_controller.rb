@@ -17,7 +17,7 @@ class SchoolsController < ApplicationController
   def show
     @school.user.nil? ? @dietician = nil : @dietician = @school.user.first_name << " " << @school.user.last_name
     @active_profiles = Profile.where(school: @school, active: true)
-    @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
+    @week_menus = WeekMenu.where(status: true).joins(:profile).where(profiles: { school: @school, active: true })
     @intolerances = []
     @allergies = []
 

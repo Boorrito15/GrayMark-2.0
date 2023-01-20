@@ -1,10 +1,5 @@
 <div class="container text-left">
   <div class="banner">
-    <%# <% unless @school.photo.nil?%>
-      <%# <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
-    <%# <% end %>
-    <br><br>
-
     <div class="d-flex flex-wrap justify-content-between">
       <div>
         <h2><%= @school.name %></h2>
@@ -71,7 +66,7 @@
               <div class ="card-body">
                 <p> <%= @menu_intolerances.join(', ') %> - <%= @menu_allergies.join(', ') %> free | <%= @profile_diet %></p>
                 <br><br>
-                <%= link_to "View menu", week_menu_path(week_menu), class: "btn btn-primary" %>
+                <%= link_to "View menu", school_week_menu_path(@school, week_menu), class: "btn btn-primary" %>
               </div>
             </div>
           <% end %>

@@ -6,10 +6,11 @@ class WeekMenusController < ApplicationController
   before_action :set_week_menu, only: %i[show update_status edit]
 
   def index
-    @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
+    @week_menus = WeekMenu.where(status: true).joins(:profile).where(profiles: { school: @school, active: true })
     @profiles = Profile.where(school: @school, active: true)
     @current_menus = @week_menus.select { |week_menu| week_menu.date > Date.today - 21 }
     @past_menus = @week_menus.select { |week_menu| week_menu.date < Date.today - 21 }
+    @pending_menus = WeekMenu.where(status: false).joins(:profile).where(profiles: { school: @school, active: true })
   end
 
   def show

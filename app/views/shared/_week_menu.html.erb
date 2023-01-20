@@ -6,7 +6,7 @@
         <% week_menu.profile.allergy_profiles.each do |allergy_profile| %>
         <h5> <%= allergy_profile.ingredient.name.capitalize %>
         <% end %> free </h5>
-        <%= link_to "View menu", week_menu_path(week_menu) %>
+        <%= link_to "View menu", school_week_menu_path(@school, week_menu) %>
       </div>
     </div>
   <% end %>
