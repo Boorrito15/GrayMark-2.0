@@ -56,8 +56,6 @@ class WeekMenusController < ApplicationController
         @dessert = Spoonacular.new(@cuisine, @diet, @intolerances, @allergies, "dessert")
         @dessert_dishes = @dessert.call
 
-        # For each day, assign 3 dishes (1 for each mealtype)
-
         0.upto(4) do |n|
           date = @date + n.days
           @day_menu = DayMenu.create(date: date, week_menu: @week_menu)
@@ -98,4 +96,3 @@ class WeekMenusController < ApplicationController
     @day_menus_grouped_by_day = @day_menus.group_by { |day_menu| day_menu.date.strftime("%A") }
   end
 end
-  # TO-DO: create 3 dishes for each day_menu (1 dish for each course) (Spoonacular API)
