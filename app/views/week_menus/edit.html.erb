@@ -1,15 +1,24 @@
-<div data-controller="day-focus" class="container page" style="height: 200vh">
+<div data-controller="day-focus" class="container page" style="height: 225vh">
   <div class="banner">
-    <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
-    <br><br>
-    <h1>Review <%= @intolerances.join(', ') %>, <%= @allergies.join(', ') %> free | <%= @diet %> </h1>
-    <h2><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h2>
-    <% case @week_menu.status %>
-    <% when true %>
-       <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-primary" %>
-    <% else %>
-       <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-info" %>
-    <% end %>
+    <div class="d-flex flex-wrap justify-content-between">
+      <div>
+        <h1><%=@school.name %></h1>
+        <br>
+        <h2>Edit <%= @intolerances.join(', ') %>, <%= @allergies.join(', ') %> free | <%= @diet %> </h2>
+        <h3><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h3>
+      </div>
+      <div>
+        <div class="d-flex">
+          <% case @week_menu.status %>
+          <% when true %>
+            <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-primary" %>
+          <% else %>
+            <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-info" %>
+          <% end %>
+            <%= link_to "Save", school_week_menu_path(@school, @week_menu), class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class = "row mb-5">
@@ -34,13 +43,16 @@
     <div class="mb-5" id="<%= day %>">
       <h3><%= day %></h3>
       <div class="cards">
-
         <% day_menus.each do |day_menu| %>
             <% day_menu.dishes.each do |dish|  %>
               <div class="card-trip">
                 <%= cl_image_tag dish.image.key, crop: :fill %>
                 <div class="card-trip-infos">
-                  <h4 class="card-title"><%= dish.name %></h4>
+                  <div>
+                    <h4 class="card-title"><%= dish.name %></h4>
+                    <br>
+                    <%= link_to "Substitute", "#"  %>
+                  </div>
                 </div>
               </div>
             <% end %>

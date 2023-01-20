@@ -2,7 +2,6 @@
   <h3>Create allergy free menus for <%= @school.name %></h3>
   <%= simple_form_for [@school, @week_menu] do |f| %>
     <%= f.input :date, as: :date, html5: true, label: "Start date", input_html: {name: "date"} %>
-    <%= f.input :day_menus, label: "Select a cuisine", collection: DayMenu.cuisine, input_html: { data: {controller: "tom-select"}, name: "cuisine", class: "input"}%>
     <h5>You will be creating <%= @profiles.count %> menus </h5>
     <%= f.button :submit, class: "btn btn-primary", value: "Create Menus" %>
   <% end %>

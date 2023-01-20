@@ -2,16 +2,18 @@ require "json"
 require "open-uri"
 
 class WeekMenusController < ApplicationController
+  before_action :set_school, only: %i[index new create review]
+  before_action :set_week_menu, only: %i[show update_status edit]
+
   def index
-    @school = School.find(params[:school_id])
-    @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
+    @week_menus = WeekMenu.where(status: true).joins(:profile).where(profiles: { school: @school, active: true })
     @profiles = Profile.where(school: @school, active: true)
     @current_menus = @week_menus.select { |week_menu| week_menu.date > Date.today - 21 }
     @past_menus = @week_menus.select { |week_menu| week_menu.date < Date.today - 21 }
+    @pending_menus = WeekMenu.where(status: false).joins(:profile).where(profiles: { school: @school, active: true })
   end
 
   def show
-    @week_menu = WeekMenu.find(params[:id])
     @profile = @week_menu.profile
     @school = @week_menu.profile.school
     @diet = @profile.diet.name
@@ -23,15 +25,12 @@ class WeekMenusController < ApplicationController
   end
 
   def new
-    @school = School.find(params[:school_id])
     @profiles = Profile.where(school: @school, active: true)
     @week_menu = WeekMenu.new
   end
 
   def create
-    @school = School.find(params[:school_id])
     @date = Date.parse(params[:date])
-
     @cuisine = params[:cuisine]
     @profiles = Profile.where(school: @school, active: true)
 
@@ -71,21 +70,18 @@ class WeekMenusController < ApplicationController
   end
 
   def review
-    @school = School.find(params[:school_id])
     @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
     @week_menus_pending = @week_menus.where(status: nil) && @week_menus.where(status: false)
     @week_menus_approved = @week_menus.where(status: true)
   end
 
   def update_status
-    @week_menu = WeekMenu.find(params[:id])
     @school = @week_menu.profile.school
     @week_menu.update(status: !@week_menu.status)
     redirect_to edit_school_week_menu_path(@school, @week_menu), notice: "Menu has been updated"
   end
 
   def edit
-    @week_menu = WeekMenu.find(params[:id])
     @profile = @week_menu.profile
     @school = @week_menu.profile.school
     @diet = @profile.diet.name
@@ -94,5 +90,15 @@ class WeekMenusController < ApplicationController
     @day_menus = DayMenu.where(week_menu: @week_menu)
     @day_menus_ordered = @day_menus.in_order_of(:meal_type, [ "main course", "side dish", "dessert" ])
     @day_menus_grouped_by_day = @day_menus.group_by { |day_menu| day_menu.date.strftime("%A") }
+  end
+
+  private
+
+  def set_school
+    @school = School.find(params[:school_id])
+  end
+
+  def set_week_menu
+    @week_menu = WeekMenu.find(params[:id])
   end
 end

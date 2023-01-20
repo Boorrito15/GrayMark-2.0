@@ -1,17 +1,23 @@
 class SchoolsController < ApplicationController
+  before_action :set_school, only: %i[assign_school show]
+
   def index
     @schools = School.where(user: current_user).order(name: :asc)
   end
 
   def search
-    @schools = School.all.order('name ASC')
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR postcode ILIKE :query"
+      @schools = School.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @schools = School.all.order('name ASC')
+    end
   end
 
   def show
-    @school = School.find(params[:id])
     @school.user.nil? ? @dietician = nil : @dietician = @school.user.first_name << " " << @school.user.last_name
     @active_profiles = Profile.where(school: @school, active: true)
-    @week_menus = WeekMenu.joins(:profile).where(profiles: { school: @school, active: true })
+    @week_menus = WeekMenu.where(status: true).joins(:profile).where(profiles: { school: @school, active: true })
     @intolerances = []
     @allergies = []
 
@@ -29,7 +35,6 @@ class SchoolsController < ApplicationController
   end
 
   def assign_school
-    @school = School.find(params[:id])
     @dietician = @school.user
     if @dietician == current_user
       @school.update(user: nil)
@@ -39,5 +44,11 @@ class SchoolsController < ApplicationController
       flash.alert = "#{@school.name} has been added to your schools"
     end
     redirect_to schools_path
+  end
+
+  private
+
+  def set_school
+    @school = School.find(params[:id])
   end
 end

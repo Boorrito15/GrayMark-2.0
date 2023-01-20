@@ -1,26 +1,29 @@
 <div class="container">
   <h1>Manage <%= @school.name%>'s menus </h1>
   <br><br>
-  <div class="row justify-content-between">
-    <div class="col-4">
+  <div class="d-flex flex-wrap justify-content-between">
+    <div>
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
-          role="tab" aria-controls="nav-home" aria-selected="true">Current menus</button>
+          <button class="nav-link active" id="nav-current-tab" data-bs-toggle="tab" data-bs-target="#nav-current" type="button"
+          role="tab" aria-controls="nav-current" aria-selected="true">Current menus</button>
 
-          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
-          role="tab" aria-controls="nav-profile" aria-selected="false">Past menus</button>
+          <button class="nav-link" id="nav-past-tab" data-bs-toggle="tab" data-bs-target="#nav-past" type="button"
+          role="tab" aria-controls="nav-past" aria-selected="false">Past menus</button>
+
+          <button class="nav-link" id="nav-pending-tab" data-bs-toggle="tab" data-bs-target="#nav-pending" type="button"
+          role="tab" aria-controls="nav-pending" aria-selected="false">Pending menus</button>
         </div>
       </nav>
     </div>
-    <div class="col-4 text-end">
+    <div>
       <%= link_to "Create menus", new_school_week_menu_path(@school.id), class:"btn btn-primary" %>
     </div>
   </div>
   <br>
 <!--TABS -->
   <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="tab-pane fade show active p-3" id="nav-current" role="tabpanel" aria-labelledby="nav-current-tab">
       <div class = "cards">
         <% @current_menus.each do |menu| %>
           <div class = "card">
@@ -41,14 +44,14 @@
               end %>
               <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
               <br><br>
-              <%= link_to "View menu", week_menu_path(menu), class: "btn btn-primary" %>
+              <%= link_to "View menu", school_week_menu_path(@school, menu), class: "btn btn-primary" %>
             </div>
           </div>
         <% end %>
       </div>
     </div>
 
-    <div class="tab-pane fade p-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="tab-pane fade p-3" id="nav-past" role="tabpanel" aria-labelledby="nav-past-tab">
         <% @past_menus.group_by(&:date).each do |menu_by_date| %>
         <h3> <%= menu_by_date[0].strftime("%d %B %Y") %> to <%= (menu_by_date[0]+18.days).strftime("%d %B %Y") %> </h3>
         <br><br>
@@ -72,10 +75,38 @@
                 end %>
                 <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
                 <br><br>
-                <%= link_to "View menu", week_menu_path(menu), class: "btn btn-primary" %>
+                <%= link_to "View menu", school_week_menu_path(@school, menu), class: "btn btn-primary" %>
               </div>
             </div>
           <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="tab-pane fade p-3" id="nav-pending" role="tabpanel" aria-labelledby="nav-pending-tab">
+      <div class = "cards">
+        <% @pending_menus.each do |menu| %>
+          <div class = "card inactive">
+            <div class ="card-body inactive">
+              <% @profile = menu.profile
+              if @profile.diet.nil?
+                @menu_diet = ""
+              else
+                @menu_diet = @profile.diet.name
+              end
+              @menu_intolerances = []
+              IntoleranceProfile.where(profile: @profile).each do |intolerance_profile|
+                @menu_intolerances << intolerance_profile.intolerance.name
+              end
+              @menu_allergies = []
+              AllergyProfile.where(profile: @profile).each do |allergy_profile|
+                @menu_allergies << allergy_profile.ingredient.name
+              end %>
+              <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
+              <br><br>
+              <%= link_to "View menu", school_week_menu_path(@school, menu), class: "btn btn-primary" %>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>

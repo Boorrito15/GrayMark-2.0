@@ -1,16 +1,22 @@
 <div data-controller="day-focus" class="container page" style="height: 200vh">
   <div class="banner">
-    <%= cl_image_tag @school.photo.key, class: "avatar-xlarge" %>
-    <br><br>
-    <h1><%= @intolerances.join(', ') %>, <%= @allergies.join(', ') %> free | <%= @diet %> </h1>
-    <h2><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h2>
-    <% case @week_menu.status %>
-    <% when true %>
-      <button type="button" class="btn btn-primary"><%= @week_menu.return_status %></button>
-    <% else %>
-      <button type="button" class="btn btn-outline primary" disabled><%= @week_menu.return_status %></button>
-    <% end %>
-
+    <div class="d-flex flex-wrap justify-content-between">
+      <div>
+        <h1><%= @school.name %></h1>
+        <br>
+        <h2><%= @intolerances.join(', ') %>, <%= @allergies.join(', ') %> free | <%= @diet %> </h2>
+        <h3><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h3>
+      </div>
+      <div>
+        <% case @week_menu.status %>
+        <% when true %>
+          <button type="button" class="btn btn-primary"><%= @week_menu.return_status %></button>
+        <% else %>
+          <button type="button" class="btn btn-outline primary" disabled><%= @week_menu.return_status %></button>
+        <% end %>
+          <%= link_to "Edit menu", edit_school_week_menu_path(@school, @week_menu), class: "btn btn-primary" %>
+      </div>
+    </div>
   </div>
 
   <div class = "row mb-5">
@@ -35,7 +41,6 @@
     <div class="mb-5" id="<%= day %>">
       <h3><%= day %></h3>
       <div class="cards">
-
         <% day_menus.each do |day_menu| %>
             <% day_menu.dishes.each do |dish|  %>
               <div class="card-trip">
