@@ -59,12 +59,12 @@
   <div class="row justify-content-between">
     <div class="col-4">
       <% unless @week_menu.prev.nil? %>
-        <%= link_to "Prev Menu", @week_menu.prev, class:"btn btn-primary" %>
+        <%= link_to "<< Prev Menu", @week_menu.prev, class:"btn btn-primary" %>
       <% end %>
     </div>
     <div class="col-4 justify-content-end">
       <% unless @week_menu.next.nil? %>
-        <%= link_to "Next Menu", @week_menu.next, class:"float-end btn btn-primary" %>
+        <%= link_to "Next Menu >>", @week_menu.next, class:"float-end btn btn-primary" %>
       <% end %>
     </div>
   </div>
