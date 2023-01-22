@@ -8,7 +8,7 @@ class SchoolsController < ApplicationController
   def search
     if params[:query].present?
       sql_query = "name ILIKE :query OR postcode ILIKE :query"
-      @schools = School.where(sql_query, query: "%#{params[:query]}%")
+      @schools = School.where(sql_query, query: "%#{params[:query]}%").order('name ASC')
     else
       @schools = School.all.order('name ASC')
     end
