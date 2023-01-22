@@ -22,6 +22,7 @@ class ProfilesController < ApplicationController
     @profile_intolerance = @profiles.joins(:intolerance_profiles).where(intolerance_profiles: { intolerance_id: @intolerances }).distinct
     @profile = @profile_intolerance.joins(:allergy_profiles).where(allergy_profiles: { ingredient_id: @allergies }).distinct
 
+
     if @profile.empty?
       @profile = Profile.create!(school: @school, diet: @diet, active: @active)
       unless @intolerances.nil?

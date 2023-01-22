@@ -46,7 +46,8 @@
       <br><br>
         <div class = "cards">
           <% @current_menus.each do |week_menu| %>
-            <% @menu_profile = week_menu.profile  %>
+            <% @menu_profile = week_menu.profile %>
+            <%# REFACTOR THIS INTO CONTROLLER %>
             <% @profile_diet = @menu_profile.diet %>
             <% if @profile_diet.nil? %>
               <% @profile_diet = "" %>
@@ -65,7 +66,7 @@
             <div class = "card">
               <div class ="card-body">
                 <p> <%= @menu_intolerances.join(', ') %> - <%= @menu_allergies.join(', ') %> free | <%= @profile_diet %></p>
-                <br><br>
+                
                 <%= link_to "View menu", school_week_menu_path(@school, week_menu), class: "btn btn-primary" %>
               </div>
             </div>
@@ -74,41 +75,3 @@
     </div>
   <% end %>
 </div>
-
-  <% if false %>
-    <div>
-      <div class="row justify-content-between">
-        <div class="col-4">
-          <h3> Profiles </h3>
-        </div>
-        <div class="col-4 text-end">
-          <%= link_to "Create new allergy profile", new_school_profile_path(@school), class:"btn btn-primary" %>
-        </div>
-      </div>
-      <br>
-    </div>
-    <div class = "cards">
-      <% @active_profiles.each do |profile| %>
-        <% if profile.diet.nil? %>
-          <% @profile_diet = "" %>
-        <% else %>
-          <% @profile_diet = profile.diet.name %>
-        <% end %>
-        <% @profile_intolerances = []
-        IntoleranceProfile.where(profile: profile).each do |intolerance_profile|
-          @profile_intolerances << intolerance_profile.intolerance.name
-        end
-        @profile_allergies = []
-        AllergyProfile.where(profile: profile).each do |allergy_profile|
-          @profile_allergies << allergy_profile.ingredient.name
-        end %>
-        <div class = "card">
-          <div class ="card-body">
-            <p> <%= @profile_intolerances.join(', ') %>, <%= @profile_allergies.join(', ') %> free | <%= @profile_diet %></p>
-            <%# <% raise %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-    <br><br>
-  <% end %>

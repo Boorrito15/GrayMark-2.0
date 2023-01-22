@@ -10,10 +10,12 @@ class WeekMenu < ApplicationRecord
   end
 
   def next
-    WeekMenu.where("id > ?", id).order(id: :asc).limit(1).first
+    @school = self.profile.school
+    WeekMenu.joins(:profile).where(profiles: { school: @school, active: true }).where("week_menus.id > ?", id).order(id: :asc).limit(1).first
   end
 
   def prev
-    WeekMenu.where("id < ?", id).order(id: :desc).limit(1).first
+    @school = self.profile.school
+    WeekMenu.joins(:profile).where(profiles: { school: @school, active: true }).where("week_menus.id < ?", id).order(id: :asc).limit(1).first
   end
 end

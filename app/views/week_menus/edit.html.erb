@@ -70,6 +70,8 @@
     <div class="col-4 justify-content-end">
       <% unless @week_menu.next.nil? %>
         <%= link_to "Next Menu >>", edit_school_week_menu_path(@school, @week_menu.next.id), class:"float-end btn btn-primary"  %>
+      <% else %>
+        <%= link_to "Done", review_school_week_menus_path(@school), class:"float-end btn btn-primary" %>
       <% end %>
     </div>
   </div>

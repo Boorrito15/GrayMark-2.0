@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Review <%= @week_menus.count %> menus for <%= @school.name%> </h1>
   <br>
-  <div class="row justify-content-between">
+  <div class="d-flex flex-wrap justify-content-between">
     <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
@@ -11,6 +11,13 @@
         role="tab" aria-controls="nav-profile" aria-selected="false">Approved</button>
       </div>
     </nav>
+    <div>
+      <% if @week_menus_pending.count == 0 %>
+        <%= link_to "Finish review", school_path(@school), class:"btn btn-primary" %>
+      <% else %>
+        <%= link_to "Finish review", "#", class:"btn btn-primary disabled" %>
+      <% end %>
+    </div>
   </div>
   <br>
   <div class="tab-content" id="nav-tabContent">
