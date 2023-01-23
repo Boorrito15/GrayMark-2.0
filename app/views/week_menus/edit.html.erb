@@ -8,15 +8,13 @@
         <h3><%= @week_menu.date.strftime("%d %B %Y") %> to <%= (@week_menu.date+18.days).strftime("%d %B %Y") %></h3>
       </div>
       <div>
-        <div class="d-flex">
-          <% case @week_menu.status %>
-          <% when true %>
-            <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-primary" %>
-          <% else %>
-            <%= button_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), method: :patch, class: "btn btn-info" %>
-          <% end %>
-            <%= link_to "Save", school_week_menu_path(@school, @week_menu), class: "btn btn-primary" %>
-        </div>
+        <% case @week_menu.status %>
+        <% when true %>
+          <%= link_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), data: { turbo_method: :patch }, class: "btn btn-primary" %>
+        <% else %>
+          <%= link_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), data: { turbo_method: :patch }, class: "btn btn-info" %>
+        <% end %>
+        <%= link_to "Save", school_week_menu_path(@school, @week_menu), class: "btn btn-primary" %>
       </div>
     </div>
   </div>
@@ -44,21 +42,19 @@
       <h3><%= day %></h3>
       <div class="cards">
         <% day_menus.each do |day_menu| %>
-            <% day_menu.dishes.each do |dish|  %>
+          <% day_menu.menu_dishes.each do |menu_dish| %>
               <div class="card-trip">
-                <%= cl_image_tag dish.image.key, crop: :fill %>
+                <%= cl_image_tag menu_dish.dish.image.key, crop: :fill %>
                 <div class="card-trip-infos">
-                  <div>
-                    <h4 class="card-title"><%= dish.name %></h4>
-                    <br>
-                    <%= link_to "Substitute", "#"  %>
-                  </div>
+                  <h4 class="card-title"><%= menu_dish.dish.name %></h4>
+                  <%= link_to "Substitute", edit_day_menu_menu_dish_path(day_menu, menu_dish, diet: @diet, intolerances: @intolerances, ingredients: @allergies, meal_type: @meal_type) %>
                 </div>
               </div>
             <% end %>
           <% end %>
       </div>
     </div>
+
   <% end %>
 
   <div class="row justify-content-between">

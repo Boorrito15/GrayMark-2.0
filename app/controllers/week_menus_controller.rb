@@ -20,7 +20,7 @@ class WeekMenusController < ApplicationController
     @intolerances = @profile.intolerances.map(&:name)
     @allergies = @profile.ingredients.map(&:name)
     @day_menus = DayMenu.where(week_menu: @week_menu)
-    @day_menus_ordered = @day_menus.in_order_of(:meal_type, [ "main course", "side dish", "dessert" ])
+    @day_menus_ordered = @day_menus.in_order_of(:meal_type, ["main course", "side dish", "dessert"])
     @day_menus_grouped_by_day = @day_menus.group_by { |day_menu| day_menu.date.strftime("%A") }
   end
 
