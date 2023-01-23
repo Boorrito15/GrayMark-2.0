@@ -20,17 +20,10 @@ class Spoonacular
   private
 
   def search_recipes_query
-    url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&query=#{@query}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&exclude_ingredients=#{@exclude_ingredients}&type=#{@meal_type}&number=5&sort=random&fillIngredients=true"
+    url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&query=#{@query}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&exclude_ingredients=#{@exclude_ingredients}&type=#{@meal_type}&number=5&sort=random&fillIngredients=false"
     dish_serialized = URI.open(url).read
     dishes_raw = JSON.parse(dish_serialized)
     @dishes_results = dishes_raw["results"]
-  end
-
-  def display_dishes
-    @dishes = []
-    @dishes_results.each do |dish|
-      @dish = Dish.find_or_create_by(id: dish["id"], name: dish["title"], course: @meal_type)
-    end
   end
 
   def search_recipes

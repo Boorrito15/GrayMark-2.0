@@ -8,7 +8,12 @@ class MenuDishesController < ApplicationController
     @meal_type = params[:meal_type]
 
     @query = params[:query]
-    Spoonacular.new(@query, @cuisine, @diet, @intolerances, @allergies, "main course")
-    @schools = School.where(sql_query, query: "%#{params[:query]}%").order('name ASC')
+    if params[:query].present?
+      @results = Spoonacular.new(@query, @cuisine, @diet, @intolerances, @allergies, @meal_type)
+      @results_dishes = @results.search_recipes_query
+    else
+      Dish.all
+    end
+
   end
 end
