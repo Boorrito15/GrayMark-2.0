@@ -11,7 +11,7 @@
   </div>
   <br><br>
 
-  <%= form_with(url: search_schools_path, method: :get, class: "d-flex") do %>
+  <%= form_with(url: edit_menu_dish_path, method: :get, class: "d-flex") do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
@@ -19,17 +19,15 @@
     %>
     <%= submit_tag "Search", class: "btn btn-primary"%>
   <% end %>
-
   <br><br>
-
-  <div class = "cards">
+  <div class="cards">
     <% @results_dishes.each do |dish| %>
       <div class="card-trip">
-        <%= dish[:image], crop: :fill %>
+        <%= image_tag (dish["image"]) %>
         <div class="card-trip-infos">
-        <h4 class="card-title"><%= dish.[:name] %></h4>
+          <%= dish["title"] %>
+        </div>
       </div>
     <% end %>
   </div>
-
 </div>
