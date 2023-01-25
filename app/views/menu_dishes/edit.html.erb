@@ -12,13 +12,13 @@
   <br><br>
 
   <%= form_with(url: edit_day_menu_menu_dish_path, method: :get, class: "d-flex") do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Search for a dish"
-    %>
+    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search for a dish" %>
+    <%= hidden_field_tag :diet, @diet %>
+    <%= hidden_field_tag :intolerances, @intolerances %>
+    <%= hidden_field_tag :ingredients, @allergies %>
     <%= submit_tag "Search", class: "btn btn-primary"%>
   <% end %>
+
   <br><br>
   <div class="cards">
     <% @results_dishes.each do |dish| %>

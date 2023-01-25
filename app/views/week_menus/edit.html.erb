@@ -47,7 +47,7 @@
                 <%= cl_image_tag menu_dish.dish.image.key, crop: :fill %>
                 <div class="card-trip-infos">
                   <h4 class="card-title"><%= menu_dish.dish.name %></h4>
-                  <%= link_to "Substitute", edit_day_menu_menu_dish_path(day_menu, menu_dish, diet: @diet, intolerances: @intolerances, ingredients: @allergies, meal_type: @meal_type) %>
+                  <%= link_to "Substitute", edit_day_menu_menu_dish_path(day_menu, menu_dish, diet: @diet, intolerances: @intolerances.join(','), ingredients: @allergies.join(','), meal_type: @meal_type) %>
                 </div>
               </div>
             <% end %>

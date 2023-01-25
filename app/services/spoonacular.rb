@@ -23,14 +23,14 @@ class Spoonacular
   private
 
   def search_recipes_query(query)
-    url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&query=#{query}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&exclude_ingredients=#{@exclude_ingredients}&type=#{@meal_type}&number=100&sort=random&fillIngredients=false"
+    url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&query=#{query}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&excludeIngredients=#{@exclude_ingredients}&type=#{@meal_type}&number=100&sort=random&fillIngredients=false"
     dish_serialized = URI.open(url).read
     dishes_raw = JSON.parse(dish_serialized)
     @dishes_results = dishes_raw["results"]
   end
 
   def search_recipes
-    url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&exclude_ingredients=#{@exclude_ingredients}&type=#{@meal_type}&number=5&sort=random&fillIngredients=true"
+    url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{ENV['SPOONACULAR_API']}&cuisine=#{@cuisine}&diet=#{@diet}&intolerances=#{@intolerances}&excludeIngredients=#{@exclude_ingredients}&type=#{@meal_type}&number=5&sort=random&fillIngredients=true"
     dish_serialized = URI.open(url).read
     dishes_raw = JSON.parse(dish_serialized)
     @dishes_results = dishes_raw["results"]
