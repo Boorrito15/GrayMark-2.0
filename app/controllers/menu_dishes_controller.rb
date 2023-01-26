@@ -20,6 +20,7 @@ class MenuDishesController < ApplicationController
       file = URI.open(params["image"])
       @dish.image.attach(io: file, filename: "dish.png", content_type: "image/png")
       @dish.save
+      
       # @ingredients_raw = dish["missedIngredients"]
       # @ingredients_raw.each do |ingredient|
       #   id = ingredient["id"]
