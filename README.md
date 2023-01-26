@@ -1,1 +1,1 @@
-A redesigned and much improved version of the original (https://github.com/patersonclaire/GrayMark "GrayMark"), which I developed as my final project in LeWagon Bali 2022.
+A redesigned and much improved version of [GrayMark](https://github.com/patersonclaire/GrayMark "GrayMark"), which I developed as my final project in LeWagon Bali 2022. With GrayMark 2.0, dieticians can now generate hundreds of menus in a single click as opposed to having to generate them one-by-one in the last version. 
