@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     member do
       patch :assign_school
     end
-    resources :week_menus, only: %i[index show new create edit update] do
+    resources :week_menus, only: %i[index new edit update create] do
       collection do
         get :review
       end
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
       end
     end
     resources :profiles, only: %i[index show new create edit update] do
-      # resources :week_menus, only: %i[index show new review create edit update]
+      resources :week_menus, only: %i[index show edit update]
       resources :intolerance_profiles, only: %i[index show new create]
       resources :allergy_profiles, only: %i[index show new create]
     end

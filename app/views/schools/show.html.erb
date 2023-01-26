@@ -66,8 +66,7 @@
             <div class = "card">
               <div class ="card-body">
                 <p> <%= @menu_intolerances.join(', ') %> - <%= @menu_allergies.join(', ') %> free | <%= @profile_diet %></p>
-                
-                <%= link_to "View menu", school_week_menu_path(@school, week_menu), class: "btn btn-primary" %>
+                <%= link_to "View menu", school_profile_week_menu_path(@school, @menu_profile, week_menu), class: "btn btn-primary" %>
               </div>
             </div>
           <% end %>

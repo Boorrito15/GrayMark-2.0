@@ -14,7 +14,7 @@
         <% else %>
           <button type="button" class="btn btn-outline primary" disabled><%= @week_menu.return_status %></button>
         <% end %>
-          <%= link_to "Edit menu", edit_school_week_menu_path(@school, @week_menu), class: "btn btn-primary" %>
+          <%= link_to "Edit menu", edit_school_profile_week_menu_path(@school, @profile, @week_menu), class: "btn btn-primary" %>
       </div>
     </div>
   </div>
@@ -42,11 +42,12 @@
       <h3><%= day %></h3>
       <div class="cards">
         <% day_menus.each do |day_menu| %>
-            <% day_menu.dishes.each do |dish|  %>
+            <% day_menu.dishes.in_order_of(:course, ["main course", "side dish", "dessert"]).each do |dish|  %>
               <div class="card-trip">
                 <%= cl_image_tag dish.image.key, crop: :fill %>
                 <div class="card-trip-infos">
                   <h4 class="card-title"><%= dish.name %></h4>
+                  <p> <%= dish.course %> </p>
                 </div>
               </div>
             <% end %>
