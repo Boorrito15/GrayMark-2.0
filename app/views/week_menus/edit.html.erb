@@ -42,19 +42,20 @@
       <h3><%= day %></h3>
       <div class="cards">
         <% day_menus.each do |day_menu| %>
-          <% day_menu.menu_dishes.each do |menu_dish| %>
-              <div class="card-trip">
-                <%= cl_image_tag menu_dish.dish.image.key, crop: :fill %>
-                <div class="card-trip-infos">
-                  <h4 class="card-title"><%= menu_dish.dish.name %></h4>
-                  <%= link_to "Substitute", edit_day_menu_menu_dish_path(day_menu, menu_dish, diet: @diet, intolerances: @intolerances.join(','), ingredients: @allergies.join(','), meal_type: @meal_type) %>
-                </div>
+          <% day_menu.dishes.in_order_of(:course, ["main course", "side dish", "dessert"]).each do |dish| %>
+            <% menu_dish = MenuDish.find_by(dish: dish, day_menu: day_menu) %>
+            <div class="card-trip">
+              <%= cl_image_tag dish.image.key, crop: :fill %>
+              <div class="card-trip-infos">
+                <h4 class="card-title"><%= dish.name %></h4>
+                <p> <%= dish.course %> </p>
+                <%= link_to "Substitute", edit_day_menu_menu_dish_path(day_menu, menu_dish, diet: @diet, intolerances: @intolerances.join(','), ingredients: @allergies.join(','), meal_type: @meal_type) %>
               </div>
-            <% end %>
+            </div>
           <% end %>
+        <% end %>
       </div>
     </div>
-
   <% end %>
 
   <div class="row justify-content-between">
