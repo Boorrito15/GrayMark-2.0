@@ -14,7 +14,7 @@
         <% else %>
           <button type="button" class="btn btn-outline primary" disabled><%= @week_menu.return_status %></button>
         <% end %>
-          <%= link_to "Edit menu", edit_school_week_menu_path(@school, @week_menu), class: "btn btn-primary" %>
+          <%= link_to "Edit menu", edit_school_profile_week_menu_path(@school, @profile, @week_menu), class: "btn btn-primary" %>
       </div>
     </div>
   </div>

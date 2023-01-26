@@ -14,7 +14,7 @@
         <% else %>
           <%= link_to "#{@week_menu.return_status}", update_status_school_week_menu_path(@school, @week_menu), data: { turbo_method: :patch }, class: "btn btn-info" %>
         <% end %>
-        <%= link_to "Save", school_week_menu_path(@school, @week_menu), class: "btn btn-primary" %>
+        <%= link_to "Save", school_profile_week_menu_path(@school, @profile, @week_menu), class: "btn btn-primary" %>
       </div>
     </div>
   </div>
@@ -60,12 +60,12 @@
   <div class="row justify-content-between">
     <div class="col-4">
       <% unless @week_menu.prev.nil? %>
-        <%= link_to "<< Prev Menu", edit_school_week_menu_path(@school, @week_menu.prev.id), class:"btn btn-primary" %>
+        <%= link_to "<< Prev Menu", edit_school_profile_week_menu_path(@school, @week_menu.prev.id), class:"btn btn-primary" %>
       <% end %>
     </div>
     <div class="col-4 justify-content-end">
       <% unless @week_menu.next.nil? %>
-        <%= link_to "Next Menu >>", edit_school_week_menu_path(@school, @week_menu.next.id), class:"float-end btn btn-primary"  %>
+        <%= link_to "Next Menu >>", edit_school_profile_week_menu_path(@school, @week_menu.next.id), class:"float-end btn btn-primary"  %>
       <% else %>
         <%= link_to "Done", review_school_week_menus_path(@school), class:"float-end btn btn-primary" %>
       <% end %>

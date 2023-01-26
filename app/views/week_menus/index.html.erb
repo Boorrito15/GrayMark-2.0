@@ -44,7 +44,7 @@
               end %>
               <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
               <br><br>
-              <%= link_to "View menu", school_week_menu_path(@school, menu), class: "btn btn-primary" %>
+              <%= link_to "View menu", school_profile_week_menu_path(@school, @profile, menu), class: "btn btn-primary" %>
             </div>
           </div>
         <% end %>
@@ -75,7 +75,7 @@
                 end %>
                 <p> <%= @menu_intolerances.join(', ') %>, <%= @menu_allergies.join(', ') %> free | <%= @menu_diet %></p>
                 <br><br>
-                <%= link_to "View menu", school_week_menu_path(@school, menu), class: "btn btn-primary" %>
+                <%= link_to "View menu", school_profile_week_menu_path(@school, @profile, menu), class: "btn btn-primary" %>
               </div>
             </div>
           <% end %>

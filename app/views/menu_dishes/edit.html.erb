@@ -26,6 +26,13 @@
         <%= image_tag (dish["image"]) %>
         <div class="card-trip-infos">
           <%= dish["title"] %>
+          <%= dish["id"] %>
+          <%= simple_form_for [@menu_dish] do |f| %>
+            <%= f.hidden_field :dish, value: dish["id"], name: "key" %>
+            <%= f.hidden_field :dish, value: dish["title"], name: "title" %>
+            <%= f.hidden_field :dish, value: dish["image"], name: "image" %>
+            <%= f.button :submit, class: "btn btn-outline", value: "Select dish" %>
+          <% end %>
         </div>
       </div>
     <% end %>
