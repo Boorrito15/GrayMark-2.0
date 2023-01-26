@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+A redesigned and much improved version of the original (https://github.com/patersonclaire/GrayMark "GrayMark"), which I developed as my final project in LeWagon Bali 2022.
